@@ -1,1 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
 
+<SCRIPT language=JavaScript>
+var message = "This function disabled by developer in security reaseon!";
+
+function rtclickcheck(keyp){ if (navigator.appName == "Netscape" && keyp.which == 3){ alert(message); return false; }
+
+if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) { alert(message); return false; } }
+
+document.onmousedown = rtclickcheck;
+</SCRIPT>
+
+<title>IT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="jquery.js"><\/script>')</script>
+<style>
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  font-size: 20px; 
+  background-image: url('background.jpg'); 
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: grey; 
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: grey;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: black;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(110, 109, 109);
+  color: white;
+  text-align: center;
+  height: '80'
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -35px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: fixed;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 2;
+}
+
+.btn {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 4px 8px;
+  text-align: center;
+  font-size: 15px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  border-radius: 15px;
+}
+
+.btn:hover {
+  background-color: grey;
+  color: white;
+}
+
+img {
+   	max-width: 100%;
+	}
+
+</style>
+</head>
+<body>
+
+<div id="navbar" class="navbar">
+  <strong><a id="home" href="https://tarlanziyadov.github.io/IT/">Home</a></strong>
+  <div id="testToolsbutton" class="subnav">
+    <button id="subnavmapsbuttonTestTools" class="subnavbtn"><strong>TestTools</strong><i id="caret" class="fa fa-caret-down"></i></button>
+    <div id="subnavbarcontent" class="subnav-content">
+        <strong><a id="downloadHelper++" style="color:grey;font-size:15px;" href="https://tarlanziyadov.github.io/IT/Helper.html">Helper++</a></strong>
+        
+        <strong><a id="downloadSeleniumByGUI" style="color:grey;font-size:15px;" href="https://tarlanziyadov.github.io/IT/SeleniumByGUI.html">SeleniumByGUI</a></strong>  
+
+       <strong><a id="downloadFastCapture" style="color:grey;font-size:15px;" href="https://tarlanziyadov.github.io/IT/FastCapture.html">FastCapture</a></strong>
+    </div>
+  </div> 
+</div>
+
+
+<div style="padding:0 16px">
+<br>
+<br>
+<br>
+  <h3 id="documnettxt" style="color:black;font-size:40px;"><strong>Welcome to IT-Webpage</strong></h3>
+
+    <p id="frontPagetxt" style="color:black;font-size:20px;"><em><strong>
+     Welcome to IT-webpage developed by Tarlan Ziyadov wich contains some testing tools for Explority and Automation tests. As soon as a new tool will be developed you will find it in here but for now 
+     its available three test tool to choose from. You will find them in the menu. 
+
+     Best regards Tarlan Ziyadov.</strong>
+   
+  </em></p> 
+
+
+
+<br>
+<div id="footer" class="footer"><strong>
+<p id="copyrighttxt">2020 © Tarlan Ziyadov</p></strong>
+</div>
+
+
+<script>
+  $('.footer').hover(function() {
+  $(this).animate({height: '500'}, 10);
+},function() {
+$('.footer').animate({height: '60'}, 10);
+});
+</script>
+
+
+</body>
+</html>
