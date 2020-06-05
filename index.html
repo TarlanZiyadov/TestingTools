@@ -53,7 +53,7 @@ window.onload = function () {
 </SCRIPT>
 
 <title>Testing Tools</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <meta charset="utf-8" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
@@ -362,7 +362,7 @@ img {
 </head>
 <body>
 
-d
+
 <div id="navbar" class="sidenav">
   <strong><a class="tablinks" onmouseover="openHome(event,'mainMenu')" href="https://tarlanziyadov.github.io/TestingTools/" style="font-size:20px;"><i id="home" style="font-size:20px;"class="fa fa-fw fa-home"></i> Home</a></strong>
   <strong><a class="tablinks" onmouseover="openHelper(event,'helperPlusPluss')" style="font-size:20px;"><i id="downloadHelper++" style="font-size:20px;" class="glyphicon glyphicon-chevron-right"></i> Helper++</a></strong> 
@@ -447,7 +447,7 @@ d
 
 
 
-
+// this function is for helper++ modal
 function openHelper(evt, helperPlusPluss) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -462,7 +462,7 @@ function openHelper(evt, helperPlusPluss) {
   evt.currentTarget.className += " active";
 }
 
-
+// this function is for seleniumbygui modal
 function openSeleniumByGUI(evt, selenium) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -478,7 +478,7 @@ function openSeleniumByGUI(evt, selenium) {
 }
 
 
-
+// this function is for fastcapture modal
 function openFastCapture(evt, fast) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -494,7 +494,7 @@ function openFastCapture(evt, fast) {
 }
 
 
-
+// this function is for main menu modal
 function openHome(evt, mainMenu) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -508,6 +508,17 @@ function openHome(evt, mainMenu) {
   document.getElementById(mainMenu).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
+// this jquery is for animation of sidebar
+$(function(){
+    $('.sidenav').hover(function(){
+        $(this).animate({width:'190px'},50);
+        $('.footer').animate({width:'190px'},50);
+    },function(){
+        $(this).animate({width:'15px'},50);
+        $('.footer').animate({width:'10px'},50);
+    }).trigger('mouseleave');
+});
 
 </script>
 
