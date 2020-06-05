@@ -368,7 +368,7 @@ img {
   <strong><a class="tablinks" onmouseover="openHelper(event,'helperPlusPluss')" style="font-size:20px;"><i id="downloadHelper++" style="font-size:20px;" class="glyphicon glyphicon-chevron-right"></i> Helper++</a></strong> 
   <strong><a class="tablinks" onmouseover="openSeleniumByGUI(event,'selenium')" style="font-size:20px;"><i id="downloadSeleniumByGUI" style="font-size:20px;" class="glyphicon glyphicon-chevron-right"></i> SeleniumByGUI</a></strong>  
   <strong><a class="tablinks" onmouseover="openFastCapture(event,'fast')" style="font-size:20px;"><i id="downloadFastCapture" style="font-size:20px;" class="glyphicon glyphicon-chevron-right"></i> FastCapture</a></strong>
-  <strong><a href="#about" style="font-size:20px;"><i id="about" style="font-size:20px;" class="glyphicon glyphicon-info-sign"></i> About</a></strong>
+  <strong><a class="tablinks" href="#about" style="font-size:20px;"><i id="about" style="font-size:20px;" class="glyphicon glyphicon-info-sign"></i> About</a></strong>
 
     
   <div id="footer" class="footer">
@@ -514,9 +514,18 @@ $(function(){
     $('.sidenav').hover(function(){
         $(this).animate({width:'190px'},50);
         $('.footer').animate({width:'190px'},50);
+     
+      $('.tablinks').show();
+      $('[id^=copyrighttxt]').show();
+
     },function(){
-        $(this).animate({width:'15px'},50);
-        $('.footer').animate({width:'10px'},50);
+        $(this).animate({width:'40px'},50);
+        $('.footer').animate({width:'0px'},50);
+
+        $('.tablinks').hide();
+        $('[id^=copyrighttxt]').hide();
+
+
     }).trigger('mouseleave');
 });
 
