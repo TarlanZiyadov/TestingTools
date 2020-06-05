@@ -98,8 +98,8 @@ body {
 
 
 .main {
-  margin-left: 200px; /* Same as the width of the sidenav */
-  font-size: 28px; /* Increased text to enable scrolling */
+  margin-left: 20px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
 
@@ -147,7 +147,7 @@ img {
 
 .helper {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 800px;
+  max-width: 60vmax;
   margin: auto;
   text-align: center;
   font-family: arial;
@@ -155,7 +155,7 @@ img {
 
 .seleniumByGUI {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 500px;
+  max-width: 40vmax;
   margin: auto;
   text-align: center;
   font-family: arial;
@@ -164,7 +164,7 @@ img {
 
 .fastCapture {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 500px;
+  max-width: 30vmax;
   margin: auto;
   text-align: center;
   font-family: arial;
@@ -290,10 +290,11 @@ img {
   float: left;
   padding: 0px 12px;
   border: 0px solid #ccc;
-  width: 100%;
+  width: 100vw;
   border-left: none;
-  height: 100%;
+  height: 100vh;
   display: none;
+  position: absolute;
 }
 
 /* Clear floats after the tab */
@@ -308,7 +309,7 @@ img {
 </head>
 <body>
 
-  
+  <!-- Navigation bar -->
 <div id="navbar" class="sidenav">
   <strong><a class="tablinks" href="https://tarlanziyadov.github.io/TestingTools/" style="font-size:20px;"><i id="home" style="font-size:20px;"class="fa fa-fw fa-home"></i><span> Home</span></a></strong>
   <strong><a class="tablinks" onmouseover="openHelper(event,'helperPlusPluss')" style="font-size:20px;"><i id="downloadHelper++" style="font-size:20px;" class="glyphicon glyphicon-chevron-right"></i><span> Helper++</span></a></strong> 
@@ -316,7 +317,7 @@ img {
   <strong><a class="tablinks" onmouseover="openFastCapture(event,'fast')" style="font-size:20px;"><i id="downloadFastCapture" style="font-size:20px;" class="glyphicon glyphicon-chevron-right"></i><span> FastCapture</span></a></strong>
   <strong><a class="tablinks" href="#about" style="font-size:20px;"><i id="about" style="font-size:20px;" class="glyphicon glyphicon-info-sign"></i><span>  About</span></a></strong>
 
-    
+    <!-- Footer -->
   <div id="footer" class="footer">
     <strong>
       <p id="copyrighttxt">2020 © Tarlan Ziyadov</p>
@@ -326,10 +327,10 @@ img {
 
 
 
-
+<!-- Home page -->
 <div class="main">
   <h2 id="documenttxt" class="headerPage"><strong>Welcome to Testing Tools-Webpage</strong></h2>
-    <p id="frontPagetxt" style="padding-left: 40px; text-align: center;color:black;font-size:20px;"><em><strong>
+    <p id="frontPagetxt" style="text-align: center;color:black;font-size:20px;"><em><strong>
      The page is under development please wait...</strong>
      <br>
      Best regards Tarlan Ziyadov.
@@ -338,8 +339,7 @@ img {
 </div>
 
 
-
-
+<!-- Helper++ page -->
 <div id="helperPlusPluss" class="tabcontent">
 <div class="helper">
 <h3 id="softwareHelper++" class ="headerTools" ><strong>Helper++</strong></h3>
@@ -353,6 +353,7 @@ img {
 </div>
 
 
+<!-- SeleniumByGUI page -->
 <div id="selenium" class="tabcontent">
 <div class="seleniumByGUI">
 <h4 id="softwareSeleniumByGUI" class ="headerTools" ><strong>SeleniumByGUI</strong></h4>
@@ -366,6 +367,7 @@ img {
 </div>
 
 
+<!-- FastCapture page -->
 <div id="fast" class="tabcontent">
 <div class="fastCapture">
 <h5 id="softwareFastCapture" class ="headerTools" ><strong>FastCapture</strong></h5>
@@ -379,11 +381,10 @@ img {
 </div>
 
 
-
+<!-- Here is div for separate usage only which does not contains atributes -->
 <div id="waitDownloading"><i class="glyphicon glyphicon-cloud-download"></i> Downloading please wait...</div>
-
-
 <div class="clearfix"></div>
+
 
 <script>
   // this function animates downloading banner in down side of page
