@@ -61,7 +61,7 @@ window.onload = function () {
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
-
+* {box-sizing: border-box}
 body {
   font-family: 'Times New Roman', Times, serif;
   margin: 0;
@@ -202,7 +202,7 @@ img {
 
 .helper {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  max-width: 800px;
   margin: auto;
   text-align: center;
   font-family: arial;
@@ -210,7 +210,7 @@ img {
 
 .seleniumByGUI {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  max-width: 500px;
   margin: auto;
   text-align: center;
   font-family: arial;
@@ -219,7 +219,7 @@ img {
 
 .fastCapture {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  max-width: 500px;
   margin: auto;
   text-align: center;
   font-family: arial;
@@ -340,22 +340,23 @@ img {
 /*Here download animation ends*/
 
 
-.flex-container {
-    display: flex;
-
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 0px solid #ccc;
+  width: 100%;
+  border-left: none;
+  height: 100%;
+  display: none;
 }
 
-.flex-child {
-    flex: 1;
-    border: 2px;
-        
-}  
-
-.flex-child:first-child {
-    margin-right: 20px;
-    padding-left: 260px;  
-} 
-
+/* Clear floats after the tab */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 </style>
 </head>
@@ -363,10 +364,10 @@ img {
 
 
 <div id="navbar" class="sidenav">
-  <strong><a href="https://tarlanziyadov.github.io/TestingTools/" style="font-size:20px;"><i id="home" style="font-size:20px;"class="fa fa-fw fa-home"></i> Home</a></strong>
-  <strong><a href="https://github.com/TarlanZiyadov/Helper/raw/master/Helper%2B%2BSetup.exe" style="font-size:20px;"><i id="downloadHelper++" style="font-size:20px;" class="glyphicon glyphicon-chevron-right"></i> Helper++</a></strong> 
-  <strong><a href="https://github.com/TarlanZiyadov/SeleniumByGUI/raw/master/SeleniumByGUISetup.exe" style="font-size:20px;"><i id="downloadSeleniumByGUI" style="font-size:20px;" class="glyphicon glyphicon-chevron-right"></i> SeleniumByGUI</a></strong>  
-  <strong><a href="https://github.com/TarlanZiyadov/FastCapture/raw/master/FastCaptureSetup.exe" style="font-size:20px;"><i id="downloadFastCapture" style="font-size:20px;" class="glyphicon glyphicon-chevron-right"></i> FastCapture</a></strong>
+  <strong><a class="tablinks" onmouseover="openHome(event,'mainMenu')" href="https://tarlanziyadov.github.io/TestingTools/" style="font-size:20px;"><i id="home" style="font-size:20px;"class="fa fa-fw fa-home"></i> Home</a></strong>
+  <strong><a class="tablinks" onmouseover="openHelper(event,'helperPlusPluss')" style="font-size:20px;"><i id="downloadHelper++" style="font-size:20px;" class="glyphicon glyphicon-chevron-right"></i> Helper++</a></strong> 
+  <strong><a class="tablinks" onmouseover="openSeleniumByGUI(event,'selenium')" style="font-size:20px;"><i id="downloadSeleniumByGUI" style="font-size:20px;" class="glyphicon glyphicon-chevron-right"></i> SeleniumByGUI</a></strong>  
+  <strong><a class="tablinks" onmouseover="openFastCapture(event,'fast')" style="font-size:20px;"><i id="downloadFastCapture" style="font-size:20px;" class="glyphicon glyphicon-chevron-right"></i> FastCapture</a></strong>
   <strong><a href="#about" style="font-size:20px;"><i id="about" style="font-size:20px;" class="glyphicon glyphicon-info-sign"></i> About</a></strong>
 
     
@@ -378,22 +379,21 @@ img {
 </div>
 
 
-<br>
+<div id="mainMenu" class="tabcontent">
 <div class="main">
   <h2 id="documenttxt" class="headerPage"><strong>Welcome to Testing Tools-Webpage</strong></h2>
-
     <p id="frontPagetxt" style="padding-left: 40px; text-align: center;color:black;font-size:20px;"><em><strong>
-     The page is under development please wait...
-     Best regards Tarlan Ziyadov.</strong>
+     The page is under development please wait...</strong>
+     <br>
+     Best regards Tarlan Ziyadov.
+    </br>
   </em></p> 
-
 </div>
-</br>
+</div>
 
-<div class="flex-container">
 
-  <div class="flex-child magenta">
 
+<div id="helperPlusPluss" class="tabcontent">
 <div class="helper">
 <h3 id="softwareHelper++" class ="headerTools" ><strong>Helper++</strong></h3>
   <img src="Helper++.jpeg" alt="Helper++"/>
@@ -405,8 +405,8 @@ img {
 </div>
 </div>
 
-<div class="flex-child green">
 
+<div id="selenium" class="tabcontent">
 <div class="seleniumByGUI">
 <h4 id="softwareSeleniumByGUI" class ="headerTools" ><strong>SeleniumByGUI</strong></h4>
   <img src="SeleniumByGUI.jpg" alt="SeleniumByGUI"/>
@@ -418,8 +418,8 @@ img {
 </div>
 </div>
 
-<div class="flex-child green">
 
+<div id="fast" class="tabcontent">
 <div class="fastCapture">
 <h5 id="softwareFastCapture" class ="headerTools" ><strong>FastCapture</strong></h5>
   <img src="FastCapture.jpg" alt="FastCapture"/>
@@ -431,11 +431,12 @@ img {
 </div>
 </div>
 
-</div>
+
 
 <div id="waitDownloading"><i class="glyphicon glyphicon-cloud-download"></i> Downloading please wait...</div>
 
 
+<div class="clearfix"></div>
 
 <script>
  function downloading() {
@@ -443,6 +444,71 @@ img {
   dwnload.className = "show";
   setTimeout(function(){ dwnload.className = dwnload.className.replace("show", ""); }, 4000);
 }
+
+
+
+
+function openHelper(evt, helperPlusPluss) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(helperPlusPluss).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+
+function openSeleniumByGUI(evt, selenium) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(selenium).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+
+
+function openFastCapture(evt, fast) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(fast).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+
+
+function openHome(evt, mainMenu) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(mainMenu).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
 </script>
 
 
