@@ -66,7 +66,7 @@ body {
   font-family: 'Times New Roman', Times, serif;
   margin: auto;
   font-size: 20px; 
-  background-image: url('background.jpg'); 
+  background-image: url('backgroundMainPage.jpg'); 
   height: 100%;
   width: 100%;
 }
@@ -119,61 +119,6 @@ body {
   height: 60px;
   padding-left: 15px;
   font-size: 15px;
-}
-
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -35px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.tooltip .tooltiptext::after {
-  content: "";
-  position: fixed;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 2;
-}
-
-.btn {
-  background-color: #ddd;
-  border: none;
-  color: black;
-  padding: 4px 8px;
-  text-align: center;
-  font-size: 15px;
-  margin: 4px 2px;
-  transition: 0.3s;
-  border-radius: 15px;
-}
-
-.btn:hover {
-  background-color: grey;
-  color: white;
 }
 
 img {
@@ -358,13 +303,14 @@ img {
   display: table;
 }
 
+
 </style>
 </head>
 <body>
 
-
+  
 <div id="navbar" class="sidenav">
-  <strong><a class="tablinks" onmouseover="openHome(event,'mainMenu')" href="https://tarlanziyadov.github.io/TestingTools/" style="font-size:20px;"><i id="home" style="font-size:20px;"class="fa fa-fw fa-home"></i><span> Home</span></a></strong>
+  <strong><a class="tablinks" href="https://tarlanziyadov.github.io/TestingTools/" style="font-size:20px;"><i id="home" style="font-size:20px;"class="fa fa-fw fa-home"></i><span> Home</span></a></strong>
   <strong><a class="tablinks" onmouseover="openHelper(event,'helperPlusPluss')" style="font-size:20px;"><i id="downloadHelper++" style="font-size:20px;" class="glyphicon glyphicon-chevron-right"></i><span> Helper++</span></a></strong> 
   <strong><a class="tablinks" onmouseover="openSeleniumByGUI(event,'selenium')" style="font-size:20px;"><i id="downloadSeleniumByGUI" style="font-size:20px;" class="glyphicon glyphicon-chevron-right"></i><span> SeleniumByGUI</span></a></strong>  
   <strong><a class="tablinks" onmouseover="openFastCapture(event,'fast')" style="font-size:20px;"><i id="downloadFastCapture" style="font-size:20px;" class="glyphicon glyphicon-chevron-right"></i><span> FastCapture</span></a></strong>
@@ -381,7 +327,6 @@ img {
 
 
 
-<div id="mainMenu" class="tabcontent">
 <div class="main">
   <h2 id="documenttxt" class="headerPage"><strong>Welcome to Testing Tools-Webpage</strong></h2>
     <p id="frontPagetxt" style="padding-left: 40px; text-align: center;color:black;font-size:20px;"><em><strong>
@@ -391,7 +336,7 @@ img {
     </br>
   </em></p> 
 </div>
-</div>
+
 
 
 
@@ -441,6 +386,7 @@ img {
 <div class="clearfix"></div>
 
 <script>
+  // this function animates downloading banner in down side of page
  function downloading() {
   var dwnload = document.getElementById("waitDownloading");
   dwnload.className = "show";
@@ -496,20 +442,6 @@ function openFastCapture(evt, fast) {
 }
 
 
-// this function is for main menu modal
-function openHome(evt, mainMenu) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(mainMenu).style.display = "block";
-  evt.currentTarget.className += " active";
-}
 
 // this jquery is for animation of sidebar
 $(function(){
