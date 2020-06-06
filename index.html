@@ -179,7 +179,7 @@ img {
   text-align: center;
   cursor: pointer;
   width: 100%;
-  font-size: 3vmin;
+  font-size: 2vmin;
 }
 
 .helper button:hover {
@@ -197,7 +197,7 @@ img {
   text-align: center;
   cursor: pointer;
   width: 100%;
-  font-size: 3vmin;
+  font-size: 2vmin;
 }
 
 .seleniumByGUI button:hover {
@@ -215,7 +215,7 @@ img {
   text-align: center;
   cursor: pointer;
   width: 100%;
-  font-size: 3vmin;
+  font-size: 2vmin;
 }
 
 .fastCapture button:hover {
@@ -243,18 +243,18 @@ img {
 /* Here starts animation for download*/
 #waitDownloading {
   visibility: hidden;
-  min-width: 250px;
-  margin-left: -125px;
+  min-width: 20vmin;
+  margin-left: -55px;
   background-color: #333;
   color: #fff;
   text-align: center;
-  border-radius: 2px;
-  padding: 16px;
+  border-radius: 1vmax;
+  padding: 1vmin;
   position: fixed;
   z-index: 1;
   left: 50%;
   bottom: 30px;
-  font-size: 17px;
+  font-size: 2vmin;
 }
 
 #waitDownloading.show {
@@ -339,6 +339,31 @@ background-size: 3vmin;
 
 
 
+.downloadIcon{
+
+background: url('assets/download.png');
+background-size: 3vmin;
+  height: 3vmin;
+  width: 3vmin;
+  display: block;
+  position: absolute;
+}
+
+
+
+.downloadingIcon{
+
+background: url('assets/downloading.png');
+background-size: 3vmin;
+  height: 3vmin;
+  width: 3vmin;
+  display: inline-block;
+  position: relative;
+  top: 1vmin;
+  margin-right: 2vmin;
+}
+
+
 </style>
 </head>
 <body>
@@ -381,7 +406,7 @@ background-size: 3vmin;
  <p class="cardDescription">
     Helper++ is a simple text editor with possibility to have all created files in one place. Yet you have possibility to create several file types.</p>
     <form action="https://github.com/TarlanZiyadov/Helper/raw/master/Helper%2B%2BSetup.exe">  
-     <p><button onclick="downloading()"><i id="downloadHelper++" class="glyphicon glyphicon-save"></i> Download</button></p>
+     <p><button onclick="downloading()"><i id="downloadHelper++" class="downloadIcon"></i><span>Download</span></button></p>
     </form>
 </div>
 </div>
@@ -395,7 +420,7 @@ background-size: 3vmin;
   <p class="cardDescription">
   SeleniumByGUI is great tool for automation of input fields with huge list of naughty strings.</p>
   <form action="https://github.com/TarlanZiyadov/SeleniumByGUI/raw/master/SeleniumByGUISetup.exe">
-    <p><button onclick="downloading()"><i id="downloadSeleniumByGUI" class="glyphicon glyphicon-save"></i> Download</button></p>  
+    <p><button onclick="downloading()"><i id="downloadSeleniumByGUI" class="downloadIcon"></i><span>Download</span></button></p>
   </form>
 </div>
 </div>
@@ -409,14 +434,14 @@ background-size: 3vmin;
   <p class="cardDescription">
   Take fast screenshots while you are in test session.</p>
   <form action="https://github.com/TarlanZiyadov/FastCapture/raw/master/FastCaptureSetup.exe">
-    <p><button onclick="downloading()"><i id="downloadFastCapture"  class="glyphicon glyphicon-save"></i> Download</button></p>  
+    <p><button onclick="downloading()"><i id="downloadFastCapture" class="downloadIcon"></i><span>Download</span></button></p>
   </form>
 </div>
 </div>
 
 
 <!-- Here is div for separate usage only which does not contains atributes -->
-<div id="waitDownloading"><i class="glyphicon glyphicon-cloud-download"></i> Downloading please wait...</div>
+<div id="waitDownloading"><i class="downloadingIcon"></i> Downloading please wait...</div>
 <div class="clearfix"></div>
 
 
