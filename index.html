@@ -65,7 +65,7 @@ window.onload = function () {
 body {
   font-family: 'Times New Roman', Times, serif;
   margin: auto;
-  font-size: 20px; 
+  font-size: 3vmin; 
   background-image: url('backgroundMainPage.jpg'); 
   height: 100%;
   width: 100%;
@@ -73,7 +73,7 @@ body {
 
 .sidenav {
   height: 100%;
-  width: 190px;
+  width: 30vmin;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -87,7 +87,7 @@ body {
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 3vmin;
   color: #818181;
   display: block;
 }
@@ -104,20 +104,20 @@ body {
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav a {font-size: 4vmin;}
 }
 
 .footer {
   position: fixed;
   left: 0;
   bottom: 0;
-  width: 190px;
+  width: 30vmin;
   background-color:#202020;
   color: white;
   text-align: left;
   height: 60px;
   padding-left: 15px;
-  font-size: 15px;
+  font-size: 2vmin;
 }
 
 img {
@@ -179,7 +179,7 @@ img {
   text-align: center;
   cursor: pointer;
   width: 100%;
-  font-size: 18px;
+  font-size: 3vmin;
 }
 
 .helper button:hover {
@@ -197,7 +197,7 @@ img {
   text-align: center;
   cursor: pointer;
   width: 100%;
-  font-size: 18px;
+  font-size: 3vmin;
 }
 
 .seleniumByGUI button:hover {
@@ -215,7 +215,7 @@ img {
   text-align: center;
   cursor: pointer;
   width: 100%;
-  font-size: 18px;
+  font-size: 3vmin;
 }
 
 .fastCapture button:hover {
@@ -236,7 +236,7 @@ img {
 
 .headerPage{
   color:black;
-  font-size:3vmin;
+  font-size:4vmin;
   text-align: center;
 }
 
@@ -311,11 +311,11 @@ img {
 
   <!-- Navigation bar -->
 <div id="navbar" class="sidenav">
-  <strong><a class="tablinks" href="https://tarlanziyadov.github.io/TestingTools/" style="font-size:20px;"><i id="home" style="font-size:20px;"class="fa fa-fw fa-home"></i><span> Home</span></a></strong>
-  <strong><a class="tablinks" onmouseover="openHelper(event,'helperPlusPluss')" style="font-size:20px;"><i id="downloadHelper++" style="font-size:20px;" class="glyphicon glyphicon-chevron-right"></i><span> Helper++</span></a></strong> 
-  <strong><a class="tablinks" onmouseover="openSeleniumByGUI(event,'selenium')" style="font-size:20px;"><i id="downloadSeleniumByGUI" style="font-size:20px;" class="glyphicon glyphicon-chevron-right"></i><span> SeleniumByGUI</span></a></strong>  
-  <strong><a class="tablinks" onmouseover="openFastCapture(event,'fast')" style="font-size:20px;"><i id="downloadFastCapture" style="font-size:20px;" class="glyphicon glyphicon-chevron-right"></i><span> FastCapture</span></a></strong>
-  <strong><a class="tablinks" href="#about" style="font-size:20px;"><i id="about" style="font-size:20px;" class="glyphicon glyphicon-info-sign"></i><span>  About</span></a></strong>
+  <strong><a class="tablinks" href="https://tarlanziyadov.github.io/TestingTools/" style="font-size:3vmin;"><i id="home" style="font-size:3vmin;" class="fa fa-fw fa-home"></i><span> Home</span></a></strong>
+  <strong><a class="tablinks" onmouseover="openHelper(event,'helperPlusPluss')" style="font-size:3vmin;"><i id="downloadHelper++" style="font-size:3vmin;" class="glyphicon glyphicon-chevron-right"></i><span> Helper++</span></a></strong> 
+  <strong><a class="tablinks" onmouseover="openSeleniumByGUI(event,'selenium')" style="font-size:3vmin;"><i id="downloadSeleniumByGUI" style="font-size:3vmin;" class="glyphicon glyphicon-chevron-right"></i><span> SeleniumByGUI</span></a></strong>  
+  <strong><a class="tablinks" onmouseover="openFastCapture(event,'fast')" style="font-size:3vmin;"><i id="downloadFastCapture" style="font-size:3vmin;" class="glyphicon glyphicon-chevron-right"></i><span> FastCapture</span></a></strong>
+  <strong><a class="tablinks" href="#about" style="font-size:3vmin;"><i id="about" style="font-size:3vmin;" class="glyphicon glyphicon-info-sign"></i><span>  About</span></a></strong>
 
     <!-- Footer -->
   <div id="footer" class="footer">
@@ -447,14 +447,14 @@ function openFastCapture(evt, fast) {
 // this jquery is for animation of sidebar
 $(function(){
     $('.sidenav').hover(function(){
-        $(this).animate({width:'190px'},50);
-        $('.footer').animate({width:'190px'},50);
+        $(this).animate({width:'30vmin'},50);
+        $('.footer').animate({width:'30vmin'},50);
      
       $('.tablinks span').show();
       $('[id^=copyrighttxt]').show();
 
     },function(){
-        $(this).animate({width:'50px'},50);
+        $(this).animate({width:'9vmin'},50);
         $('.footer').animate({width:'0px'},50);
 
         $('.tablinks span').hide();
