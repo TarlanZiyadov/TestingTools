@@ -71,7 +71,7 @@ body {
 
 .sidenav {
   height: 100%;
-  width: 32vmin;
+  width: 28vmin;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -111,7 +111,7 @@ body {
   position: fixed;
   left: 0;
   bottom: 0;
-  width: 32vmin;
+  width: 28vmin;
   background-color:#202020;
   color: white;
   text-align: left;
@@ -226,7 +226,7 @@ img {
 
 .cardDescription {
   display: block;
-  font-size:3vmin;
+  font-size:2vmin;
 }
 
 .headerTools{
@@ -345,11 +345,11 @@ background-size: 3vmin;
 
   <!-- Navigation bar -->
 <div id="navbar" class="sidenav">
-  <strong><a class="tablinks" href="https://tarlanziyadov.github.io/TestingTools/" style="font-size:3vmin;"><i id="home" class="homeIcon"></i><span style="padding-left: 5vmin;"> Home</span></a></strong>
-  <strong><a class="tablinks" onmouseover="openHelper(event,'helperPlusPluss')" style="font-size:3vmin;"><i id="downloadHelper++" class="fileIcon"></i><span style="padding-left: 5vmin"> Helper++</span></a></strong> 
-  <strong><a class="tablinks" onmouseover="openSeleniumByGUI(event,'selenium')" style="font-size:3vmin;"><i id="downloadSeleniumByGUI" class="fileIcon"></i><span style="padding-left: 5vmin"> SeleniumByGUI</span></a></strong>  
-  <strong><a class="tablinks" onmouseover="openFastCapture(event,'fast')" style="font-size:3vmin;"><i id="downloadFastCapture" class="fileIcon"></i><span style="padding-left: 5vmin"> FastCapture</span></a></strong>
-  <strong><a class="tablinks" href="#about" style="font-size:3vmin;"><i id="about" class="infoIcon"></i><span style="padding-left: 5vmin"> About</span></a></strong>
+  <strong><a class="tablinks" href="https://tarlanziyadov.github.io/TestingTools/" style="font-size:2vmin;"><i id="home" class="homeIcon"></i><span style="padding-left: 5vmin;"> Home</span></a></strong>
+  <strong><a class="tablinks" onmouseover="openHelper(event,'helperPlusPluss')" style="font-size:2vmin;"><i id="downloadHelper++" class="fileIcon"></i><span style="padding-left: 5vmin"> Helper++</span></a></strong> 
+  <strong><a class="tablinks" onmouseover="openSeleniumByGUI(event,'selenium')" style="font-size:2vmin;"><i id="downloadSeleniumByGUI" class="fileIcon"></i><span style="padding-left: 5vmin"> SeleniumByGUI</span></a></strong>  
+  <strong><a class="tablinks" onmouseover="openFastCapture(event,'fast')" style="font-size:2vmin;"><i id="downloadFastCapture" class="fileIcon"></i><span style="padding-left: 5vmin"> FastCapture</span></a></strong>
+  <strong><a class="tablinks" href="#about" style="font-size:2vmin;"><i id="about" class="infoIcon"></i><span style="padding-left: 5vmin"> About</span></a></strong>
 
     <!-- Footer -->
   <div id="footer" class="footer">
@@ -481,8 +481,8 @@ function openFastCapture(evt, fast) {
 // this jquery is for animation of sidebar
 $(function(){
     $('.sidenav').hover(function(){
-        $(this).animate({width:'32vmin'},50);
-        $('.footer').animate({width:'32vmin'},50);
+        $(this).animate({width:'28vmin'},50);
+        $('.footer').animate({width:'28vmin'},50);
      
       $('.tablinks span').show();
       $('[id^=copyrighttxt]').show();
