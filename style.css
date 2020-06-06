@@ -111,6 +111,15 @@ img {
 }
 
 
+.aboutDeveloper {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 25vmax;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+
+
 .helper button {
   border: none;
   outline: 0;
@@ -163,7 +172,22 @@ img {
   opacity: 0.9;
 }
 
-
+.aboutDeveloper button {
+    border: none;
+    outline: 0;
+    padding: 1vmin;
+    color: white;
+    background-color: #202020;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 2vmin;
+  }
+  
+  .aboutDeveloper button:hover {
+    opacity: 0.9;
+  }
+  
 
 .cardDescription {
   display: block;
@@ -301,6 +325,17 @@ background-size: 3vmin;
   position: absolute;
 }
 
+
+
+.contactIcon{
+
+    background: url('assets/contact.png');
+    background-size: 3vmin;
+      height: 3vmin;
+      width: 3vmin;
+      display: block;
+      position: absolute;
+    }
 
 
 .downloadingIcon{
