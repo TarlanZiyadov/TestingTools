@@ -1,0 +1,316 @@
+
+* {box-sizing: border-box}
+body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: auto;
+  font-size: 3vmin; 
+  background-image: url('assets/backgroundMainPage.jpg'); 
+  height: 100%;
+  width: 100%;
+}
+
+.sidenav {
+  height: 100%;
+  width: 28vmin;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #202020;
+  overflow-x: hidden;
+  padding-top: 20px;
+  cursor: pointer;
+  
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 3vmin;
+  color: #818181;
+  display: block;
+  margin-bottom: 2vmin;
+  text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+
+.main {
+  margin-left: 20px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 4vmin;}
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 28vmin;
+  background-color:#202020;
+  color: white;
+  text-align: left;
+  height: 60px;
+  padding-left: 15px;
+  font-size: 2vmin;
+}
+
+img {
+   	max-width: 100%;
+	}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.helper {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 45vmax;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.seleniumByGUI {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 30vmax;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+
+.fastCapture {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 25vmax;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+
+.helper button {
+  border: none;
+  outline: 0;
+  padding: 1vmin;
+  color: white;
+  background-color: #202020;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 2vmin;
+}
+
+.helper button:hover {
+  opacity: 0.9;
+}
+
+
+
+.seleniumByGUI button {
+  border: none;
+  outline: 0;
+  padding: 1vmin;
+  color: white;
+  background-color: #202020;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 2vmin;
+}
+
+.seleniumByGUI button:hover {
+  opacity: 0.9;
+}
+
+
+
+.fastCapture button {
+  border: none;
+  outline: 0;
+  padding: 1vmin;
+  color: white;
+  background-color: #202020;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 2vmin;
+}
+
+.fastCapture button:hover {
+  opacity: 0.9;
+}
+
+
+
+.cardDescription {
+  display: block;
+  font-size:2vmin;
+}
+
+.headerTools{
+  color:black;
+  font-size:3vmin;
+}
+
+.headerPage{
+  color:black;
+  font-size:4vmin;
+  text-align: center;
+}
+
+/* Here starts animation for download*/
+#waitDownloading {
+  visibility: hidden;
+  min-width: 20vmin;
+  margin-left: -55px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 1vmax;
+  padding: 1vmin;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 2vmin;
+}
+
+#waitDownloading.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+/*Here download animation ends*/
+
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 0px solid #ccc;
+  width: 100vw;
+  border-left: none;
+  height: 100vh;
+  display: none;
+  position: absolute;
+}
+
+/* Clear floats after the tab */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+.homeIcon{
+
+  background: url('assets/home.png');
+  background-size: 3vmin;
+    height: 3vmin;
+    width: 3vmin;
+    display: block;
+    position: absolute;
+}
+
+
+.fileIcon{
+
+background: url('assets/file.png');
+background-size: 3vmin;
+  height: 3vmin;
+  width: 3vmin;
+  display: block;
+  position: absolute;
+}
+
+.infoIcon{
+
+background: url('assets/information.png');
+background-size: 3vmin;
+  height: 3vmin;
+  width: 3vmin;
+  display: block;
+  position: absolute;
+}
+
+
+.helpIcon{
+
+    background: url('assets/help.png');
+    background-size: 3vmin;
+      height: 3vmin;
+      width: 3vmin;
+      display: block;
+      position: absolute;
+    }
+
+
+
+.downloadIcon{
+
+background: url('assets/download.png');
+background-size: 3vmin;
+  height: 3vmin;
+  width: 3vmin;
+  display: block;
+  position: absolute;
+}
+
+
+
+.downloadingIcon{
+
+background: url('assets/downloading.png');
+background-size: 3vmin;
+  height: 3vmin;
+  width: 3vmin;
+  display: inline-block;
+  position: relative;
+  top: 1vmin;
+  margin-right: 2vmin;
+}

@@ -1,371 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!--Here i block f12 key press and right mouse click-->
-<SCRIPT language=JavaScript>
-var message = "This function disabled by developer!";
-
-function rtclickcheck(keyp){ if (navigator.appName == "Netscape" && keyp.which == 3){ alert(message); return false; }
-
-if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) { alert(message); return false; } }
-
-document.onmousedown = rtclickcheck;
-
-window.onload = function () {
-           document.addEventListener("contextmenu", function (e) {
-               e.preventDefault();
-           }, false);
-           document.addEventListener("keydown", function (e) {
-               //document.onkeydown = function(e) {
-               // "I" key
-               if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-                   disabledEvent(e);
-               }
-               // "J" key
-               if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-                   disabledEvent(e);
-               }
-               // "S" key + macOS
-               if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-                   disabledEvent(e);
-               }
-               // "U" key
-               if (e.ctrlKey && e.keyCode == 85) {
-                   disabledEvent(e);
-               }
-               // "F12" key
-               if (event.keyCode == 123) {
-                   disabledEvent(e);
-               }
-           }, false);
-           function disabledEvent(e) {
-               if (e.stopPropagation) {
-                   e.stopPropagation();
-               } else if (window.event) {
-                   window.event.cancelBubble = true;
-               }
-               e.preventDefault();
-               return false;
-           }
-       }
-
-
-</SCRIPT>
-
 <title>Testing Tools</title>
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <meta charset="utf-8" />
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
 <script>window.jQuery || document.write('<script src="jquery.js"><\/script>')</script>
 
-<style>
-* {box-sizing: border-box}
-body {
-  font-family: 'Times New Roman', Times, serif;
-  margin: auto;
-  font-size: 3vmin; 
-  background-image: url('backgroundMainPage.jpg'); 
-  height: 100%;
-  width: 100%;
-}
-
-.sidenav {
-  height: 100%;
-  width: 28vmin;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #202020;
-  overflow-x: hidden;
-  padding-top: 20px;
-  cursor: pointer;
-  
-}
-
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 3vmin;
-  color: #818181;
-  display: block;
-  margin-bottom: 2vmin;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-
-.main {
-  margin-left: 20px; /* Same as the width of the sidenav */
-  padding: 0px 10px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 4vmin;}
-}
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 28vmin;
-  background-color:#202020;
-  color: white;
-  text-align: left;
-  height: 60px;
-  padding-left: 15px;
-  font-size: 2vmin;
-}
-
-img {
-   	max-width: 100%;
-	}
-
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555; 
-}
-
-.helper {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 45vmax;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-}
-
-.seleniumByGUI {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 30vmax;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-}
-
-
-.fastCapture {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 25vmax;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-}
-
-
-.helper button {
-  border: none;
-  outline: 0;
-  padding: 1vmin;
-  color: white;
-  background-color: #202020;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 2vmin;
-}
-
-.helper button:hover {
-  opacity: 0.9;
-}
-
-
-
-.seleniumByGUI button {
-  border: none;
-  outline: 0;
-  padding: 1vmin;
-  color: white;
-  background-color: #202020;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 2vmin;
-}
-
-.seleniumByGUI button:hover {
-  opacity: 0.9;
-}
-
-
-
-.fastCapture button {
-  border: none;
-  outline: 0;
-  padding: 1vmin;
-  color: white;
-  background-color: #202020;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 2vmin;
-}
-
-.fastCapture button:hover {
-  opacity: 0.9;
-}
-
-
-
-.cardDescription {
-  display: block;
-  font-size:2vmin;
-}
-
-.headerTools{
-  color:black;
-  font-size:3vmin;
-}
-
-.headerPage{
-  color:black;
-  font-size:4vmin;
-  text-align: center;
-}
-
-/* Here starts animation for download*/
-#waitDownloading {
-  visibility: hidden;
-  min-width: 20vmin;
-  margin-left: -55px;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  border-radius: 1vmax;
-  padding: 1vmin;
-  position: fixed;
-  z-index: 1;
-  left: 50%;
-  bottom: 30px;
-  font-size: 2vmin;
-}
-
-#waitDownloading.show {
-  visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
-
-@-webkit-keyframes fadein {
-  from {bottom: 0; opacity: 0;} 
-  to {bottom: 30px; opacity: 1;}
-}
-
-@keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
-}
-
-@-webkit-keyframes fadeout {
-  from {bottom: 30px; opacity: 1;} 
-  to {bottom: 0; opacity: 0;}
-}
-
-@keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
-}
-/*Here download animation ends*/
-
-
-/* Style the tab content */
-.tabcontent {
-  float: left;
-  padding: 0px 12px;
-  border: 0px solid #ccc;
-  width: 100vw;
-  border-left: none;
-  height: 100vh;
-  display: none;
-  position: absolute;
-}
-
-/* Clear floats after the tab */
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-
-
-.homeIcon{
-
-  background: url('assets/home.png');
-  background-size: 3vmin;
-    height: 3vmin;
-    width: 3vmin;
-    display: block;
-    position: absolute;
-}
-
-
-.fileIcon{
-
-background: url('assets/file.png');
-background-size: 3vmin;
-  height: 3vmin;
-  width: 3vmin;
-  display: block;
-  position: absolute;
-}
-
-.infoIcon{
-
-background: url('assets/information.png');
-background-size: 3vmin;
-  height: 3vmin;
-  width: 3vmin;
-  display: block;
-  position: absolute;
-}
-
-
-
-.downloadIcon{
-
-background: url('assets/download.png');
-background-size: 3vmin;
-  height: 3vmin;
-  width: 3vmin;
-  display: block;
-  position: absolute;
-}
-
-
-
-.downloadingIcon{
-
-background: url('assets/downloading.png');
-background-size: 3vmin;
-  height: 3vmin;
-  width: 3vmin;
-  display: inline-block;
-  position: relative;
-  top: 1vmin;
-  margin-right: 2vmin;
-}
-
-
-</style>
+<!-- Here is css linked to file -->
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- Navigation bar -->
@@ -375,6 +20,7 @@ background-size: 3vmin;
   <strong><a class="tablinks" onmouseover="openSeleniumByGUI(event,'selenium')" style="font-size:2vmin;"><i id="downloadSeleniumByGUI" class="fileIcon"></i><span style="padding-left: 5vmin"> SeleniumByGUI</span></a></strong>  
   <strong><a class="tablinks" onmouseover="openFastCapture(event,'fast')" style="font-size:2vmin;"><i id="downloadFastCapture" class="fileIcon"></i><span style="padding-left: 5vmin"> FastCapture</span></a></strong>
   <strong><a class="tablinks" href="#about" style="font-size:2vmin;"><i id="about" class="infoIcon"></i><span style="padding-left: 5vmin"> About</span></a></strong>
+  <strong><a class="tablinks" href="#help" style="font-size:2vmin;"><i id="help" class="helpIcon"></i><span style="padding-left: 5vmin"> Help</span></a></strong>
 
     <!-- Footer -->
   <div id="footer" class="footer">
@@ -402,11 +48,11 @@ background-size: 3vmin;
 <div id="helperPlusPluss" class="tabcontent">
 <div class="helper">
 <h3 id="softwareHelper++" class ="headerTools"><strong>Helper++</strong></h3>
-  <img src="Helper++.jpeg" alt="Helper++"/>
- <p class="cardDescription">
+  <img src="assets/Helper++.jpeg" alt="Helper++"/>
+ <p id="descriptionHelper" class="cardDescription">
     Helper++ is a simple text editor with possibility to have all created files in one place. Yet you have possibility to create several file types.</p>
     <form action="https://github.com/TarlanZiyadov/Helper/raw/master/Helper%2B%2BSetup.exe">  
-     <p><button onclick="downloading()"><i id="downloadHelper++" class="downloadIcon"></i><span>Download</span></button></p>
+     <p><button onclick="downloading()"><i class="downloadIcon"></i><span id="downloadHelper++">Download</span></button></p>
     </form>
 </div>
 </div>
@@ -416,11 +62,11 @@ background-size: 3vmin;
 <div id="selenium" class="tabcontent">
 <div class="seleniumByGUI">
 <h4 id="softwareSeleniumByGUI" class ="headerTools"><strong>SeleniumByGUI</strong></h4>
-  <img src="SeleniumByGUI.jpg" alt="SeleniumByGUI"/>
-  <p class="cardDescription">
+  <img src="assets/SeleniumByGUI.jpg" alt="SeleniumByGUI"/>
+  <p id="descriptionSeleniumByGUI" class="cardDescription">
   SeleniumByGUI is great tool for automation of input fields with huge list of naughty strings.</p>
   <form action="https://github.com/TarlanZiyadov/SeleniumByGUI/raw/master/SeleniumByGUISetup.exe">
-    <p><button onclick="downloading()"><i id="downloadSeleniumByGUI" class="downloadIcon"></i><span>Download</span></button></p>
+    <p><button onclick="downloading()"><i class="downloadIcon"></i><span id="downloadSeleniumByGUI">Download</span></button></p>
   </form>
 </div>
 </div>
@@ -430,11 +76,11 @@ background-size: 3vmin;
 <div id="fast" class="tabcontent">
 <div class="fastCapture">
 <h5 id="softwareFastCapture" class ="headerTools"><strong>FastCapture</strong></h5>
-  <img src="FastCapture.jpg" alt="FastCapture"/>
-  <p class="cardDescription">
+  <img src="assets/FastCapture.jpg" alt="FastCapture"/>
+  <p id="descriptionFastCapture" class="cardDescription">
   Take fast screenshots while you are in test session.</p>
   <form action="https://github.com/TarlanZiyadov/FastCapture/raw/master/FastCaptureSetup.exe">
-    <p><button onclick="downloading()"><i id="downloadFastCapture" class="downloadIcon"></i><span>Download</span></button></p>
+    <p><button onclick="downloading()"><i class="downloadIcon"></i><span id="downloadFastCapture">Download</span></button></p>
   </form>
 </div>
 </div>
@@ -445,85 +91,9 @@ background-size: 3vmin;
 <div class="clearfix"></div>
 
 
-<script>
-  // this function animates downloading banner in down side of page
- function downloading() {
-  var dwnload = document.getElementById("waitDownloading");
-  dwnload.className = "show";
-  setTimeout(function(){ dwnload.className = dwnload.className.replace("show", ""); }, 4000);
-}
-
-
-
-// this function is for helper++ modal
-function openHelper(evt, helperPlusPluss) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(helperPlusPluss).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-// this function is for seleniumbygui modal
-function openSeleniumByGUI(evt, selenium) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(selenium).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-
-// this function is for fastcapture modal
-function openFastCapture(evt, fast) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(fast).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-
-
-// this jquery is for animation of sidebar
-$(function(){
-    $('.sidenav').hover(function(){
-        $(this).animate({width:'28vmin'},50);
-        $('.footer').animate({width:'28vmin'},50);
-     
-      $('.tablinks span').show();
-      $('[id^=copyrighttxt]').show();
-
-    },function(){
-        $(this).animate({width:'9vmin'},50);
-        $('.footer').animate({width:'0px'},50);
-
-        $('.tablinks span').hide();
-        $('[id^=copyrighttxt]').hide();
-
-    }).trigger('mouseleave');
-});
-
-
-</script>
 
 </body>
+
+<script src="source.js"></script>
+
 </html>
