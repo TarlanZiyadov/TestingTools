@@ -89,9 +89,7 @@
   }
   
 
-  
-  
-  // this jquery is for animation of sidebar
+ // this jquery is for animation of sidebar
   $(function(){
       $('.sidenav').hover(function(){
           $(this).animate({width:'28vmin'},50);
