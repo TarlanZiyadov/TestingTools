@@ -260,6 +260,7 @@ img {
   height: 100vh;
   display: none;
   position: absolute;
+  margin-bottom: 15vmin;
 }
 
 /* Clear floats after the tab */
