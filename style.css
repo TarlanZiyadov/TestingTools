@@ -3,10 +3,11 @@
 body {
   font-family: 'Times New Roman', Times, serif;
   margin: auto;
-  font-size: 3vmin; 
+  font-size: 2vmin; 
   background-image: url('assets/backgroundMainPage.jpg'); 
   height: 100%;
   width: 100%;
+  color: black;
 }
 
 .sidenav {
@@ -213,6 +214,7 @@ img {
   color:black;
   font-size:4vmin;
   text-align: center;
+  text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
 }
 
 /* Here starts animation for download*/
@@ -284,94 +286,86 @@ img {
 
 
 .homeIcon{
-
   background: url('assets/home.png');
   background-size: 3vmin;
-    height: 3vmin;
-    width: 3vmin;
-    display: block;
-    position: absolute;
+  height: 3vmin;
+  width: 3vmin;
+  display: block;
+  position: absolute;
 }
 
 
 .fileIcon{
-
 background: url('assets/file.png');
 background-size: 3vmin;
-  height: 3vmin;
-  width: 3vmin;
-  display: block;
-  position: absolute;
+height: 3vmin;
+width: 3vmin;
+display: block;
+position: absolute;
 }
 
 .infoIcon{
-
 background: url('assets/information.png');
 background-size: 3vmin;
-  height: 3vmin;
-  width: 3vmin;
-  display: block;
-  position: absolute;
+height: 3vmin;
+width: 3vmin;
+display: block;
+position: absolute;
 }
 
 
 .helpIcon{
-
-    background: url('assets/help.png');
-    background-size: 3vmin;
-      height: 3vmin;
-      width: 3vmin;
-      display: block;
-      position: absolute;
-    }
+background: url('assets/help.png');
+background-size: 3vmin;
+height: 3vmin;
+width: 3vmin;
+display: block;
+position: absolute;
+}
 
 
 
 .downloadIcon{
-
 background: url('assets/download.png');
 background-size: 3vmin;
-  height: 3vmin;
-  width: 3vmin;
-  display: block;
-  position: absolute;
+height: 3vmin;
+width: 3vmin;
+display: block;
+position: absolute;
 }
 
 
 
 .contactIcon{
-
-    background: url('assets/contact.png');
-    background-size: 3vmin;
-      height: 3vmin;
-      width: 3vmin;
-      display: block;
-      position: absolute;
-    }
+background: url('assets/contact.png');
+background-size: 3vmin;
+height: 3vmin;
+width: 3vmin;
+display: block;
+position: absolute;
+}
 
 
 
 
 .linkedinIcon{
-
-    background: url('assets/linkedin.png');
-    background-size: 3vmin;
-        height: 3vmin;
-        width: 3vmin;
-        display: block;
-        position: absolute;
-    }
+background: url('assets/linkedin.png');
+background-size: 3vmin;
+height: 3vmin;
+width: 3vmin;
+display: block;
+position: absolute;
+}
 
 
 
 .downloadingIcon{
-
 background: url('assets/downloading.png');
 background-size: 3vmin;
-  height: 3vmin;
-  width: 3vmin;
-  display: inline-block;
-  position: relative;
-  top: 1vmin;
-  margin-right: 2vmin;
+height: 3vmin;
+width: 3vmin;
+display: inline-block;
+position: relative;
+top: 1vmin;
+margin-right: 2vmin;
 }
