@@ -8,7 +8,7 @@
   
   
   
-  // this function is for helper++ modal
+  // this function is for helper++ card
   function openHelper(evt, helperPlusPluss) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -23,7 +23,7 @@
     evt.currentTarget.className += " active";
   }
   
-  // this function is for seleniumbygui modal
+  // this function is for seleniumbygui card
   function openSeleniumByGUI(evt, selenium) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -39,7 +39,7 @@
   }
   
   
-  // this function is for fastcapture modal
+  // this function is for fastcapture card
   function openFastCapture(evt, fast) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -56,8 +56,8 @@
   
 
   
-  // this function is for about modal
-  function about(evt, aboutCreater) {
+  // this function is for about card
+  function openAbout(evt, aboutCreater) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -68,6 +68,23 @@
       tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
     document.getElementById(aboutCreater).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  
+
+  
+  // this function is for help card
+  function openHelp(evt, helpCard) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(helpCard).style.display = "block";
     evt.currentTarget.className += " active";
   }
   

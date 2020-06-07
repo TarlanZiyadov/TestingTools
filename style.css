@@ -119,6 +119,15 @@ img {
     font-family: arial;
   }
 
+  
+.helpToUser {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 25vmax;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+
 
 .helper button {
   border: none;
@@ -189,6 +198,7 @@ img {
   }
   
 
+
 .cardDescription {
   display: block;
   font-size:2vmin;
@@ -213,13 +223,14 @@ img {
   background-color: #333;
   color: #fff;
   text-align: center;
-  border-radius: 1vmax;
+  border-radius: 3vmax;
   padding: 1vmin;
   position: fixed;
   z-index: 1;
   left: 50%;
   bottom: 30px;
   font-size: 2vmin;
+  text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
 }
 
 #waitDownloading.show {
@@ -337,6 +348,20 @@ background-size: 3vmin;
       display: block;
       position: absolute;
     }
+
+
+
+
+.linkedinIcon{
+
+    background: url('assets/linkedin.png');
+    background-size: 3vmin;
+        height: 3vmin;
+        width: 3vmin;
+        display: block;
+        position: absolute;
+    }
+
 
 
 .downloadingIcon{
