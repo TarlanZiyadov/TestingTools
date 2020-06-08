@@ -50,6 +50,7 @@ body {
 }
 
 .footer{
+  clear: both;
   position: relative;
   left: 0;
   bottom: 0;
@@ -58,12 +59,12 @@ body {
   color: white;
   height: 20vmin;
   font-size: 2vmin;
-  top: 130vmin;
+  bottom: -160vmin;
 }
 
 .footerImage{
   position: relative;
-  top: 145vmin;
+  bottom: -175vmin;
   right: 50%;
   left: 50%;
   z-index: 10;
