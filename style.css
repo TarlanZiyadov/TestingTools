@@ -66,7 +66,7 @@ body {
   left: unset;
   position: absolute;
   top: 155vmin;
-  right: 46vmax;
+  right: 45%;
   z-index: 10;
   width: 10vmin;
   height: 10vmin;
