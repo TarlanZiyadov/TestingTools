@@ -62,10 +62,8 @@ body {
 }
 
 .footerImage{
-  top: unset;
-  left: unset;
-  position: absolute;
-  top: 155vmin;
+  position: relative;
+  top: 145vmin;
   right: 50%;
   left: 50%;
   z-index: 10;
