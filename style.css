@@ -1,5 +1,9 @@
 
 * {box-sizing: border-box}
+*:before,
+*:after {
+ box-sizing: border-box;
+}
 body {
   font-family: 'Times New Roman', Times, serif;
   margin: auto;
@@ -8,6 +12,7 @@ body {
   height: 100%;
   width: 100%;
   color: black;
+  position: relative;
 }
 
 .sidenav {
@@ -50,10 +55,8 @@ body {
 }
 
 .footer{
-  clear: both;
   position: relative;
   left: 0;
-  bottom: 0;
   width: 100%;
   background-color:#585757;
   color: white;
@@ -73,7 +76,8 @@ body {
 }
 
 img {
-   	max-width: 100%;
+     max-width: 100%;
+     max-height: 100%;
 	}
 
 /* width */
@@ -275,15 +279,13 @@ img {
 
 /* Style the tab content */
 .tabcontent {
-  float: left;
+  float: center;
   padding: 0px 12px;
   border: 0px solid #ccc;
-  width: 100vw;
   border-left: none;
-  height: 100vh;
   display: none;
-  position: absolute;
-  margin-bottom: 15vmin;
+  position: relative;
+  margin-top: 5vmin;
 }
 
 /* Clear floats after the tab */
