@@ -3,7 +3,7 @@
  function downloading() {
     var dwnload = document.getElementById("waitDownloading");
     dwnload.className = "show";
-    setTimeout(function(){ dwnload.className = dwnload.className.replace("show", ""); }, 4000);
+    setTimeout(function(){ dwnload.className = dwnload.className.replace("show", ""); }, 1000);
   }
   
   
