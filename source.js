@@ -101,3 +101,15 @@
   
       }).trigger('mouseleave');
   });
+
+  // This function is for footer css
+  $(function () { 
+  $('#footerMainPage').css("position", "fixed");
+  $('#footerMainPage').css("bottom", "0");   
+});
+
+// This function is for footer image css
+$(function () { 
+  $('#footerImg').css("position", "fixed");
+  $('#footerImg').css("bottom", "-2vmin");   
+});

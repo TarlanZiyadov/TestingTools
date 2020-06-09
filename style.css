@@ -43,28 +43,22 @@ body {
 }
 
 
-.main {
-  margin-bottom: 180vmin;
-}
-
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 4vmin;}
 }
 
 .footer{
-  position: relative;
   left: 0;
   right: 0;
   width: 100%;
   background-color:#585757;
   color: white;
-  height: 15vmin;
+  height: 12vmin;
   font-size: 2vmin;
 }
 
 .footerImage{
-  position: relative;
   right: 50%;
   left: 50%;
   z-index: 10;
@@ -287,8 +281,6 @@ img {
   position: relative;
   width: 100%;
   height: 100%;
-  margin-top: -150vmin;
-  margin-bottom: 50vmin;
 }
 
 /* Clear floats after the tab */
