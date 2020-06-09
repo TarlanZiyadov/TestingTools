@@ -44,7 +44,7 @@ body {
 
 
 .main {
-  margin-bottom: 100vmin;
+  margin-bottom: 180vmin;
 }
 
 @media screen and (max-height: 450px) {
@@ -287,8 +287,8 @@ img {
   position: relative;
   width: 100%;
   height: 100%;
-  margin-top: -90vmin;
-
+  margin-top: -150vmin;
+  margin-bottom: 50vmin;
 }
 
 /* Clear floats after the tab */
