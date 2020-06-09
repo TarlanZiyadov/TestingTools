@@ -152,6 +152,7 @@ img {
   font-size: 2vmin;
   border-radius: 3vmax;
   margin-bottom: 1vmin;
+  border: 3px solid rgb(112, 112, 112);
 }
 
 .helper button:hover {
@@ -172,6 +173,7 @@ img {
   font-size: 2vmin;
   border-radius: 3vmax;
   margin-bottom: 1vmin;
+  border: 3px solid rgb(112, 112, 112);
 }
 
 .seleniumByGUI button:hover {
@@ -192,6 +194,7 @@ img {
   font-size: 2vmin;
   border-radius: 3vmax;
   margin-bottom: 1vmin;
+  border: 3px solid rgb(112, 112, 112);
 }
 
 .fastCapture button:hover {
@@ -210,6 +213,7 @@ img {
     font-size: 2vmin;
     border-radius: 3vmax;
     margin-bottom: 1vmin;
+    border: 3px solid rgb(112, 112, 112);
   }
   
   .aboutDeveloper button:hover {
