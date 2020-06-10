@@ -94,7 +94,7 @@ img {
 .helper {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 60vmax;
-  max-height: 120vmax;
+  max-height: 50vmax;
   margin: auto;
   text-align: center;
   font-family: arial;
@@ -148,7 +148,7 @@ img {
   background-color: #3f3f3f;
   text-align: center;
   cursor: pointer;
-  width: 20%;
+  width: 30%;
   font-size: 2vmin;
   border-radius: 3vmax;
   margin-bottom: 1vmin;
@@ -169,7 +169,7 @@ img {
   background-color: #3f3f3f;
   text-align: center;
   cursor: pointer;
-  width: 20%;
+  width: 30%;
   font-size: 2vmin;
   border-radius: 3vmax;
   margin-bottom: 1vmin;
@@ -190,7 +190,7 @@ img {
   background-color: #3f3f3f;
   text-align: center;
   cursor: pointer;
-  width: 20%;
+  width: 30%;
   font-size: 2vmin;
   border-radius: 3vmax;
   margin-bottom: 1vmin;
@@ -209,7 +209,7 @@ img {
     background-color: #3f3f3f;
     text-align: center;
     cursor: pointer;
-    width: 20%;
+    width: 30%;
     font-size: 2vmin;
     border-radius: 3vmax;
     margin-bottom: 1vmin;
