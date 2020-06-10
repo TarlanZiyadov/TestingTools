@@ -1,7 +1,7 @@
  
  // this function animates downloading banner in down side of page
  function downloading() {
-    var dwnload = document.getElementById("waitDownloading");
+    let dwnload = document.getElementById("waitDownloading");
     dwnload.className = "show";
     setTimeout(function(){ dwnload.className = dwnload.className.replace("show", ""); }, 2000);
   }
@@ -10,7 +10,7 @@
   
   // this function is for helper++ card
   function openHelper(evt, helperPlusPluss) {
-    var i, tabcontent, tablinks;
+    let i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
@@ -25,7 +25,7 @@
   
   // this function is for seleniumbygui card
   function openSeleniumByGUI(evt, selenium) {
-    var i, tabcontent, tablinks;
+    let i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
@@ -41,7 +41,7 @@
   
   // this function is for fastcapture card
   function openFastCapture(evt, fast) {
-    var i, tabcontent, tablinks;
+    let i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
@@ -58,7 +58,7 @@
   
   // this function is for about card
   function openAbout(evt, aboutCreater) {
-    var i, tabcontent, tablinks;
+    let i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
@@ -75,7 +75,7 @@
   
   // this function is for help card
   function openHelp(evt, helpCard) {
-    var i, tabcontent, tablinks;
+    let i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
