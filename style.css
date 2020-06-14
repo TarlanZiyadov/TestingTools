@@ -365,6 +365,28 @@ display: block;
 position: absolute;
 }
 
+.githubIcon{
+  background: url('assets/github.png');
+  background-size: 3vmin;
+  height: 3vmin;
+  width: 3vmin;
+  display: block;
+  position: absolute;
+  border-radius: 2vmin;
+  }
+  
+  
+
+.externalIcon{
+  background: url('assets/externalButton.png');
+  background-size: 3vmin;
+  height: 3vmin;
+  width: 3vmin;
+  display: block;
+  position: absolute;
+  border-radius: 1vmin;
+  }
+  
 
 
 

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Software for testing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" />
+<meta http-equiv="Cache-control" content="public, max-age=60000">
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="jquery.js"><\/script>')</script>
+
+<!-- Here is css linked to file -->
+<link rel="stylesheet" href="style.css">
+</head>
+<!-- This webpage was developed by Tarlan Ziyadov © but feel free to use part of the source code with changes only for your project! -->
+<body>
+
+  <!-- Navigation bar -->
+<div id="navbar" class="sidenav">
+  <strong><a class="tablinks" href="http://softwarefortesting.com" style="font-size:2vmin;"><i id="back" class="backIcon"></i><span style="padding-left: 5vmin;"> Back</span></a></strong>
+  <strong><a class="tablinks" onmouseover="openJmeter(event,'jmeter')" style="font-size:2vmin;"><i id="readJmeter" class="fileIcon"></i><span style="padding-left: 5vmin"> Jmeter</span></a></strong> 
+  <strong><a class="tablinks" onmouseover="openMemreduct(event,'memreduct')" style="font-size:2vmin;"><i id="readMemreduct" class="fileIcon"></i><span style="padding-left: 5vmin"> Memreduct</span></a></strong> 
+  <strong><a class="tablinks" onmouseover="openMemtest(event,'memtest')" style="font-size:2vmin;"><i id="readMemtest" class="fileIcon"></i><span style="padding-left: 5vmin"> Memtest</span></a></strong> 
+  <strong><a class="tablinks" onmouseover="openRapidReporter(event,'rapidReporter')" style="font-size:2vmin;"><i id="readRapidReporter" class="fileIcon"></i><span style="padding-left: 5vmin"> Rapid Reporter</span></a></strong>
+  <strong><a class="tablinks" onmouseover="openWireshark(event,'wireshark')" style="font-size:2vmin;"><i id="readwireshark" class="fileIcon"></i><span style="padding-left: 5vmin"> Wireshark</span></a></strong>
+  <strong><a class="tablinks" onmouseover="openFiddler(event,'fiddler')" style="font-size:2vmin;"><i id="readFiddler" class="fileIcon"></i><span style="padding-left: 5vmin"> Fiddler</span></a></strong>
+  <strong><a class="tablinks" onmouseover="openCypress(event,'cypress')" style="font-size:2vmin;"><i id="readCypress" class="fileIcon"></i><span style="padding-left: 5vmin"> Cypress io</span></a></strong>
+  <strong><a class="tablinks" onmouseover="openSelenium(event,'selenium')" style="font-size:2vmin;"><i id="readSelenium" class="fileIcon"></i><span style="padding-left: 5vmin"> Selenium WebDriver</span></a></strong>
+  <strong><a class="tablinks" onmouseover="openXmind(event,'xmind')" style="font-size:2vmin;"><i id="readXmind" class="fileIcon"></i><span style="padding-left: 5vmin"> Xmind</span></a></strong>
+</div>
+
+
+
+
+<!-- External test tool home page -->
+<div>
+  <h2 id="documentTxt" class="headerPage"><strong>Test tools to gain more skills as a tester!</strong></h2>
+    <p id="frontPagetxt" style="padding-left: 10vmin; text-align: center;"><em><strong>
+     This page contains test tools which could be usefull for every tester in need. The list based only by known tools but if there som more I am missing which I have of 
+     course please let me know by sending your feedback!
+       </strong>  
+  </em></p> 
+</div>
+
+
+
+<!--  Jmeter page -->
+<div id="jmeter" class="tabcontent">
+<div class="jmeter">
+<h3 id="softwareJmeter" class ="headerTools"><strong>Jmeter</strong></h3>
+  <img src="assets/Jmeter.jpeg" style="width: 90vmin;height: 50vmin;" alt="Jmeter"/>
+ <p id="descriptionJmeter" class="cardDescription">
+   Description here</p>
+</div>
+</div>
+
+<!--  Memreduct page -->
+<div id="memreduct" class="tabcontent">
+  <div class="memreduct">
+  <h3 id="softwareMemreduct" class ="headerTools"><strong>Memreduct</strong></h3>
+    <img src="assets/Memreduct.jpeg" style="width: 30vmin;height: 45vmin;" alt="Memreduct"/>
+   <p id="descriptionMemreduct" class="cardDescription">
+     Description here</p>
+  </div>
+  </div>
+  
+
+
+<!--  Memtest page -->
+<div id="memtest" class="tabcontent">
+  <div class="memtest">
+  <h3 id="softwareMemtest" class ="headerTools"><strong>Memtest</strong></h3>
+    <img src="assets/Memtest.jpeg" style="width: 20vmin;height: 30vmin;" alt="Memtest"/>
+   <p id="descriptionMemtest" class="cardDescription">
+     Description here</p>
+  </div>
+  </div>
+
+
+  <!--  Rapid reporter page -->
+<div id="rapidReporter" class="tabcontent">
+  <div class="rapidReporter">
+  <h3 id="softwareRapidReporter" class ="headerTools"><strong>Rapid Reporter</strong></h3>
+    <img src="assets/RapidReporter.jpeg" style="width: 90vmin;height: 8vmin;" alt="RapidReporter"/>
+   <p id="descriptionRapidReporter" class="cardDescription">
+     Description here</p>
+  </div>
+  </div>
+  
+
+  <!--  Wireshark page -->
+<div id="wireshark" class="tabcontent">
+  <div class="wireshark">
+  <h3 id="softwareWireshark" class ="headerTools"><strong>Wireshark</strong></h3>
+    <img src="assets/Wireshark.jpeg" style="width: 70vmin;height: 50vmin;" alt="Wireshark"/>
+   <p id="descriptionWireshark" class="cardDescription">
+     Description here</p>
+  </div>
+  </div>
+  
+
+<!--  Fiddler page -->
+<div id="fiddler" class="tabcontent">
+  <div class="fiddler">
+  <h3 id="softwareFiddler" class ="headerTools"><strong>Fiddler</strong></h3>
+    <img src="assets/Fiddler.jpeg" style="width: 70vmin;height: 50vmin;" alt="Fiddler"/>
+   <p id="descriptionFiddler" class="cardDescription">
+     Description here</p>
+  </div>
+  </div>
+  
+
+<!--  Cypress page -->
+<div id="cypress" class="tabcontent">
+  <div class="cypress">
+  <h3 id="softwareCypressio" class ="headerTools"><strong>Cypress io</strong></h3>
+    <img src="assets/Cypressio.jpeg" style="width: 90vmin;height: 50vmin;" alt="Cypressio"><span style="text-align: center; font-size: 1vmin; display: block;">Picture source : https://www.cypress.io/</span></img>
+   <p id="descriptionCypressio" class="cardDescription">
+     Description here</p>
+  </div>
+  </div>
+  
+  <!--  Selenium WebDriver page -->
+<div id="selenium" class="tabcontent">
+  <div class="selenium">
+  <h3 id="softwareSelenium" class ="headerTools"><strong>Selenium WebDriver</strong></h3>
+    <img src="assets/SeleniumWebDriver.jpeg" style="width: 90vmin;height: 50vmin;" alt="SeleniumWebDriver"><span style="text-align: center; font-size: 1vmin; display: block;">Picture source : https://www.siteforinfotech.com/selenium-webdriver-commands-automated-testing/</span></img>
+   <p id="descriptionSeleniumWebDriver" class="cardDescription">
+     Description here</p>
+  </div>
+  </div>
+  
+
+
+
+<!--  Xmind page -->
+<div id="xmind" class="tabcontent">
+  <div class="xmind">
+  <h3 id="softwareXmind" class ="headerTools"><strong>Xmind</strong></h3>
+    <img src="assets/Xmind.jpeg" style="width: 80vmin;height: 50vmin;" alt="Xmind"/>
+   <p id="descriptionXmind" class="cardDescription">
+     Description here</p>
+  </div>
+  </div>  
+
+
+<!-- Footer -->
+<div id="footerMainPage" class="footer">
+    <p style="padding-top: 0vmin;text-align: left;padding-left: 15vmin;"> 
+      <a id="feedbackMail"  href="mailto:helperplusplus@gmail.com" style="cursor: pointer;"><span style="color: cornflowerblue;">Send your feedback</span></a>
+   </p>
+    <p style="padding-top: 0vmin;text-align: left;padding-left: 15vmin;">
+      <a id="copyrighttxt"><span>2020 © Tarlan Ziyadov</span></a> 
+      <br>
+      <a id="country"><span>Sweden</span></a>
+      </br>
+    </p>
+  </div>
+
+
+
+
+<!-- Main page icon -->
+<div>
+  <p id="footerImg" class="footerImage">
+    <img src="assets/web.png" alt="Web"/>
+  </p>
+ </div>
+
+
+
+</body>
+
+<script src="source.js"></script>
+
+</html>
