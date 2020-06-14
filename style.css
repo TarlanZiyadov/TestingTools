@@ -305,13 +305,14 @@ img {
 
 
 
-.homeIcon{
-  background: url('assets/home.png');
+.refreshIcon{
+  background: url('assets/refresh.png');
   background-size: 3vmin;
   height: 3vmin;
   width: 3vmin;
   display: block;
   position: absolute;
+  border-radius: 1vmin;
 }
 
 
