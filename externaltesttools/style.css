@@ -453,3 +453,13 @@ border-radius: 2vmin;
   display: block;
   position: absolute;
 }
+
+
+.hoverOnIcon{
+  background: url('assets/hoverLeft.png');
+  background-size: 5vmin;
+  height: 5vmin;
+  width: 5vmin;
+  display: block;
+  position: absolute;
+}
