@@ -110,7 +110,7 @@ img {
   background-color: #3f3f3f;
   text-align: center;
   cursor: pointer;
-  width: 30%;
+  width: 50%;
   font-size: 2vmin;
   border-radius: 3vmax;
   margin-bottom: 1vmin;
@@ -142,7 +142,7 @@ img {
   background-color: #3f3f3f;
   text-align: center;
   cursor: pointer;
-  width: 30%;
+  width: 50%;
   font-size: 2vmin;
   border-radius: 3vmax;
   margin-bottom: 1vmin;
@@ -174,7 +174,7 @@ img {
   background-color: #3f3f3f;
   text-align: center;
   cursor: pointer;
-  width: 30%;
+  width: 50%;
   font-size: 2vmin;
   border-radius: 3vmax;
   margin-bottom: 1vmin;
@@ -207,7 +207,7 @@ img {
   background-color: #3f3f3f;
   text-align: center;
   cursor: pointer;
-  width: 30%;
+  width: 50%;
   font-size: 2vmin;
   border-radius: 3vmax;
   margin-bottom: 1vmin;
@@ -239,7 +239,7 @@ img {
   background-color: #3f3f3f;
   text-align: center;
   cursor: pointer;
-  width: 30%;
+  width: 50%;
   font-size: 2vmin;
   border-radius: 3vmax;
   margin-bottom: 1vmin;
@@ -271,7 +271,7 @@ img {
   background-color: #3f3f3f;
   text-align: center;
   cursor: pointer;
-  width: 30%;
+  width: 50%;
   font-size: 2vmin;
   border-radius: 3vmax;
   margin-bottom: 1vmin;
@@ -304,7 +304,7 @@ img {
   background-color: #3f3f3f;
   text-align: center;
   cursor: pointer;
-  width: 30%;
+  width: 50%;
   font-size: 2vmin;
   border-radius: 3vmax;
   margin-bottom: 1vmin;
@@ -337,7 +337,7 @@ img {
   background-color: #3f3f3f;
   text-align: center;
   cursor: pointer;
-  width: 30%;
+  width: 50%;
   font-size: 2vmin;
   border-radius: 3vmax;
   margin-bottom: 1vmin;
@@ -361,7 +361,6 @@ img {
 }
 
 
-
 .xmind button {
   border: none;
   outline: 0;
@@ -370,7 +369,7 @@ img {
   background-color: #3f3f3f;
   text-align: center;
   cursor: pointer;
-  width: 30%;
+  width: 50%;
   font-size: 2vmin;
   border-radius: 3vmax;
   margin-bottom: 1vmin;
@@ -411,7 +410,7 @@ img {
   position: relative;
   width: 100%;
   height: 110%;
-  margin-bottom: 10vmin;
+  margin-bottom: 30vmin;
 }
 
 /* Clear floats after the tab */
@@ -462,4 +461,14 @@ border-radius: 2vmin;
   width: 5vmin;
   display: block;
   position: absolute;
+}
+
+ul {
+  background: #7b92a7;
+  padding: 3vmin;
+  list-style-type: square;
+}
+
+li {
+  text-align: left;
 }
