@@ -184,7 +184,7 @@ function load() {
     if (file.readyState === 4) {  // Makes sure the document is ready to parse
       if (file.status === 200) {  // Makes sure it's found the file
         text = file.responseText;
-        document.getElementById("div1descriptionJmeter").innerHTML = text;
+        document.getElementById("descriptionJmeter").innerHTML = text;
       }
     }
   }
