@@ -408,9 +408,10 @@ img {
   border-left: none;
   display: none;
   position: relative;
-  width: 100%;
+  width: 80%;
   height: 125%;
   margin-bottom: 10vmin;
+  margin-left: 15vmin;
 }
 
 /* Clear floats after the tab */
