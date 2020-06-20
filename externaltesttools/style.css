@@ -381,6 +381,36 @@ img {
 }
 
 
+.testingchallange {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-height: 120vmax;
+  width: 130vmin;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+
+.testingchallange button {
+  border: none;
+  outline: 0;
+  padding: 1vmin;
+  color: white;
+  background-color: #3f3f3f;
+  text-align: center;
+  cursor: pointer;
+  width: 55%;
+  font-size: 2vmin;
+  border-radius: 3vmax;
+  margin-bottom: 1vmin;
+  border: 3px solid rgb(112, 112, 112);
+}
+
+.testingchallange button:hover {
+  opacity: 0.9;
+}
+
+
 
 .cardDescription {
   display: block;
@@ -434,16 +464,35 @@ img {
 
 
 .fileIcon{
-background: url('assets/file.png');
-background-size: 3vmin;
-height: 3vmin;
-width: 3vmin;
-display: block;
-position: absolute;
-border-radius: 2vmin;
+  background: url('assets/software.png');
+  background-size: 3vmin;
+  height: 3vmin;
+  width: 3vmin;
+  display: block;
+  position: absolute;
 }
 
 
+.iframeIcon{
+  background: url('assets/iframe.png');
+  background-size: 3vmin;
+  height: 3vmin;
+  width: 3vmin;
+  display: block;
+  position: absolute;
+}
+
+
+.externalFileIcon{
+  background: url('assets/externalLink.png');
+  background-size: 3vmin;
+  height: 3vmin;
+  width: 3vmin;
+  display: block;
+  position: absolute;
+  border-radius: 2vmin;
+}
+    
 
 .webIcon{
   background: url('assets/web.png');
@@ -473,4 +522,13 @@ ul {
 li {
   text-align: left;
   padding-left: 1vmin;
+}
+
+.resp-iframe {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100vmin;
+  width: 130vmin;
+  border: 0;
 }
