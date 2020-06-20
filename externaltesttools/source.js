@@ -5,6 +5,9 @@
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
+      if(i!=9){
+        $('body').css("width", "100vw"); //Here we change the body width back to origin same same on other functions except testingchallange
+      }
     }
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
@@ -21,6 +24,9 @@
     for (i = 0; i < tabcontent.length; i++) {
       if(i==0){
         tabcontent[i].style.display = "block";
+        if(i!=9){
+          $('body').css("width", "100vw");
+        }
       }
     }
   }
@@ -32,6 +38,9 @@ function openMemreduct(evt, memreduct) {
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
+    if(i!=9){
+      $('body').css("width", "100vw");
+    }
   }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
@@ -49,6 +58,9 @@ function openMemtest(evt, memtest) {
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
+    if(i!=9){
+      $('body').css("width", "100vw");
+    }
   }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
@@ -66,6 +78,9 @@ function openRapidReporter(evt, rapidReporter) {
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
+    if(i!=9){
+      $('body').css("width", "100vw");
+    }
   }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
@@ -84,6 +99,9 @@ function openWireshark(evt, wireshark) {
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
+    if(i!=9){
+      $('body').css("width", "100vw");
+    }
   }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
@@ -101,6 +119,9 @@ function openFiddler(evt, fiddler) {
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
+    if(i!=9){
+      $('body').css("width", "100vw");
+    }
   }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
@@ -117,6 +138,9 @@ function openCypress(evt, cypress) {
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
+    if(i!=9){
+      $('body').css("width", "100vw");
+    }
   }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
@@ -134,6 +158,9 @@ function openSelenium(evt, selenium) {
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
+    if(i!=9){
+      $('body').css("width", "100vw");
+    }
   }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
@@ -150,6 +177,9 @@ function openXmind(evt, xmind) {
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
+    if(i!=9){
+      $('body').css("width", "100vw");
+    }
   }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
@@ -165,6 +195,9 @@ function openTestingchallange(evt, testingchallange) {
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
+    if(i==9){
+      $('body').css("width", "150vw"); // Here we change body width to fit the iframe size
+    }
   }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
