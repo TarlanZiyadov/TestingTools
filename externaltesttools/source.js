@@ -14,6 +14,17 @@
     evt.currentTarget.className += " active";
   }
   
+  // Here we show the first card on load always 
+  window.onload =function(){
+    let i, tabcontent;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      if(i==0){
+        tabcontent[i].style.display = "block";
+      }
+    }
+  }
+
 
 // this function is for Memreduct card
 function openMemreduct(evt, memreduct) {
