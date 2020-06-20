@@ -196,7 +196,7 @@ function openTestingchallange(evt, testingchallange) {
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
     if(i==9){
-      $('body').css("width", "150vw"); // Here we change body width to fit the iframe size
+      $('body').css("width", "152vw"); // Here we change body width to fit the iframe size
     }
   }
   tablinks = document.getElementsByClassName("tablinks");
