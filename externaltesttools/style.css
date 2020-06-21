@@ -394,6 +394,7 @@ img {
 .cardDescription {
   display: block;
   font-size:2vmin;
+  color: black;
 }
 
 .headerTools{
@@ -472,6 +473,16 @@ img {
   border-radius: 2vmin;
 }
     
+
+.externalLinkWebIcon{
+  background: url('assets/externalLinkWebPage.png');
+  background-size: 2vmin;
+  height: 2vmin;
+  width: 2vmin;
+  display: block;
+  position: absolute;
+  margin-left: 30vmin;
+}
 
 .webIcon{
   background: url('assets/web.png');
