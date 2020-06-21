@@ -391,27 +391,6 @@ img {
 }
 
 
-.testingchallange button {
-  border: none;
-  outline: 0;
-  padding: 1vmin;
-  color: white;
-  background-color: #3f3f3f;
-  text-align: center;
-  cursor: pointer;
-  width: 55%;
-  font-size: 2vmin;
-  border-radius: 3vmax;
-  margin-bottom: 1vmin;
-  border: 3px solid rgb(112, 112, 112);
-}
-
-.testingchallange button:hover {
-  opacity: 0.9;
-}
-
-
-
 .cardDescription {
   display: block;
   font-size:2vmin;
