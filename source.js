@@ -101,11 +101,11 @@
  // this jquery is for animation of sidebar
   $(function(){
       $('.sidenav').hover(function(){
-          $(this).animate({width:'28vmin'},150);
+          $(this).animate({width:'28vmin'},50);
         $('.tablinks span').show();
   
       },function(){
-          $(this).animate({width:'9vmin'},150);
+          $(this).animate({width:'9vmin'},50);
           $('.tablinks span').hide();
   
       }).trigger('mouseleave');
