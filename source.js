@@ -101,7 +101,7 @@
  // this jquery is for animation of sidebar
   $(function(){
       $('.sidenav').hover(function(){
-          $(this).animate({width:'28vmin'},50);
+          $(this).animate({width:'30vmin'},50);
         $('.tablinks span').show();
   
       },function(){
