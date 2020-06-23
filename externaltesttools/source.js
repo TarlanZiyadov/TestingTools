@@ -252,27 +252,8 @@ window.onload=function(){
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   
-    let databaseJmeter = firebase.database().ref().child('externaltesttools/jmeter');
     let databaseExternalTestToolsMain = firebase.database().ref().child('externaltesttools/mainpageText');
-   
-    databaseJmeter.child('descriptionFirst').on('value', function(snapshot) {
-    let descriptionFirst = snapshot.val();
-    let jmeterTextFirst = document.getElementById("descriptionJmeter");
-    jmeterTextFirst.textContent += descriptionFirst;
-    });
-
-    databaseJmeter.child('descriptionSecond').on('value', function(snapshot) {
-    let descriptionSecond = snapshot.val();
-    let jmeterTextSecond = document.getElementById("jemterFeature");
-    jmeterTextSecond.textContent += descriptionSecond;
-    });
-
-    databaseJmeter.child('listHeader').on('value', function(snapshot) {
-    let listHeader = snapshot.val();
-    let jmeterTextThird = document.getElementById("jmeterAbility");
-    jmeterTextThird.textContent += listHeader;
-    });
-
+  
     databaseExternalTestToolsMain.child('descriptionFirst').on('value', function(snapshot) {
     let descriptionFirst = snapshot.val();
     let mainTextFirst = document.getElementById("frontPagetxt");
