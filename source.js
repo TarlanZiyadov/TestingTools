@@ -6,17 +6,7 @@
     setTimeout(function(){ dwnload.className = dwnload.className.replace("show", ""); }, 2000);
   }
   
-   // Here we show the first card on load always 
-   window.onload =function(){
-    let i, tabcontent;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      if(i==0){
-        tabcontent[i].style.display = "block";
-      }
-    }
-  }
-  
+   
   // this function is for helper++ card
   function openHelper(evt, helperPlusPluss) {
     let i, tabcontent, tablinks;
@@ -129,3 +119,15 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'UA-169533728-1');
+
+
+// Here we show the first card on load always 
+window.onload =function(){
+  let i, tabcontent;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    if(i==0){
+      tabcontent[i].style.display = "block";
+    }
+  }
+}
