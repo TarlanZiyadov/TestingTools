@@ -226,7 +226,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'UA-169533728-1');
 
-window.onload=function(){
+document.addEventListener('DOMContentLoaded', function(e) {
 // Here we show the first card on load always 
   let i, tabcontent;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -238,4 +238,4 @@ window.onload=function(){
         }
       }
     }
-}
+},true);

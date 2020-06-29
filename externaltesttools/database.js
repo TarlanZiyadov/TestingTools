@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(e) {
+window.onload =function(){
     
         // Here we download content from database
       let firebaseConfig = {
@@ -13,12 +13,21 @@ document.addEventListener('DOMContentLoaded', function(e) {
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       
+      firebase.auth().signInAnonymously();
+
         let databaseExternalTestToolsMain = firebase.database().ref().child('externaltesttools/mainpageText');
       
-        databaseExternalTestToolsMain.child('descriptionFirst').on('value', function(snapshot) {
-        let descriptionFirst = snapshot.val();
-        let mainTextFirstID = document.getElementById("frontPagetxt");
-        mainTextFirstID.textContent += descriptionFirst;
-        });
+        firebase.auth().onAuthStateChanged(firebaseUser => {
+
+          if(firebaseUser)
     
-    }, true);
+            {         
+            databaseExternalTestToolsMain.child('descriptionFirst').on('value', function(snapshot) {
+            let descriptionFirst = snapshot.val();
+            let mainTextFirstID = document.getElementById("frontPagetxt");
+            mainTextFirstID.textContent += descriptionFirst;
+            });
+        }
+    })
+    
+}
