@@ -25,22 +25,21 @@ window.onload =function(){
       let databaseUsersSelenium = firebase.database().ref().child('selenium/users');
       let databaseUsersFastCapture = firebase.database().ref().child('fastCapture/users');
 
-      let databaseGetUserTokenHelper = firebase.database().ref().child('rate/helper');
-      let databaseGetUserTokenSelenium = firebase.database().ref().child('rate/selenium');
-      let databaseGetUserTokenFastCapture = firebase.database().ref().child('rate/fastCapture');
+      let databaseGetUserUidHelper = firebase.database().ref().child('rate/helper');
+      let databaseGetUserUidSelenium = firebase.database().ref().child('rate/selenium');
+      let databaseGetUserUidFastCapture = firebase.database().ref().child('rate/fastCapture');
 
       firebase.auth().onAuthStateChanged(firebaseUser => {
 
       if(firebaseUser)
 
         {         
-            const user = firebase.auth().currentUser;
-            let tokenUser=user.getIdToken();
+            const user = firebase.auth().currentUser;   
 
-            databaseGetUserTokenHelper.once('value', function(snapshotHelper) {
-              snapshotHelper.forEach(function(child) {
+            databaseGetUserUidHelper.once('value', function(snapshotHelperUid) {
+              snapshotHelperUid.forEach(function(child) {
                 
-                if(child.val()==tokenUser.i.substring(0,29)){
+                if(child.val()==user.uid){
 
                   $("#star1Helper").attr('disabled','disabled');
                   $("#star2Helper").attr('disabled','disabled');
@@ -51,10 +50,10 @@ window.onload =function(){
               });         
             })
 
-            databaseGetUserTokenSelenium.once('value', function(snapshotSelenium) {
-              snapshotSelenium.forEach(function(child) {
+            databaseGetUserUidSelenium.once('value', function(snapshotSeleniumUid) {
+              snapshotSeleniumUid.forEach(function(child) {
                 
-                if(child.val()==tokenUser.i.substring(0,29)){
+                if(child.val()==user.uid){
 
                   $("#star1Selenium").attr('disabled','disabled');
                   $("#star2Selenium").attr('disabled','disabled');
@@ -66,10 +65,10 @@ window.onload =function(){
             })
 
 
-            databaseGetUserTokenFastCapture.once('value', function(snapshotFastCApture) {
-              snapshotFastCApture.forEach(function(child) {
+            databaseGetUserUidFastCapture.once('value', function(snapshotFastCaptureUid) {
+              snapshotFastCaptureUid.forEach(function(child) {
                 
-                if(child.val()==tokenUser.i.substring(0,29)){
+                if(child.val()==user.uid){
 
                   $("#star1FastCapture").attr('disabled','disabled');
                   $("#star2FastCapture").attr('disabled','disabled');
@@ -333,7 +332,3 @@ databaseUsersFastCapture.child('countAllUsers').once('value', function(snapshotU
 })
 }
 
-// log out anonymous
-window.onbeforeunload = function(e)  {
-  firebase.auth().signOut();
-}

@@ -2,8 +2,7 @@
 document.getElementById('star5Helper').onclick = function() {
 
    const user = firebase.auth().currentUser;
-   let tokenUser=user.getIdToken();
-
+  
   document.getElementById("star1Helper").checked = false;
   document.getElementById("star2Helper").checked = false;
   document.getElementById("star3Helper").checked = false;
@@ -19,7 +18,7 @@ document.getElementById('star5Helper').onclick = function() {
 
   let databaseStarAdd = firebase.database().ref().child('helper/starcount');
   let databaseUserAdd = firebase.database().ref().child('helper/users');
-  let databaseAddUserToken = firebase.database().ref().child('rate/helper');
+  let databaseAddUserUid = firebase.database().ref().child('rate/helper');
 
   firebase.auth().onAuthStateChanged(firebaseUser => 
     {
@@ -28,11 +27,10 @@ document.getElementById('star5Helper').onclick = function() {
 
         {
           
-          let random=databaseAddUserToken.push();
+          let random=databaseAddUserUid.push();
           random.set(
-                tokenUser.i.substring(0,29));
-    
-        
+                user.uid);
+                
           databaseUserAdd.child('countAllUsers').once('value', function(snapshot) {
             let sum=1;
             let valueOfAllUsers = parseInt(snapshot.val());
@@ -141,7 +139,6 @@ document.getElementById('star5Helper').onclick = function() {
 document.getElementById('star4Helper').onclick = function() {
 
   const user = firebase.auth().currentUser;
-  let tokenUser=user.getIdToken();
 
      document.getElementById("star1Helper").checked = false;
      document.getElementById("star2Helper").checked = false;
@@ -158,17 +155,17 @@ document.getElementById('star4Helper').onclick = function() {
 
      let databaseStarAdd = firebase.database().ref().child('helper/starcount');
      let databaseUserAdd = firebase.database().ref().child('helper/users');
-     let databaseAddUserToken = firebase.database().ref().child('rate/helper');
-     
+     let databaseAddUserUid = firebase.database().ref().child('rate/helper');
+
      firebase.auth().onAuthStateChanged(firebaseUser => {
 
      if(firebaseUser)
 
       {
         
-        let random=databaseAddUserToken.push();
+        let random=databaseAddUserUid.push();
         random.set(
-              tokenUser.i.substring(0,29));
+              user.uid);
 
       
         databaseUserAdd.child('countAllUsers').once('value', function(snapshot) {
@@ -276,7 +273,6 @@ document.getElementById('star4Helper').onclick = function() {
   document.getElementById('star3Helper').onclick = function() {
   
   const user = firebase.auth().currentUser;
-  let tokenUser=user.getIdToken();
 
      document.getElementById("star1Helper").checked = false;
      document.getElementById("star2Helper").checked = false;
@@ -293,7 +289,7 @@ document.getElementById('star4Helper').onclick = function() {
 
      let databaseStarAdd = firebase.database().ref().child('helper/starcount');
      let databaseUserAdd = firebase.database().ref().child('helper/users');
-     let databaseAddUserToken = firebase.database().ref().child('rate/helper');
+     let databaseAddUserUid = firebase.database().ref().child('rate/helper');
 
      firebase.auth().onAuthStateChanged(firebaseUser => {
 
@@ -301,9 +297,9 @@ document.getElementById('star4Helper').onclick = function() {
 
       {
        
-        let random=databaseAddUserToken.push();
+        let random=databaseAddUserUid.push();
         random.set(
-              tokenUser.i.substring(0,29));
+              user.uid);
 
       
         databaseUserAdd.child('countAllUsers').once('value', function(snapshot) {
@@ -411,8 +407,7 @@ document.getElementById('star4Helper').onclick = function() {
   document.getElementById('star2Helper').onclick = function() {
   
     const user = firebase.auth().currentUser;
-    let tokenUser=user.getIdToken();
-  
+ 
        document.getElementById("star1Helper").checked = false;
        document.getElementById("star2Helper").checked = false;
        document.getElementById("star3Helper").checked = false;
@@ -428,7 +423,7 @@ document.getElementById('star4Helper').onclick = function() {
   
        let databaseStarAdd = firebase.database().ref().child('helper/starcount');
        let databaseUserAdd = firebase.database().ref().child('helper/users');
-       let databaseAddUserToken = firebase.database().ref().child('rate/helper');
+       let databaseAddUserUid = firebase.database().ref().child('rate/helper');
 
        firebase.auth().onAuthStateChanged(firebaseUser => {
   
@@ -436,9 +431,9 @@ document.getElementById('star4Helper').onclick = function() {
   
         {
          
-          let random=databaseAddUserToken.push();
+          let random=databaseAddUserUid.push();
           random.set(
-                tokenUser.i.substring(0,29));
+                user.uid);
   
         
           databaseUserAdd.child('countAllUsers').once('value', function(snapshot) {
@@ -547,7 +542,6 @@ document.getElementById('star4Helper').onclick = function() {
   document.getElementById('star1Helper').onclick = function() {
   
     const user = firebase.auth().currentUser;
-    let tokenUser=user.getIdToken();
   
        document.getElementById("star1Helper").checked = false;
        document.getElementById("star2Helper").checked = false;
@@ -564,7 +558,7 @@ document.getElementById('star4Helper').onclick = function() {
   
        let databaseStarAdd = firebase.database().ref().child('helper/starcount');
        let databaseUserAdd = firebase.database().ref().child('helper/users');
-       let databaseAddUserToken = firebase.database().ref().child('rate/helper');
+       let databaseAddUserUid = firebase.database().ref().child('rate/helper');
 
        firebase.auth().onAuthStateChanged(firebaseUser => {
   
@@ -572,9 +566,9 @@ document.getElementById('star4Helper').onclick = function() {
   
         {
          
-          let random=databaseAddUserToken.push();
+          let random=databaseAddUserUid.push();
           random.set(
-                tokenUser.i.substring(0,29));
+                user.uid);
   
         
           databaseUserAdd.child('countAllUsers').once('value', function(snapshot) {

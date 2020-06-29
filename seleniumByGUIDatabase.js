@@ -2,8 +2,7 @@
 document.getElementById('star5Selenium').onclick = function() {
 
    const user = firebase.auth().currentUser;
-   let tokenUser=user.getIdToken();
-
+  
   document.getElementById("star1Selenium").checked = false;
   document.getElementById("star2Selenium").checked = false;
   document.getElementById("star3Selenium").checked = false;
@@ -19,7 +18,7 @@ document.getElementById('star5Selenium').onclick = function() {
 
   let databaseStarAdd = firebase.database().ref().child('selenium/starcount');
   let databaseUserAdd = firebase.database().ref().child('selenium/users');
-  let databaseAddUserToken = firebase.database().ref().child('rate/selenium');
+  let databaseAddUserUid = firebase.database().ref().child('rate/selenium');
 
   firebase.auth().onAuthStateChanged(firebaseUser => 
     {
@@ -28,9 +27,9 @@ document.getElementById('star5Selenium').onclick = function() {
 
         {
           
-          let random=databaseAddUserToken.push();
+          let random=databaseAddUserUid.push();
           random.set(
-                tokenUser.i.substring(0,29));
+                user.uid);
     
         
           databaseUserAdd.child('countAllUsers').once('value', function(snapshot) {
@@ -141,7 +140,6 @@ document.getElementById('star5Selenium').onclick = function() {
 document.getElementById('star4Selenium').onclick = function() {
 
   const user = firebase.auth().currentUser;
-  let tokenUser=user.getIdToken();
 
   document.getElementById("star1Selenium").checked = false;
   document.getElementById("star2Selenium").checked = false;
@@ -158,7 +156,7 @@ document.getElementById('star4Selenium').onclick = function() {
 
   let databaseStarAdd = firebase.database().ref().child('selenium/starcount');
   let databaseUserAdd = firebase.database().ref().child('selenium/users');
-  let databaseAddUserToken = firebase.database().ref().child('rate/selenium');
+  let databaseAddUserUid = firebase.database().ref().child('rate/selenium');
      
      firebase.auth().onAuthStateChanged(firebaseUser => {
 
@@ -166,9 +164,9 @@ document.getElementById('star4Selenium').onclick = function() {
 
       {
         
-        let random=databaseAddUserToken.push();
+        let random=databaseAddUserUid.push();
         random.set(
-              tokenUser.i.substring(0,29));
+              user.uid);
 
       
         databaseUserAdd.child('countAllUsers').once('value', function(snapshot) {
@@ -276,7 +274,6 @@ document.getElementById('star4Selenium').onclick = function() {
   document.getElementById('star3Selenium').onclick = function() {
   
   const user = firebase.auth().currentUser;
-  let tokenUser=user.getIdToken();
 
   document.getElementById("star1Selenium").checked = false;
   document.getElementById("star2Selenium").checked = false;
@@ -293,7 +290,7 @@ document.getElementById('star4Selenium').onclick = function() {
 
   let databaseStarAdd = firebase.database().ref().child('selenium/starcount');
   let databaseUserAdd = firebase.database().ref().child('selenium/users');
-  let databaseAddUserToken = firebase.database().ref().child('rate/selenium');
+  let databaseAddUserUid = firebase.database().ref().child('rate/selenium');
 
      firebase.auth().onAuthStateChanged(firebaseUser => {
 
@@ -301,9 +298,9 @@ document.getElementById('star4Selenium').onclick = function() {
 
       {
        
-        let random=databaseAddUserToken.push();
+        let random=databaseAddUserUid.push();
         random.set(
-              tokenUser.i.substring(0,29));
+              user.uid);
 
       
         databaseUserAdd.child('countAllUsers').once('value', function(snapshot) {
@@ -411,7 +408,6 @@ document.getElementById('star4Selenium').onclick = function() {
   document.getElementById('star2Selenium').onclick = function() {
   
     const user = firebase.auth().currentUser;
-    let tokenUser=user.getIdToken();
   
     document.getElementById("star1Selenium").checked = false;
     document.getElementById("star2Selenium").checked = false;
@@ -428,7 +424,7 @@ document.getElementById('star4Selenium').onclick = function() {
   
     let databaseStarAdd = firebase.database().ref().child('selenium/starcount');
     let databaseUserAdd = firebase.database().ref().child('selenium/users');
-    let databaseAddUserToken = firebase.database().ref().child('rate/selenium');
+    let databaseAddUserUid = firebase.database().ref().child('rate/selenium');
 
        firebase.auth().onAuthStateChanged(firebaseUser => {
   
@@ -436,9 +432,9 @@ document.getElementById('star4Selenium').onclick = function() {
   
         {
          
-          let random=databaseAddUserToken.push();
+          let random=databaseAddUserUid.push();
           random.set(
-                tokenUser.i.substring(0,29));
+                user.uid);
   
         
           databaseUserAdd.child('countAllUsers').once('value', function(snapshot) {
@@ -547,7 +543,6 @@ document.getElementById('star4Selenium').onclick = function() {
   document.getElementById('star1Selenium').onclick = function() {
   
     const user = firebase.auth().currentUser;
-    let tokenUser=user.getIdToken();
   
     document.getElementById("star1Selenium").checked = false;
     document.getElementById("star2Selenium").checked = false;
@@ -564,16 +559,17 @@ document.getElementById('star4Selenium').onclick = function() {
   
     let databaseStarAdd = firebase.database().ref().child('selenium/starcount');
     let databaseUserAdd = firebase.database().ref().child('selenium/users');
-    let databaseAddUserToken = firebase.database().ref().child('rate/selenium');
+    let databaseAddUserUid = firebase.database().ref().child('rate/selenium');
+
        firebase.auth().onAuthStateChanged(firebaseUser => {
   
        if(firebaseUser)
   
         {
          
-          let random=databaseAddUserToken.push();
+          let random=databaseAddUserUid.push();
           random.set(
-                tokenUser.i.substring(0,29));
+                user.uid);
   
         
           databaseUserAdd.child('countAllUsers').once('value', function(snapshot) {
