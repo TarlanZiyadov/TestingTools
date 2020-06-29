@@ -20,6 +20,7 @@ http://www.doublejdesign.co.uk/
 http://www.icojam.com/
 http://turbomilk.com/
 https://www.everaldo.com/
+https://www.deviantart.com/delacro
 Licensed by https://creativecommons.org/licenses/by/3.0/ ©
 -->
 <body>
@@ -81,6 +82,22 @@ Licensed by https://creativecommons.org/licenses/by/3.0/ ©
     <form action="https://github.com/TarlanZiyadov/Helper/raw/master/Helper++Setup.exe">  
      <p><button onclick="downloading()"><i class="downloadIcon"></i><span id="downloadHelper++" style="font-size: 2vmin;">Download</span></button></p>
     </form>
+    <div id="rateClassHelper" class="rateHelper">
+      <input type="radio" id="star5Helper" name="rateHelper" value="5" />
+      <label for="star5Helper" title="Great!"><strong>5 stars</strong></label>
+      <input type="radio" id="star4Helper" name="rateHelper" value="4" />
+      <label for="star4Helper" title="Good!"><strong>4 stars</strong></label>
+      <input type="radio" id="star3Helper" name="rateHelper" value="3" />
+      <label for="star3Helper" title="Ok!"><strong>3 stars</strong></label>
+      <input type="radio" id="star2Helper" name="rateHelper" value="2" />
+      <label for="star2Helper" title="Not good!"><strong>2 stars</strong></label>
+      <input type="radio" id="star1Helper" name="rateHelper" value="1" />
+      <label for="star1Helper" title="Bad!"><strong>1 stars</strong></label>
+    </div>
+    <div>
+      <p id="usersCountTxtHelper" class="cardDescription"><i class="rateIcon"></i><em>Users rated</em></p>
+      <p id="usersCountHelper" class="cardDescription"></p>
+    </div>
 </div>
 </div>
 
@@ -113,6 +130,22 @@ Licensed by https://creativecommons.org/licenses/by/3.0/ ©
   <form action="https://github.com/TarlanZiyadov/SeleniumByGUI/raw/master/SeleniumByGUISetup.exe">
     <p><button onclick="downloading()"><i class="downloadIcon"></i><span id="downloadSeleniumByGUI" style="font-size: 2vmin;">Download</span></button></p>
   </form>
+  <div id="rateClassSelenium" class="rateSelenium">
+    <input type="radio" id="star5Selenium" name="rateSelenium" value="5" />
+    <label for="star5Selenium" title="Great!"><strong>5 stars</strong></label>
+    <input type="radio" id="star4Selenium" name="rateSelenium" value="4" />
+    <label for="star4Selenium" title="Good!"><strong>4 stars</strong></label>
+    <input type="radio" id="star3Selenium" name="rateSelenium" value="3" />
+    <label for="star3Selenium" title="Ok!"><strong>3 stars</strong></label>
+    <input type="radio" id="star2Selenium" name="rateSelenium" value="2" />
+    <label for="star2Selenium" title="Not good!"><strong>2 stars</strong></label>
+    <input type="radio" id="star1Selenium" name="rateSelenium" value="1" />
+    <label for="star1Selenium" title="Bad!"><strong>1 stars</strong></label>
+  </div>
+  <div>
+    <p id="usersCountTxtSelenium" class="cardDescription"><i class="rateIcon"></i><em>Users rated</em></p>
+    <p id="usersCountSelenium" class="cardDescription"></p>
+  </div>
 </div>
 </div>
 
@@ -145,6 +178,22 @@ Licensed by https://creativecommons.org/licenses/by/3.0/ ©
   <form action="https://github.com/TarlanZiyadov/FastCapture/raw/master/FastCaptureSetup.exe">
     <p><button onclick="downloading()"><i class="downloadIcon"></i><span id="downloadFastCapture" style="font-size: 2vmin;">Download</span></button></p>
   </form>
+  <div id="rateClassFastCapture" class="rateFastCapture">
+    <input type="radio" id="star5FastCapture" name="rateFastCapture" value="5" />
+    <label for="star5FastCapture" title="Great!"><strong>5 stars</strong></label>
+    <input type="radio" id="star4FastCapture" name="rateFastCapture" value="4" />
+    <label for="star4FastCapture" title="Good!"><strong>4 stars</strong></label>
+    <input type="radio" id="star3FastCapture" name="rateFastCapture" value="3" />
+    <label for="star3FastCapture" title="Ok!"><strong>3 stars</strong></label>
+    <input type="radio" id="star2FastCapture" name="rateFastCapture" value="2" />
+    <label for="star2FastCapture" title="Not good!"><strong>2 stars</strong></label>
+    <input type="radio" id="star1FastCapture" name="rateFastCapture" value="1" />
+    <label for="star1FastCapture" title="Bad!"><strong>1 stars</strong></label>
+  </div>
+  <div>
+    <p id="usersCountTxtFastCapture" class="cardDescription"><i class="rateIcon"></i><em>Users rated</em></p>
+    <p id="usersCountFastCapture" class="cardDescription"></p>
+  </div>
 </div>
 </div>
 
@@ -212,8 +261,12 @@ Licensed by https://creativecommons.org/licenses/by/3.0/ ©
 </body>
 
 <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-database.js"></script>
 <script src="source.js"></script>
 <script src="database.js"></script>
+<script src="helperDatabase.js"></script>
+<script src="seleniumByGUIDatabase.js"></script>
+<script src="fastCaptureDatabase.js"></script>
 
 </html>

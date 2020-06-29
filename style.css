@@ -292,7 +292,7 @@ img {
   display: none;
   position: relative;
   width: 80%;
-  height: 110%;
+  height: 125%;
   margin-bottom: 10vmin;
   margin-left: 15vmin;
 }
@@ -425,6 +425,15 @@ margin-right: 2vmin;
 }
 
 
+.rateIcon{
+  background: url('assets/usersRate.png');
+  background-size: 2vmin;
+  height: 2vmin;
+  width: 2vmin;
+  position: absolute;
+  margin-left: 12vmin;
+  }
+
 table {
   font-family: 'Times New Roman', Times, serif;
   border-collapse: collapse;
@@ -439,4 +448,117 @@ td, th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+/* Star rating */
+/* Modified and changed from: https://github.com/mukulkant/Star-rating-using-pure-css  thanks for great tutorial appreciate*/
+.rateHelper {
+  float: center;
+  height: 5vmin;
+  padding: 0 10px;
+}
+.rateHelper:not(:checked) > input {
+  position:absolute;
+  display: none;
+}
+.rateHelper:not(:checked) > label {
+  float:right;
+  width:5em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:2vmin;
+  color:#ccc;
+}
+.rateHelper:not(:checked) > label:before {
+  content: '★ ';
+}
+.rateHelper > input:checked ~ label {
+  color: #dfb82f;    
+}
+.rateHelper:not(:checked) > label:hover,
+.rateHelper:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+.rateHelper > input:checked + label:hover,
+.rateHelper > input:checked + label:hover ~ label,
+.rateHelper > input:checked ~ label:hover,
+.rateHelper > input:checked ~ label:hover ~ label,
+.rateHelper > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+
+.rateSelenium {
+  float: center;
+  height: 5vmin;
+  padding: 0 10px;
+}
+.rateSelenium:not(:checked) > input {
+  position:absolute;
+  display: none;
+}
+.rateSelenium:not(:checked) > label {
+  float:right;
+  width:5em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:2vmin;
+  color:#ccc;
+}
+.rateSelenium:not(:checked) > label:before {
+  content: '★ ';
+}
+.rateSelenium > input:checked ~ label {
+  color: #dfb82f;    
+}
+.rateSelenium:not(:checked) > label:hover,
+.rateSelenium:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+.rateSelenium > input:checked + label:hover,
+.rateSelenium > input:checked + label:hover ~ label,
+.rateSelenium > input:checked ~ label:hover,
+.rateSelenium > input:checked ~ label:hover ~ label,
+.rateSelenium > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+
+
+.rateFastCapture {
+  float: center;
+  height: 5vmin;
+  padding: 0 10px;
+}
+.rateFastCapture:not(:checked) > input {
+  position:absolute;
+  display: none;
+}
+.rateFastCapture:not(:checked) > label {
+  float:right;
+  width:5em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:2vmin;
+  color:#ccc;
+}
+.rateFastCapture:not(:checked) > label:before {
+  content: '★ ';
+}
+.rateFastCapture > input:checked ~ label {
+  color: #dfb82f;    
+}
+.rateFastCapture:not(:checked) > label:hover,
+.rateFastCapture:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+.rateFastCapture > input:checked + label:hover,
+.rateFastCapture > input:checked + label:hover ~ label,
+.rateFastCapture > input:checked ~ label:hover,
+.rateFastCapture > input:checked ~ label:hover ~ label,
+.rateFastCapture > label:hover ~ input:checked ~ label {
+  color: #c59b08;
 }
