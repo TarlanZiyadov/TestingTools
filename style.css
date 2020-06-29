@@ -468,7 +468,7 @@ tr:nth-child(even) {
   white-space:nowrap;
   cursor:pointer;
   font-size:2vmin;
-  color:#ccc;
+  color:rgb(160, 158, 158);
 }
 .rateHelper:not(:checked) > label:before {
   content: '★ ';
@@ -505,7 +505,7 @@ tr:nth-child(even) {
   white-space:nowrap;
   cursor:pointer;
   font-size:2vmin;
-  color:#ccc;
+  color:rgb(160, 158, 158);
 }
 .rateSelenium:not(:checked) > label:before {
   content: '★ ';
@@ -543,7 +543,7 @@ tr:nth-child(even) {
   white-space:nowrap;
   cursor:pointer;
   font-size:2vmin;
-  color:#ccc;
+  color:rgb(160, 158, 158);
 }
 .rateFastCapture:not(:checked) > label:before {
   content: '★ ';
