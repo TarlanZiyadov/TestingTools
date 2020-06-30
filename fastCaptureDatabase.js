@@ -673,3 +673,36 @@ document.getElementById('star4FastCapture').onclick = function() {
      })
    }
   
+
+
+  document.getElementById('downloadFastCaptureLink').addEventListener("click", function(event){
+
+  let databaseAddDownloadCountFastCapture = firebase.database().ref().child('fastCapture/downloadCount');
+
+  firebase.auth().onAuthStateChanged(firebaseUser => {
+
+    if(firebaseUser){
+
+      databaseAddDownloadCountFastCapture.child('downloaded').once('value', function(snapshot) {
+        let sum=1;
+        let valueOfDownloads = snapshot.val();
+        sum += valueOfDownloads;
+    
+        databaseAddDownloadCountFastCapture.update({
+          'downloaded': sum
+        }).then(printResult =>{
+
+          databaseAddDownloadCountFastCapture.child('downloaded').once('value', function(snapshotCount) {
+
+            let downloaded = parseInt(snapshotCount.val());
+    
+            let dwnlCount = document.getElementById("downloadCounterFastCapture");
+            dwnlCount.textContent = "";                       
+            dwnlCount.textContent += downloaded; 
+          });
+
+        })
+      });
+    }
+  })
+});

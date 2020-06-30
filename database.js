@@ -29,6 +29,10 @@ window.onload =function(){
       let databaseGetUserUidSelenium = firebase.database().ref().child('rate/selenium');
       let databaseGetUserUidFastCapture = firebase.database().ref().child('rate/fastCapture');
 
+      let databaseGetDownloadCountHelper = firebase.database().ref().child('helper/downloadCount');
+      let databaseGetDownloadCountSeleniumByGUI = firebase.database().ref().child('selenium/downloadCount');
+      let databaseGetDownloadCountFastCapture = firebase.database().ref().child('fastCapture/downloadCount');
+
       firebase.auth().onAuthStateChanged(firebaseUser => {
 
       if(firebaseUser)
@@ -98,7 +102,32 @@ window.onload =function(){
               regardsTextID.textContent += regardsText;
               });
 
+            databaseGetDownloadCountHelper.child('downloaded').once('value', function(snapshotCount) {
 
+              let donwloaded = parseInt(snapshotCount.val());
+      
+              let dwnlCount = document.getElementById("downloadCounterHelper++");
+              dwnlCount.textContent = "";                       
+              dwnlCount.textContent += donwloaded; 
+            });
+
+            databaseGetDownloadCountSeleniumByGUI.child('downloaded').once('value', function(snapshotCount) {
+  
+              let downloaded = parseInt(snapshotCount.val());
+      
+              let dwnlCount = document.getElementById("downloadCounterSeleniumByGUI");
+              dwnlCount.textContent = "";                       
+              dwnlCount.textContent += downloaded; 
+            });
+
+            databaseGetDownloadCountFastCapture.child('downloaded').once('value', function(snapshotCount) {
+
+              let downloaded = parseInt(snapshotCount.val());
+      
+              let dwnlCount = document.getElementById("downloadCounterFastCapture");
+              dwnlCount.textContent = "";                       
+              dwnlCount.textContent += downloaded; 
+            });
 
       // Here we get summary of all stars for Helper++ and get back summary of stars with some mathematic condition 
       databaseUsersHelper.child('countAllUsers').once('value', function(snapshotUsersHelper) {

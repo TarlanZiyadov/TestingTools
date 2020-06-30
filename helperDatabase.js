@@ -672,3 +672,34 @@ document.getElementById('star4Helper').onclick = function() {
      })
    }
   
+document.getElementById('downloadHelper++Link').addEventListener("click", function(event){
+
+  let databaseAddDownloadCountHelper = firebase.database().ref().child('helper/downloadCount');
+
+  firebase.auth().onAuthStateChanged(firebaseUser => {
+
+    if(firebaseUser){
+
+      databaseAddDownloadCountHelper.child('downloaded').once('value', function(snapshot) {
+        let sum=1;
+        let valueOfDownloads = snapshot.val();
+        sum += valueOfDownloads;
+    
+        databaseAddDownloadCountHelper.update({
+          'downloaded': sum
+        }).then(printResult =>{
+
+          databaseAddDownloadCountHelper.child('downloaded').once('value', function(snapshotCount) {
+
+            let downloaded = parseInt(snapshotCount.val());
+    
+            let dwnlCount = document.getElementById("downloadCounterHelper++");
+            dwnlCount.textContent = "";                       
+            dwnlCount.textContent += downloaded; 
+          });
+
+        })
+      });
+    }
+  })
+});

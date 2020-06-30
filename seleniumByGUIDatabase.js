@@ -673,3 +673,35 @@ document.getElementById('star4Selenium').onclick = function() {
      })
    }
   
+
+   document.getElementById('downloadSeleniumByGUILink').addEventListener("click", function(event){
+
+    let databaseAddDownloadCountSeleniumByGUI = firebase.database().ref().child('selenium/downloadCount');
+  
+    firebase.auth().onAuthStateChanged(firebaseUser => {
+  
+      if(firebaseUser){
+  
+        databaseAddDownloadCountSeleniumByGUI.child('downloaded').once('value', function(snapshot) {
+          let sum=1;
+          let valueOfDownloads = snapshot.val();
+          sum += valueOfDownloads;
+      
+          databaseAddDownloadCountSeleniumByGUI.update({
+            'downloaded': sum
+          }).then(printResult =>{
+  
+            databaseAddDownloadCountSeleniumByGUI.child('downloaded').once('value', function(snapshotCount) {
+  
+              let downloaded = parseInt(snapshotCount.val());
+      
+              let dwnlCount = document.getElementById("downloadCounterSeleniumByGUI");
+              dwnlCount.textContent = "";                       
+              dwnlCount.textContent += downloaded; 
+            });
+  
+          })
+        });
+      }
+    })
+  });
