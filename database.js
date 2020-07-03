@@ -1,4 +1,4 @@
-window.onload =function(){
+window.addEventListener('load', ()=> {
     
         // Here we download content from database
       let firebaseConfig = {
@@ -40,8 +40,8 @@ window.onload =function(){
         {         
             const user = firebase.auth().currentUser;   
 
-            databaseGetUserUidHelper.once('value', function(snapshotHelperUid) {
-              snapshotHelperUid.forEach(function(child) {
+            databaseGetUserUidHelper.once('value', (snapshotHelperUid)=> {
+              snapshotHelperUid.forEach((child)=> {
                 
                 if(child.val()==user.uid){
 
@@ -54,8 +54,8 @@ window.onload =function(){
               });         
             })
 
-            databaseGetUserUidSelenium.once('value', function(snapshotSeleniumUid) {
-              snapshotSeleniumUid.forEach(function(child) {
+            databaseGetUserUidSelenium.once('value', (snapshotSeleniumUid)=> {
+              snapshotSeleniumUid.forEach((child)=> {
                 
                 if(child.val()==user.uid){
 
@@ -69,8 +69,8 @@ window.onload =function(){
             })
 
 
-            databaseGetUserUidFastCapture.once('value', function(snapshotFastCaptureUid) {
-              snapshotFastCaptureUid.forEach(function(child) {
+            databaseGetUserUidFastCapture.once('value', (snapshotFastCaptureUid)=> {
+              snapshotFastCaptureUid.forEach((child)=> {
                 
                 if(child.val()==user.uid){
 
@@ -84,25 +84,25 @@ window.onload =function(){
             })
           
 
-            databaseMainPage.child('descriptionFirst').on('value', function(snapshot) {
+            databaseMainPage.child('descriptionFirst').on('value', (snapshot)=> {
             let descriptionFirst = snapshot.val();
             let mainTextFirstID = document.getElementById("frontPagetxt");
             mainTextFirstID.textContent += descriptionFirst;
             });
 
-            databaseMainPage.child('descriptionSecond').on('value', function(snapshot) {
+            databaseMainPage.child('descriptionSecond').on('value', (snapshot)=> {
               let descriptionSecond = snapshot.val();
               let mainTextSecondID = document.getElementById("frontPagetxtForTips");
               mainTextSecondID.textContent += descriptionSecond;
               });
 
-            databaseMainPage.child('regardsText').on('value', function(snapshot) {
+            databaseMainPage.child('regardsText').on('value', (snapshot)=> {
               let regardsText = snapshot.val();
               let regardsTextID = document.getElementById("regardsTxt");
               regardsTextID.textContent += regardsText;
               });
 
-            databaseGetDownloadCountHelper.child('downloaded').once('value', function(snapshotCount) {
+            databaseGetDownloadCountHelper.child('downloaded').once('value', (snapshotCount)=> {
 
               let donwloaded = parseInt(snapshotCount.val());
       
@@ -111,7 +111,7 @@ window.onload =function(){
               dwnlCount.textContent += donwloaded; 
             });
 
-            databaseGetDownloadCountSeleniumByGUI.child('downloaded').once('value', function(snapshotCount) {
+            databaseGetDownloadCountSeleniumByGUI.child('downloaded').once('value', (snapshotCount)=> {
   
               let downloaded = parseInt(snapshotCount.val());
       
@@ -120,7 +120,7 @@ window.onload =function(){
               dwnlCount.textContent += downloaded; 
             });
 
-            databaseGetDownloadCountFastCapture.child('downloaded').once('value', function(snapshotCount) {
+            databaseGetDownloadCountFastCapture.child('downloaded').once('value', (snapshotCount)=> {
 
               let downloaded = parseInt(snapshotCount.val());
       
@@ -130,12 +130,12 @@ window.onload =function(){
             });
 
       // Here we get summary of all stars for Helper++ and get back summary of stars with some mathematic condition 
-      databaseUsersHelper.child('countAllUsers').once('value', function(snapshotUsersHelper) {
-        databaseStarsHelper.child('star5').once('value', function(snapshotStar5Helper) {    
-          databaseStarsHelper.child('star4').once('value', function(snapshotStar4Helper) {       
-            databaseStarsHelper.child('star3').once('value', function(snapshotStar3Helper) {     
-              databaseStarsHelper.child('star2').once('value', function(snapshotStar2Helper) {  
-                databaseStarsHelper.child('star1').once('value', function(snapshotStar1Helper) {
+      databaseUsersHelper.child('countAllUsers').once('value', (snapshotUsersHelper)=> {
+        databaseStarsHelper.child('star5').once('value', (snapshotStar5Helper)=> {    
+          databaseStarsHelper.child('star4').once('value', (snapshotStar4Helper)=> {       
+            databaseStarsHelper.child('star3').once('value', (snapshotStar3Helper)=> {     
+              databaseStarsHelper.child('star2').once('value', (snapshotStar2Helper)=> {  
+                databaseStarsHelper.child('star1').once('value', (snapshotStar1Helper)=> {
         
                   let valueOfAllUsersHelper = parseInt(snapshotUsersHelper.val());
             
@@ -205,12 +205,12 @@ window.onload =function(){
     });
 
 // Here we get summary of all stars for SeleniumByGUI and get back summary of stars with some mathematic condition 
-  databaseUsersSelenium.child('countAllUsers').once('value', function(snapshotUsersSelenium) {
-    databaseStarsSelenium.child('star5').once('value', function(snapshotStar5Selenium) {    
-      databaseStarsSelenium.child('star4').once('value', function(snapshotStar4Selenium) {       
-        databaseStarsSelenium.child('star3').once('value', function(snapshotStar3Selenium) {     
-          databaseStarsSelenium.child('star2').once('value', function(snapshotStar2Selenium) {  
-            databaseStarsSelenium.child('star1').once('value', function(snapshotStar1Selenium) {
+  databaseUsersSelenium.child('countAllUsers').once('value', (snapshotUsersSelenium)=> {
+    databaseStarsSelenium.child('star5').once('value', (snapshotStar5Selenium)=> {    
+      databaseStarsSelenium.child('star4').once('value', (snapshotStar4Selenium)=> {       
+        databaseStarsSelenium.child('star3').once('value', (snapshotStar3Selenium)=> {     
+          databaseStarsSelenium.child('star2').once('value', (snapshotStar2Selenium)=> {  
+            databaseStarsSelenium.child('star1').once('value', (snapshotStar1Selenium)=> {
     
               let valueOfAllUsersSelenium = parseInt(snapshotUsersSelenium.val());
         
@@ -282,12 +282,12 @@ window.onload =function(){
 
 
 // Here we get summary of all stars for FastCapture and get back summary of stars with some mathematic condition 
-databaseUsersFastCapture.child('countAllUsers').once('value', function(snapshotUsersFastCapture) {
-  databaseStarsFastCapture.child('star5').once('value', function(snapshotStar5FastCapture) {    
-    databaseStarsFastCapture.child('star4').once('value', function(snapshotStar4FastCapture) {       
-      databaseStarsFastCapture.child('star3').once('value', function(snapshotStar3FastCapture) {     
-        databaseStarsFastCapture.child('star2').once('value', function(snapshotStar2FastCapture) {  
-          databaseStarsFastCapture.child('star1').once('value', function(snapshotStar1FastCapture) {
+databaseUsersFastCapture.child('countAllUsers').once('value', (snapshotUsersFastCapture)=> {
+  databaseStarsFastCapture.child('star5').once('value', (snapshotStar5FastCapture)=> {    
+    databaseStarsFastCapture.child('star4').once('value', (snapshotStar4FastCapture)=> {       
+      databaseStarsFastCapture.child('star3').once('value', (snapshotStar3FastCapture)=> {     
+        databaseStarsFastCapture.child('star2').once('value', (snapshotStar2FastCapture)=> {  
+          databaseStarsFastCapture.child('star1').once('value', (snapshotStar1FastCapture)=> {
   
             let valueOfAllUsersFastCapture = parseInt(snapshotUsersFastCapture.val());
       
@@ -359,5 +359,5 @@ databaseUsersFastCapture.child('countAllUsers').once('value', function(snapshotU
 
  }
 })
-}
+});
 

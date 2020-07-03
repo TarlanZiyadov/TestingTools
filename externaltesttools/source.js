@@ -226,7 +226,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'UA-169533728-1');
 
-document.addEventListener('DOMContentLoaded', function(e) {
+document.addEventListener('DOMContentLoaded', (e)=> {
 // Here we show the first card on load always 
   let i, tabcontent;
     tabcontent = document.getElementsByClassName("tabcontent");

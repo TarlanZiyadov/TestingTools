@@ -122,7 +122,7 @@ gtag('config', 'UA-169533728-1');
 
 
 // Here we show the first card on load always 
-document.addEventListener('DOMContentLoaded', function(e) {
+document.addEventListener('DOMContentLoaded', (e)=> {
   let i, tabcontent;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {

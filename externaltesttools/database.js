@@ -1,4 +1,4 @@
-window.onload =function(){
+window.addEventListener('load', ()=>{
     
         // Here we download content from database
       let firebaseConfig = {
@@ -22,7 +22,7 @@ window.onload =function(){
           if(firebaseUser)
     
             {         
-            databaseExternalTestToolsMain.child('descriptionFirst').on('value', function(snapshot) {
+            databaseExternalTestToolsMain.child('descriptionFirst').on('value', (snapshot)=> {
             let descriptionFirst = snapshot.val();
             let mainTextFirstID = document.getElementById("frontPagetxt");
             mainTextFirstID.textContent += descriptionFirst;
@@ -30,4 +30,4 @@ window.onload =function(){
         }
     })
     
-}
+});

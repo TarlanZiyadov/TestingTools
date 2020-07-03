@@ -1,5 +1,5 @@
 // Here stars all work for user rating to and from database for FastCapture
-document.getElementById('star5FastCapture').onclick = function() {
+document.getElementById('star5FastCapture').onclick = ()=> {
 
    const user = firebase.auth().currentUser;
 
@@ -32,7 +32,7 @@ document.getElementById('star5FastCapture').onclick = function() {
                 user.uid);
     
         
-          databaseUserAdd.child('countAllUsers').once('value', function(snapshot) {
+          databaseUserAdd.child('countAllUsers').once('value', (snapshot)=> {
             let sum=1;
             let valueOfAllUsers = parseInt(snapshot.val());
             sum += valueOfAllUsers;
@@ -44,7 +44,7 @@ document.getElementById('star5FastCapture').onclick = function() {
         
         
         
-          databaseStarAdd.child('star5').once('value', function(snapshot) {
+          databaseStarAdd.child('star5').once('value', (snapshot)=> {
             let sum=5;
             let valueOfStar5 = parseInt(snapshot.val());
             sum += valueOfStar5;
@@ -54,12 +54,12 @@ document.getElementById('star5FastCapture').onclick = function() {
             }).then(printResult =>{
 
               // Here we get summary of all stars for Helper++ and get back summary of stars with some mathematic condition 
-              databaseUserAdd.child('countAllUsers').once('value', function(snapshotUsers) {
-                databaseStarAdd.child('star5').once('value', function(snapshotStar5) {    
-                  databaseStarAdd.child('star4').once('value', function(snapshotStar4) {       
-                    databaseStarAdd.child('star3').once('value', function(snapshotStar3) {     
-                      databaseStarAdd.child('star2').once('value', function(snapshotStar2) {  
-                        databaseStarAdd.child('star1').once('value', function(snapshotStar1) {
+              databaseUserAdd.child('countAllUsers').once('value', (snapshotUsers)=> {
+                databaseStarAdd.child('star5').once('value', (snapshotStar5)=> {    
+                  databaseStarAdd.child('star4').once('value', (snapshotStar4)=> {       
+                    databaseStarAdd.child('star3').once('value', (snapshotStar3)=> {     
+                      databaseStarAdd.child('star2').once('value', (snapshotStar2)=> {  
+                        databaseStarAdd.child('star1').once('value', (snapshotStar1)=> {
                 
                           let valueOfAllUsers = parseInt(snapshotUsers.val());
             
@@ -137,7 +137,7 @@ document.getElementById('star5FastCapture').onclick = function() {
   
 
   
-document.getElementById('star4FastCapture').onclick = function() {
+document.getElementById('star4FastCapture').onclick = ()=> {
 
   const user = firebase.auth().currentUser;
 
@@ -169,7 +169,7 @@ document.getElementById('star4FastCapture').onclick = function() {
               user.uid);
 
       
-        databaseUserAdd.child('countAllUsers').once('value', function(snapshot) {
+        databaseUserAdd.child('countAllUsers').once('value', (snapshot)=> {
           let sum=1;
           let valueOfAllUsers = snapshot.val();
           sum += valueOfAllUsers;
@@ -181,7 +181,7 @@ document.getElementById('star4FastCapture').onclick = function() {
       
       
       
-        databaseStarAdd.child('star4').once('value', function(snapshot) {
+        databaseStarAdd.child('star4').once('value', (snapshot)=> {
           let sum=4;
           let valueOfStar4 = snapshot.val();
           sum += valueOfStar4;
@@ -191,12 +191,12 @@ document.getElementById('star4FastCapture').onclick = function() {
           }).then(printResult =>{
 
             // Here we get summary of all stars for Helper++ and get back summary of stars with some mathematic condition 
-            databaseUserAdd.child('countAllUsers').once('value', function(snapshotUsers) {
-              databaseStarAdd.child('star5').once('value', function(snapshotStar5) {    
-                databaseStarAdd.child('star4').once('value', function(snapshotStar4) {       
-                  databaseStarAdd.child('star3').once('value', function(snapshotStar3) {     
-                    databaseStarAdd.child('star2').once('value', function(snapshotStar2) {  
-                      databaseStarAdd.child('star1').once('value', function(snapshotStar1) {
+            databaseUserAdd.child('countAllUsers').once('value', (snapshotUsers)=> {
+              databaseStarAdd.child('star5').once('value', (snapshotStar5)=> {    
+                databaseStarAdd.child('star4').once('value', (snapshotStar4)=> {       
+                  databaseStarAdd.child('star3').once('value', (snapshotStar3)=> {     
+                    databaseStarAdd.child('star2').once('value', (snapshotStar2)=> {  
+                      databaseStarAdd.child('star1').once('value', (snapshotStar1)=> {
               
                         let valueOfAllUsers = parseInt(snapshotUsers.val());
           
@@ -271,7 +271,7 @@ document.getElementById('star4FastCapture').onclick = function() {
  }
 
 
-  document.getElementById('star3FastCapture').onclick = function() {
+  document.getElementById('star3FastCapture').onclick = ()=> {
   
   const user = firebase.auth().currentUser;
 
@@ -303,7 +303,7 @@ document.getElementById('star4FastCapture').onclick = function() {
               user.uid);
 
       
-        databaseUserAdd.child('countAllUsers').once('value', function(snapshot) {
+        databaseUserAdd.child('countAllUsers').once('value', (snapshot)=> {
           let sum=1;
           let valueOfAllUsers = snapshot.val();
           sum += valueOfAllUsers;
@@ -315,7 +315,7 @@ document.getElementById('star4FastCapture').onclick = function() {
       
       
       
-        databaseStarAdd.child('star3').once('value', function(snapshot) {
+        databaseStarAdd.child('star3').once('value', (snapshot)=> {
           let sum=3;
           let valueOfStar3 = snapshot.val();
           sum += valueOfStar3;
@@ -325,12 +325,12 @@ document.getElementById('star4FastCapture').onclick = function() {
           }).then(printResult =>{
 
             // Here we get summary of all stars for Helper++ and get back summary of stars with some mathematic condition 
-            databaseUserAdd.child('countAllUsers').once('value', function(snapshotUsers) {
-              databaseStarAdd.child('star5').once('value', function(snapshotStar5) {    
-                databaseStarAdd.child('star4').once('value', function(snapshotStar4) {       
-                  databaseStarAdd.child('star3').once('value', function(snapshotStar3) {     
-                    databaseStarAdd.child('star2').once('value', function(snapshotStar2) {  
-                      databaseStarAdd.child('star1').once('value', function(snapshotStar1) {
+            databaseUserAdd.child('countAllUsers').once('value', (snapshotUsers)=> {
+              databaseStarAdd.child('star5').once('value', (snapshotStar5)=> {    
+                databaseStarAdd.child('star4').once('value', (snapshotStar4)=> {       
+                  databaseStarAdd.child('star3').once('value', (snapshotStar3)=> {     
+                    databaseStarAdd.child('star2').once('value', (snapshotStar2)=> {  
+                      databaseStarAdd.child('star1').once('value', (snapshotStar1)=> {
               
                         let valueOfAllUsers = parseInt(snapshotUsers.val());
           
@@ -405,7 +405,7 @@ document.getElementById('star4FastCapture').onclick = function() {
  }
 
 
-  document.getElementById('star2FastCapture').onclick = function() {
+  document.getElementById('star2FastCapture').onclick = ()=> {
   
     const user = firebase.auth().currentUser;
   
@@ -437,7 +437,7 @@ document.getElementById('star4FastCapture').onclick = function() {
                 user.uid);
   
         
-          databaseUserAdd.child('countAllUsers').once('value', function(snapshot) {
+          databaseUserAdd.child('countAllUsers').once('value', (snapshot)=> {
             let sum=1;
             let valueOfAllUsers = snapshot.val();
             sum += valueOfAllUsers;
@@ -449,7 +449,7 @@ document.getElementById('star4FastCapture').onclick = function() {
         
         
         
-          databaseStarAdd.child('star2').once('value', function(snapshot) {
+          databaseStarAdd.child('star2').once('value', (snapshot)=> {
             let sum=2;
             let valueOfStar2 = snapshot.val();
             sum += valueOfStar2;
@@ -459,12 +459,12 @@ document.getElementById('star4FastCapture').onclick = function() {
             }).then(printResult =>{
 
               // Here we get summary of all stars for Helper++ and get back summary of stars with some mathematic condition 
-              databaseUserAdd.child('countAllUsers').once('value', function(snapshotUsers) {
-                databaseStarAdd.child('star5').once('value', function(snapshotStar5) {    
-                  databaseStarAdd.child('star4').once('value', function(snapshotStar4) {       
-                    databaseStarAdd.child('star3').once('value', function(snapshotStar3) {     
-                      databaseStarAdd.child('star2').once('value', function(snapshotStar2) {  
-                        databaseStarAdd.child('star1').once('value', function(snapshotStar1) {
+              databaseUserAdd.child('countAllUsers').once('value', (snapshotUsers)=> {
+                databaseStarAdd.child('star5').once('value', (snapshotStar5)=> {    
+                  databaseStarAdd.child('star4').once('value', (snapshotStar4)=> {       
+                    databaseStarAdd.child('star3').once('value', (snapshotStar3)=> {     
+                      databaseStarAdd.child('star2').once('value', (snapshotStar2)=> {  
+                        databaseStarAdd.child('star1').once('value', (snapshotStar1)=> {
                 
                           let valueOfAllUsers = parseInt(snapshotUsers.val());
             
@@ -540,7 +540,7 @@ document.getElementById('star4FastCapture').onclick = function() {
   
 
   
-  document.getElementById('star1FastCapture').onclick = function() {
+  document.getElementById('star1FastCapture').onclick = ()=> {
   
     const user = firebase.auth().currentUser;
   
@@ -572,7 +572,7 @@ document.getElementById('star4FastCapture').onclick = function() {
                 user.uid);
   
         
-          databaseUserAdd.child('countAllUsers').once('value', function(snapshot) {
+          databaseUserAdd.child('countAllUsers').once('value', (snapshot)=> {
             let sum=1;
             let valueOfAllUsers = snapshot.val();
             sum += valueOfAllUsers;
@@ -584,7 +584,7 @@ document.getElementById('star4FastCapture').onclick = function() {
         
         
         
-          databaseStarAdd.child('star1').once('value', function(snapshot) {
+          databaseStarAdd.child('star1').once('value', (snapshot)=> {
             let sum=1;
             let valueOfStar1 = snapshot.val();
             sum += valueOfStar1;
@@ -594,12 +594,12 @@ document.getElementById('star4FastCapture').onclick = function() {
             }).then(printResult =>{
 
               // Here we get summary of all stars for Helper++ and get back summary of stars with some mathematic condition 
-              databaseUserAdd.child('countAllUsers').once('value', function(snapshotUsers) {
-                databaseStarAdd.child('star5').once('value', function(snapshotStar5) {    
-                  databaseStarAdd.child('star4').once('value', function(snapshotStar4) {       
-                    databaseStarAdd.child('star3').once('value', function(snapshotStar3) {     
-                      databaseStarAdd.child('star2').once('value', function(snapshotStar2) {  
-                        databaseStarAdd.child('star1').once('value', function(snapshotStar1) {
+              databaseUserAdd.child('countAllUsers').once('value', (snapshotUsers)=> {
+                databaseStarAdd.child('star5').once('value', (snapshotStar5)=> {    
+                  databaseStarAdd.child('star4').once('value', (snapshotStar4)=> {       
+                    databaseStarAdd.child('star3').once('value', (snapshotStar3)=> {     
+                      databaseStarAdd.child('star2').once('value', (snapshotStar2)=> {  
+                        databaseStarAdd.child('star1').once('value', (snapshotStar1)=> {
                 
                           let valueOfAllUsers = parseInt(snapshotUsers.val());
             
@@ -675,7 +675,7 @@ document.getElementById('star4FastCapture').onclick = function() {
   
 
 
-  document.getElementById('downloadFastCaptureLink').addEventListener("click", function(event){
+  document.getElementById('downloadFastCaptureLink').addEventListener("click", (event)=>{
 
   let databaseAddDownloadCountFastCapture = firebase.database().ref().child('fastCapture/downloadCount');
 
@@ -683,7 +683,7 @@ document.getElementById('star4FastCapture').onclick = function() {
 
     if(firebaseUser){
 
-      databaseAddDownloadCountFastCapture.child('downloaded').once('value', function(snapshot) {
+      databaseAddDownloadCountFastCapture.child('downloaded').once('value', (snapshot)=> {
         let sum=1;
         let valueOfDownloads = snapshot.val();
         sum += valueOfDownloads;
@@ -692,7 +692,7 @@ document.getElementById('star4FastCapture').onclick = function() {
           'downloaded': sum
         }).then(printResult =>{
 
-          databaseAddDownloadCountFastCapture.child('downloaded').once('value', function(snapshotCount) {
+          databaseAddDownloadCountFastCapture.child('downloaded').once('value', (snapshotCount)=> {
 
             let downloaded = parseInt(snapshotCount.val());
     
