@@ -1,4 +1,6 @@
-let render = (template, node)=> {
+let render = (template, selector)=> {
+    var node = document.querySelector(selector);
+    if (!node) return;
     node.innerHTML = template;
 };
 
@@ -16,10 +18,10 @@ let descrbAbout="I am a technical tester with two years vocational education but
 let descrbHelp="Here will be soon help information hold on.......";
 
 
-render(mainPageTittle, document.querySelector('#documentTxt'));
-render(hoverTxt, document.querySelector('#frontPageHoverText'));
-render(descrbHelper, document.querySelector('#descriptionHelper'));
-render(descrbSeleniumByGUI, document.querySelector('#descriptionSeleniumByGUI'));
-render(descrbFastCapture, document.querySelector('#descriptionFastCapture'));
-render(descrbAbout, document.querySelector('#descriptionAbout'));
-render(descrbHelp, document.querySelector('#descriptionHelp'));
+render(mainPageTittle, '#documentTxt');
+render(hoverTxt,'#frontPageHoverText');
+render(descrbHelper, '#descriptionHelper');
+render(descrbSeleniumByGUI, '#descriptionSeleniumByGUI');
+render(descrbFastCapture, '#descriptionFastCapture');
+render(descrbAbout, '#descriptionAbout');
+render(descrbHelp, '#descriptionHelp');
