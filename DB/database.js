@@ -104,11 +104,11 @@ window.addEventListener('load', ()=> {
 
             databaseGetDownloadCountHelper.child('downloaded').once('value', (snapshotCount)=> {
 
-              let donwloaded = parseInt(snapshotCount.val());
+              let downloaded = parseInt(snapshotCount.val());
       
               let dwnlCount = document.getElementById("downloadCounterHelper++");
               dwnlCount.textContent = "";                       
-              dwnlCount.textContent += donwloaded; 
+              dwnlCount.textContent += downloaded; 
             });
 
             databaseGetDownloadCountSeleniumByGUI.child('downloaded').once('value', (snapshotCount)=> {
