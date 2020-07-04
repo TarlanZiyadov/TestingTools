@@ -6,6 +6,10 @@ let render = (template, selector)=> {
 
 // text
 let mainPageTittle = "Welcome to-Software for testing-Web page!";
+let frontPaText="This website has been developed to provide the opportunity to try new testing tools. The idea with this site is to share new developed "+
+"test tools that are currently lacking and also include tips on the existing tools that may be useful for testers. "+
+"Please note that the site is not commercial and is maintained for long periods as a side project.";
+let frontPageTipsText="Do you have any tips on good testing tools or maybe you have developed one and want to share it? Then feel free to contact me.";
 let hoverTxt ="Please hover on the left side of the page or tape on the menu on the left side to see available menus."
 let descrpHelper="Helper++ is a simple text editor with possibility to have "+
 "all created files in one place. Yet you have possibility to create several file types."+
@@ -19,6 +23,8 @@ let descrpHelp="Here will be soon help information hold on.......";
 
 // render
 render(mainPageTittle, '#documentTxt');
+render(frontPaText,'#frontPagetxt');
+render(frontPageTipsText,'#frontPagetxtForTips');
 render(hoverTxt,'#frontPageHoverText');
 render(descrpHelper, '#descriptionHelper');
 render(descrpSeleniumByGUI, '#descriptionSeleniumByGUI');

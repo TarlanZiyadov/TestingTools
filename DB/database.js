@@ -15,8 +15,6 @@ window.addEventListener('load', ()=> {
       
       firebase.auth().signInAnonymously();
 
-      let databaseMainPage = firebase.database().ref().child('mainpage/mainpageText');
-            
       let databaseStarsHelper = firebase.database().ref().child('helper/starcount');
       let databaseStarsSelenium = firebase.database().ref().child('selenium/starcount');
       let databaseStarsFastCapture = firebase.database().ref().child('fastCapture/starcount');
@@ -83,24 +81,6 @@ window.addEventListener('load', ()=> {
               });         
             })
           
-
-            databaseMainPage.child('descriptionFirst').on('value', (snapshot)=> {
-            let descriptionFirst = snapshot.val();
-            let mainTextFirstID = document.getElementById("frontPagetxt");
-            mainTextFirstID.textContent += descriptionFirst;
-            });
-
-            databaseMainPage.child('descriptionSecond').on('value', (snapshot)=> {
-              let descriptionSecond = snapshot.val();
-              let mainTextSecondID = document.getElementById("frontPagetxtForTips");
-              mainTextSecondID.textContent += descriptionSecond;
-              });
-
-            databaseMainPage.child('regardsText').on('value', (snapshot)=> {
-              let regardsText = snapshot.val();
-              let regardsTextID = document.getElementById("regardsTxt");
-              regardsTextID.textContent += regardsText;
-              });
 
             databaseGetDownloadCountHelper.child('downloaded').once('value', (snapshotCount)=> {
 
