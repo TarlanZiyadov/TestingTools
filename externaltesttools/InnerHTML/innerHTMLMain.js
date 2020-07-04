@@ -124,24 +124,107 @@ data.listItems.push(rapidReporterListText6,rapidReporterListText7,rapidReporterL
 renderList('#featureListRapidReporter');
 
 
-
-
+// WIRESHARK CARD
 let descrpWireshark="Wireshark is the world’s foremost and widely-used network protocol analyzer. It lets you see what’s happening on your network at a "+
 "microscopic level and is the de facto (and often de jure) standard across many commercial and non-profit enterprises, government agencies, "+
 "and educational institutions. Wireshark development thrives thanks to the volunteercontributions of networking experts around the globe and is the continuation of a "+
 "project started by Gerald Combs in 1998.";
+let wiresharkAbility="Wireshark has a rich feature set which includes the following:";
+// list
+let wiresharkListText1="Deep inspection of hundreds of protocols, with more being added all the time";
+let wiresharkListText2="Live capture and offline analysis";
+let wiresharkListText3="Captured network data can be browsed via a GUI, or via the TTY-mode TShark utility";
+let wiresharkListText4="Read/write many different capture file formats: tcpdump (libpcap), Pcap NG, Catapult DCT2000, Cisco Secure IDS iplog, Microsoft Network Monitor, "+
+"Network General Sniffer® (compressed and uncompressed), Sniffer® Pro, and NetXray®, Network Instruments Observer, NetScreen snoop, Novell LANalyzer,"+
+"RADCOM WAN/LAN Analyzer, Shomiti/Finisar Surveyor, Tektronix K12xx, Visual Networks Visual UpTime, WildPackets EtherPeek/TokenPeek/AiroPeek, and many others";
+let wiresharkListText5="Live data can be read from Ethernet, IEEE 802.11, PPP/HDLC, ATM, Bluetooth, USB, Token Ring, Frame Relay, FDDI, and others (depending on your platform)";
+let wiresharkListText6="More in the official webpage......";
+// render
+render(descrpWireshark, '#descriptionWireshark');
+render(wiresharkAbility,'#wiresharkAbility');
+data.listItems.push(wiresharkListText1,wiresharkListText2,wiresharkListText3,wiresharkListText4,wiresharkListText5,wiresharkListText6);
+renderList('#featureListWireshark');
+
+
+// FIDDLER CARD
 let descrpFiddler="Web debugging proxy tool to log all HTTP(S) traffic between your computer and the Internet. Inspect traffic, set breakpoints, and fiddle with request/response.";
+let fiddlerAbility="Key Features:";
+// list
+let fiddlerListText1="Debug traffic from PC, Mac or Linux systems and iOS and Android mobile devices. Ensure the proper cookies, "+
+"headers and cache directives are transferred between the client and server. Supports any framework, including .NET, Java, Ruby, etc.";
+let fiddlerListText2="Edit web sessions easily: just set a breakpoint to pause the processing of "+
+"the session and permit alteration of the request/response. Compose your own HTTP requests and run them through Fiddler.";
+let fiddlerListText3='Fiddler lets you see the “total page weight,” HTTP caching and compression at a glance. '+
+'Isolate performance bottlenecks with rules such as “Flag any uncompressed responses larger than 25kb.”';
+let fiddlerListText4="Decrypt HTTPS traffic and display and modify web application requests using a "+
+"man-in-the-middle decryption technique. Configure Fiddler to decrypt all traffic, or only specific sessions.";
+let fiddlerListText5="Use Fiddler Composer to quickly test APIs by creating and sending requests. Useful while developing new APIs or when testing existing APIs. "+
+"Composer is fully integrated with Sessions list; simply drag any session onto composer and edit and test the request.";
+let fiddlerListText6="More in the official webpage......";
+// render
+render(descrpFiddler, '#descriptionFiddler');
+render(fiddlerAbility,'#fiddlerAbility');
+data.listItems.push(fiddlerListText1,fiddlerListText2,fiddlerListText3,fiddlerListText4,fiddlerListText5,fiddlerListText6);
+renderList('#featureListFiddler');
+
+
+// CYPRESS IO CARD
 let descrpCypressio="Fast, easy and reliable testing for anything that runs in a browser.";
+let cypressioAbility="Cypress is different:";
+// list
+let cypressioListText1="Most end-to-end testing tools are Selenium-based, which is why they all share the same problems. To make Cypress different, we built a new architecture from the ground up. "+
+"Whereas Selenium executes remote commands through the network, Cypress runs in the same run-loop as your application.";
+let cypressioListText2="Cypress tests anything that runs in a web browser. All of the architecture surrounding Cypress is built to handle modern JavaScript frameworks especially well. "+
+"We have hundreds of projects using the latest React, Angular, Vue, Elm, etc. frameworks. Cypress also works equally well on older server rendered pages or applications.";
+let cypressioListText3="While you can compile down to JavaScript from any other language, ultimately the test code is executed "+
+"inside the browser itself. There are no language or driver bindings - there is and will only ever be just JavaScript.";
+let cypressioListText4="One of our goals was to make test-driven development a reality for end-to-end testing. "+
+"Cypress is at its best when you use it as you build your application. We give you the power to code as fast as possible.";
+let cypressioListText5="Writing end-to-end tests takes a lot of different tools to work together. With Cypress you get multiple tools in one. "+
+"There is no need to install 10 separate tools and libraries to get your test suite set up. We have taken some "+
+"of the best-in-class tools you are likely already familiar with and made them all work together seamlessly.";
+let cypressioListText6="More in the official webpage......";
+// render
+render(descrpCypressio, '#descriptionCypressio');
+render(cypressioAbility,'#cypressAbility');
+data.listItems.push(cypressioListText1,cypressioListText2,cypressioListText3,cypressioListText4,cypressioListText5,cypressioListText6);
+renderList('#featureListCypress');
+
+
+// SELENIUM WEBDRIVER CARD
 let descrpSeleniumWebDriver ="WebDriver drives a browser natively, as a user would, either locally or on a remote machine using the Selenium server, marks a leap forward in terms of browser automation."+
 " Selenium WebDriver refers to both the language bindings and the implementations of the individual browser controlling code. This is commonly referred to as just WebDriver.";
-let descrpXmind="Mind, a full-featured mind mapping and brainstorming tool, designed to generate ideas, inspire creativity, brings productivity in a remote WFH team.";
-let descrpTestChallanges="Great web page for gaining tester skills! You can learn and get skills of functional testing. Developed by Claudiu Draghia ©";
-
-
-
-render(descrpWireshark, '#descriptionWireshark');
-render(descrpFiddler, '#descriptionFiddler');
-render(descrpCypressio, '#descriptionCypressio');
+let seleniumAbility="Selenium WebDriver is a W3C Recommendation:";
+// list
+let seleniumWebDriverListText1="WebDriver is designed as a simple and more concise programming interface.";
+let seleniumWebDriverListText2="WebDriver is a compact object-oriented API.";
+let seleniumWebDriverListText3="It drives the browser effectively.";
+let seleniumWebDriverListText4="More in the official webpage......";
+// render
 render(descrpSeleniumWebDriver, '#descriptionSeleniumWebDriver');
+render(seleniumAbility,'#seleniumWebDriverAbility');
+data.listItems.push(seleniumWebDriverListText1,seleniumWebDriverListText2,seleniumWebDriverListText3,seleniumWebDriverListText4);
+renderList('#featureListSeleniumWebDriver');
+
+
+// XMIND CARD
+let descrpXmind="Mind, a full-featured mind mapping and brainstorming tool, designed to generate ideas, inspire creativity, brings productivity in a remote WFH team.";
+// list
+let xmindListText1="Many great products start with a small idea. Mind map can really be useful at the beginning of a project. "+
+"Use it to record every idea in the meeting, you might be surprised by the difference and achievement it makes in the long run.";
+let xmindListText2="Creativity will make you a more interesting person and let you win more possibilities both "+
+"at work and life. Mind maps help you think more, think further and are encouraged to explore different creative pathways.";
+let xmindListText3="All the mind maps are easy to be found both on your laptop and mobile devices, which allows you to access them any time and anywhere.";
+let xmindListText4="More in the official webpage......";
+// render
 render(descrpXmind, '#descriptionXmind');
+data.listItems.push(xmindListText1,xmindListText2,xmindListText3,xmindListText4);
+renderList('#featureListXmind');
+
+
+// TESTCHALLANGES CARD
+let descrpTestChallanges="Great web page for gaining tester skills! You can learn and get skills of functional testing. Developed by Claudiu Draghia ©";
+let linkTextTestChallanges="Official web page : http://testingchallenges.thetestingmap.org/index.php";
+// render
 render(descrpTestChallanges, '#descriptionTestingchallange');
+render(linkTextTestChallanges,'#linkTextTestingChallanges');
