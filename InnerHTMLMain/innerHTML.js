@@ -4,7 +4,7 @@ let render = (template, selector)=> {
     node.innerHTML = template;
 };
 
-
+// text
 let mainPageTittle = "Welcome to-Software for testing-Web page!";
 let hoverTxt ="Please hover on the left side of the page or tape on the menu on the left side to see available menus."
 let descrpHelper="Helper++ is a simple text editor with possibility to have "+
@@ -17,7 +17,7 @@ let descrpFastCapture="Take fast screenshots while you are in test session. Supp
 let descrpAbout="I am a technical tester with two years vocational education but as a hobby, I develop testing tools softwares and web applications for test.";
 let descrpHelp="Here will be soon help information hold on.......";
 
-
+// render
 render(mainPageTittle, '#documentTxt');
 render(hoverTxt,'#frontPageHoverText');
 render(descrpHelper, '#descriptionHelper');
