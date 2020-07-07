@@ -1,0 +1,100 @@
+
+* {box-sizing: border-box}
+*:before,
+*:after {
+ box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: auto;
+  font-size: 2vmin; 
+  background-image: url('assets/backgroundMainPage.jpg'); 
+  height: 100vh;
+  width: 100vw;
+  color: black;
+}
+
+.main {
+    margin-left: 16vmin;
+    font-size: 2vmin; 
+    padding: 0px 10px;
+  }
+  
+.sidenav {
+    height: 100%;
+    width: 15vmin;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 2vmin;
+    cursor: pointer;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 2vmin;
+    color: #818181;
+    display: block;
+    text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 4vmin;}
+  }
+  
+.footer{
+left: 0;
+right: 0;
+width: 95%;
+background-color:#585757;
+color: white;
+height: 12vmin;
+font-size: 2vmin;
+margin-top: 163vmin;
+position: absolute;
+margin-left: 15vmin;
+height: 40%;
+}
+
+.footerImage{
+z-index: 10;
+width: 7vmin;
+height: 7vmin;
+margin-left: 45%;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    }
+
+/* width */
+::-webkit-scrollbar {
+width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #555; 
+}
