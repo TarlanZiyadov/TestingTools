@@ -1,9 +1,3 @@
-let render = (template, selector)=> {
-    var node = document.querySelector(selector);
-    if (!node) return;
-    node.innerHTML = template;
-};
-
 // text
 let mainPageTittle = "Welcome to-Software for testing-Web page!";
 let frontPaText="This website has been developed to provide the opportunity to try new testing tools. The idea with this site is to share new developed "+
