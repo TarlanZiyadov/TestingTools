@@ -25,16 +25,30 @@ Licensed by https://creativecommons.org/licenses/by/3.0/ ©
 -->
 <body>
 
+<!-- Side navbar -->
   <div class="sidenav">
-    <a href="#Blog1">Blog1</a>
-    <a href="#Blog2">Blog2</a>
-    <a href="#Blog3">Blog3</a>
-    <a href="#Blog4">Blog4</a>
+    <a class="tablinks" onclick="openTab(event, 'about')" href="#About">About</a>
+    <a class="tablinks" onclick="openTab(event, 'blog1')" href="#Blog1">Blog1</a>
   </div>
 
+  
       <div class="main">
-         
+
+        <!-- About tab -->
+        <div id="about" class="tabcontent">
+          <h1>About</h1>
+          <p id="aboutText"></p>
+        </div>
+
+        <!-- Blog1 tab -->
+        <div id="blog1" class="tabcontent">
+          <h2>Blog1</h2>
+          <p id="blog1Text"></p>
+        </div>
+
       </div>
+
+
 
 <!-- Footer -->
 <div id="footerMainPage" class="footer">

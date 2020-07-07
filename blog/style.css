@@ -16,7 +16,7 @@ body {
 }
 
 .main {
-    margin-left: 16vmin;
+    margin-left: 20vmin;
     font-size: 2vmin; 
     padding: 0px 10px;
   }
@@ -31,7 +31,6 @@ body {
     background-color: #111;
     overflow-x: hidden;
     padding-top: 2vmin;
-    cursor: pointer;
   }
   
   .sidenav a {
@@ -97,4 +96,13 @@ background: #888;
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
 background: #555; 
+}
+
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 8px solid #ccc;
+  border-left: none;
+  height: 150vmin;
+  width: 90%;
 }
