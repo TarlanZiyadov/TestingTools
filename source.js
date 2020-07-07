@@ -6,9 +6,8 @@
     setTimeout(function(){ dwnload.className = dwnload.className.replace("show", ""); }, 2000);
   }
   
-   
-  // this function is for helper++ card
-  function openHelper(evt, helperPlusPluss) {
+  // this function shows tabcontent
+  function openCard(evt, tabContentId) {
     let i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -18,75 +17,9 @@
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-    document.getElementById(helperPlusPluss).style.display = "block";
+    document.getElementById(tabContentId).style.display = "block";
     evt.currentTarget.className += " active";
   }
-  
-  // this function is for seleniumbygui card
-  function openSeleniumByGUI(evt, selenium) {
-    let i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(selenium).style.display = "block";
-    evt.currentTarget.className += " active";
-  }
-  
-  
-  // this function is for fastcapture card
-  function openFastCapture(evt, fast) {
-    let i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(fast).style.display = "block";
-    evt.currentTarget.className += " active";
-  }
-  
-
-  
-  // this function is for about card
-  function openAbout(evt, aboutCreater) {
-    let i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(aboutCreater).style.display = "block";
-    evt.currentTarget.className += " active";
-  }
-  
-
-  
-  // this function is for help card
-  function openHelp(evt, helpCard) {
-    let i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(helpCard).style.display = "block";
-    evt.currentTarget.className += " active";
-  }
-  
 
  // this jquery is for animation of sidebar
   $(function(){
