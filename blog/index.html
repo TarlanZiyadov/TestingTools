@@ -21,14 +21,17 @@ http://www.icojam.com/
 http://turbomilk.com/
 https://www.everaldo.com/
 http://www.famfamfam.com/
+http://www.silvestre.com.ar/
+http://www.fatcow.com/
 Licensed by https://creativecommons.org/licenses/by/3.0/ ©
 -->
 <body>
 
 <!-- Side navbar -->
-  <div class="sidenav">
-    <a class="tablinks" onclick="openTab(event, 'about')" href="#About">About</a>
-    <a class="tablinks" onclick="openTab(event, 'blog1')" href="#Blog1">Blog1</a>
+  <div id="sideNavBar" class="sidenav">
+    <strong><a class="tablinks" href="https://softwarefortesting.com" style="font-size:2vmin;"><i id="back" class="backIcon"></i><span style="padding-left: 3vmin;"> Back</span></a></strong>
+    <strong><a class="tablinks" onclick="openTab(event, 'about')" href="#About" style="font-size:2vmin;"><i id="readAbout" class="aboutIcon"></i><span style="padding-left: 3vmin;">About</span></a></strong>
+    <strong><a class="tablinks" onclick="openTab(event, 'blog1')" href="#Blog1" style="font-size:2vmin;"><i id="readBlog1" class="blogIcon"></i><span style="padding-left: 3vmin;">Blog1</span></a></strong>
   </div>
 
   
@@ -42,7 +45,7 @@ Licensed by https://creativecommons.org/licenses/by/3.0/ ©
 
         <!-- Blog1 tab -->
         <div id="blog1" class="tabcontent">
-          <h2>Blog1</h2>
+          <h2>-How its feels to be a technical tester after two years of education-</h2>
           <p id="blog1Text"></p>
         </div>
 
@@ -72,6 +75,8 @@ Licensed by https://creativecommons.org/licenses/by/3.0/ ©
 </body>
 
 <script src="source.js"></script>
+<script src="InnerHTML/render.js"></script>
 <script src="InnerHTML/innerHTMLMain.js"></script>
+<script src="InnerHTML/innerHTMLBlogs.js"></script>
 
 </html>

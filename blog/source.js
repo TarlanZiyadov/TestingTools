@@ -1,32 +1,34 @@
 function openTab(evt, tabContentId) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
   
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-  
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-  
-    // Show the current tab, and add an "active" class to the link that opened the tab
-    document.getElementById(tabContentId).style.display = "block";
-    evt.currentTarget.className += " active";
+  let i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabContentId).style.display = "block";
+  evt.currentTarget.className += " active";
   }
 
+  
+// For google analytics
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-169533728-1');
 
-window.addEventListener('load', ()=> {
+
+document.addEventListener('DOMContentLoaded', (e)=> {
 
   let i, tabcontent;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
     if(i==0){
       tabcontent[i].style.display = "block";
     }
   }
-});
+},true);

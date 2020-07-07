@@ -19,11 +19,12 @@ body {
     margin-left: 20vmin;
     font-size: 2vmin; 
     padding: 0px 10px;
+    font-family: 'Times New Roman', Times, serif;
   }
   
 .sidenav {
     height: 100%;
-    width: 12vmin;
+    width: 15vmin;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -101,8 +102,42 @@ background: #555;
 .tabcontent {
   float: left;
   padding: 0px 12px;
-  border: 8px solid #ccc;
+  border: 0px solid #ccc;
   border-left: none;
   height: 150vmin;
   width: 90%;
+}
+
+/* Clear floats after the tab */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.aboutIcon{
+  background: url('assets/aboutIcon.png');
+  background-size: 2vmin;
+  height: 2vmin;
+  width: 2vmin;
+  display: block;
+  position: absolute;
+}
+
+.blogIcon{
+  background: url('assets/blogIcon.png');
+  background-size: 2vmin;
+  height: 2vmin;
+  width: 2vmin;
+  display: block;
+  position: absolute;
+}
+
+.backIcon{
+  background: url('assets/back.png');
+  background-size: 2vmin;
+  height: 2vmin;
+  width: 2vmin;
+  display: block;
+  position: absolute;
 }
