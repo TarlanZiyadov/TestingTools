@@ -23,7 +23,7 @@ body {
   
 .sidenav {
     height: 100%;
-    width: 15vmin;
+    width: 12vmin;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -57,13 +57,13 @@ body {
 left: 0;
 right: 0;
 width: 95%;
-background-color:#585757;
+background-color:#2c2c2c;
 color: white;
 height: 12vmin;
 font-size: 2vmin;
 margin-top: 163vmin;
 position: absolute;
-margin-left: 15vmin;
+margin-left: 12vmin;
 height: 40%;
 }
 
