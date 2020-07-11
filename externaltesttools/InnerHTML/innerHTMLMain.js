@@ -1,19 +1,12 @@
 // MAIN PAGE TEXT   
-let mainPageTittle = "Test tools to gain more skills!";
+let mainPageTitle = "Test-tools-to-gain-more-skills!";
 let frontPageText="This page contains testing tools that can be useful for all testers in need. The list is based only on known tools but if there are more useful tools "+
 "missing from the list which of course does, let me know by sending your feedback! The software descriptions have been taken from official sites and are not my own thoughts.";
 let hoverTxt ="Please hover on the left side of the page or tape on the menu on the left side to see available menus.";
 // render
-render(mainPageTittle, '#documentTxt');
+render(mainPageTitle, '#mainPageTitle');
 render(frontPageText,'#frontPagetxt');
 
-// animation
-var hoverTextSplit = hoverTxt.split("");
-var el = document.getElementById('frontPageHoverText');
-(function animate() {
-hoverTextSplit.length > 0 ? el.innerHTML += hoverTextSplit.shift() : clearTimeout(running); 
-var running = setTimeout(animate, 20);
-})();
 
 // JMETER CARD
 let descrpJmeter ="Apache JMeter may be used to test performance both on static and dynamic resources, Web dynamic applications."+

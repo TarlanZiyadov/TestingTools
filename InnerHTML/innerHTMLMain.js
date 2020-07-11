@@ -1,5 +1,5 @@
 // text
-let mainPageTittle = "Welcome to-Software for testing-Web page!";
+let mainPageTitle = "Welcome-to-Software for testing-Web-page!";
 let frontPageText="This website has been developed to provide the opportunity to try new testing tools. The idea with this site is to share new developed "+
 "test tools that are currently lacking and also include tips on the existing tools that may be useful for testers. "+
 "Please note that the site is not commercial and is maintained for long periods as a side project.";
@@ -16,7 +16,7 @@ let descrpAbout="I am a technical tester with two years vocational education but
 let descrpHelp="Here will be soon help information hold on.......";
 
 // render
-render(mainPageTittle, '#documentTxt');
+render(mainPageTitle, '#mainPageTitle');
 render(frontPageText,'#frontPagetxt');
 render(frontPageTipsText,'#frontPagetxtForTips');
 render(descrpHelper, '#descriptionHelper');
@@ -24,11 +24,3 @@ render(descrpSeleniumByGUI, '#descriptionSeleniumByGUI');
 render(descrpFastCapture, '#descriptionFastCapture');
 render(descrpAbout, '#descriptionAbout');
 render(descrpHelp, '#descriptionHelp');
-
-// animation
-var hoverTextSplit = hoverTxt.split("");
-var el = document.getElementById('frontPageHoverText');
-(function animate() {
-hoverTextSplit.length > 0 ? el.innerHTML += hoverTextSplit.shift() : clearTimeout(running); 
-var running = setTimeout(animate, 20);
-})();

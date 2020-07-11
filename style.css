@@ -275,7 +275,22 @@ img {
   font-size:4vmin;
   text-align: center;
   text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+  margin-left: 10vmin;
 }
+
+/* animation of title */
+animationTitle{
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translateY(10vmin);
+  display: inline-block;
+}
+
+animationTitle.fade{
+  opacity: 1;
+  transform: translateY(0vmin);
+}
+/* ----------------- */
 
 /* Here starts animation for download*/
 #waitDownloading {
