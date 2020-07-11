@@ -31,4 +31,8 @@ document.addEventListener('DOMContentLoaded', (e)=> {
       tabcontent[i].style.display = "block";
     }
   }
+<<<<<<< HEAD
 },true);
+=======
+},true);
+>>>>>>> fbda9a3... beta page is done
