@@ -6,8 +6,14 @@ let hoverTxt ="Please hover on the left side of the page or tape on the menu on 
 // render
 render(mainPageTittle, '#documentTxt');
 render(frontPageText,'#frontPagetxt');
-render(hoverTxt,'#frontPageHoverText');
 
+// animation
+var hoverTextSplit = hoverTxt.split("");
+var el = document.getElementById('frontPageHoverText');
+(function animate() {
+hoverTextSplit.length > 0 ? el.innerHTML += hoverTextSplit.shift() : clearTimeout(running); 
+var running = setTimeout(animate, 20);
+})();
 
 // JMETER CARD
 let descrpJmeter ="Apache JMeter may be used to test performance both on static and dynamic resources, Web dynamic applications."+
