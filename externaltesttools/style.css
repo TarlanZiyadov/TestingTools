@@ -18,6 +18,40 @@ body {
   border: 2px solid #585757;
 }
 
+/* Haptic effect for text */
+.haptic-on{
+  -webkit-animation: haptic-on 1.5s forwards 0.5s;
+  -moz-animation: haptic-on 1.5s forwards 0.5s;
+  animation: haptic-on 1.5s forwards 0.5s;
+  color: white;
+}
+
+.haptic-swing {
+  -webkit-animation: haptic-swing 1.5s ease-in-out infinite alternate;
+  -moz-animation: haptic-swing 1.5s ease-in-out infinite alternate;
+  animation: haptic-swing 1.5s ease-in-out infinite alternate;
+  color: white;
+}
+
+@keyframes haptic-on {
+  from {
+    text-shadow: none;
+  }
+  to {
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #cccef8;
+  }
+}
+
+@keyframes haptic-swing {
+  from {
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #cccef8;
+  }
+  to {
+    text-shadow: 0 0 4vmin #fff, 0 0 5vmin #fff, 0 0 7vmin #fff, 0 0 8vmin #cccef8;
+  }
+}
+/* --------------- */
+
 .sidenav {
   height: 100%;
   width: 30vmin;

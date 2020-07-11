@@ -38,13 +38,13 @@ body {
     text-shadow: none;
   }
   to {
-    text-shadow: 0 0 1px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #cccef8;
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #cccef8;
   }
 }
 
 @keyframes haptic-swing {
   from {
-    text-shadow: 0 0 1px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #cccef8;
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #cccef8;
   }
   to {
     text-shadow: 0 0 4vmin #fff, 0 0 5vmin #fff, 0 0 7vmin #fff, 0 0 8vmin #cccef8;
