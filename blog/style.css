@@ -16,10 +16,16 @@ body {
 }
 
 .main {
+<<<<<<< HEAD
     margin-left: 20vmin;
     font-size: 2vmin; 
     padding: 0px 10px;
     font-family: 'Times New Roman', Times, serif;
+=======
+    margin-left: 16vmin;
+    font-size: 2vmin; 
+    padding: 0px 10px;
+>>>>>>> a222e30... new blog page dev
   }
   
 .sidenav {
@@ -32,6 +38,10 @@ body {
     background-color: #111;
     overflow-x: hidden;
     padding-top: 2vmin;
+<<<<<<< HEAD
+=======
+    cursor: pointer;
+>>>>>>> a222e30... new blog page dev
   }
   
   .sidenav a {
@@ -57,13 +67,21 @@ body {
 left: 0;
 right: 0;
 width: 95%;
+<<<<<<< HEAD
 background-color:#2c2c2c;
+=======
+background-color:#585757;
+>>>>>>> a222e30... new blog page dev
 color: white;
 height: 12vmin;
 font-size: 2vmin;
 margin-top: 163vmin;
 position: absolute;
+<<<<<<< HEAD
 margin-left: 12vmin;
+=======
+margin-left: 15vmin;
+>>>>>>> a222e30... new blog page dev
 height: 40%;
 }
 
