@@ -63,4 +63,10 @@ document.addEventListener('DOMContentLoaded', (e)=> {
       tabcontent[i].style.display = "block";
     }
   }
+
+  // animation for haptic effect
+  setTimeout(function() {
+      $('.haptic-on').addClass('haptic-swing');
+      $('.haptic-swing').removeClass('haptic-on');
+   }, 4000);
 }, true);
