@@ -89,3 +89,12 @@ document.addEventListener('DOMContentLoaded', (e)=> {
  }, 4000);
  
 },true);
+
+// close sidebar on body click for touch screens
+document.getElementById('main').addEventListener('click', ()=> {
+  closeSidebar();
+});
+function closeSidebar (){
+  $('.sidenav').animate({width:'9vmin'},50);
+  $('.tablinks span').hide();
+}
