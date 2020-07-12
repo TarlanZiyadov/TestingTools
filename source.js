@@ -72,11 +72,10 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 }, true);
 
 // close sidebar on body click for touch screens
-document.getElementById('body').addEventListener('click', ()=> {
-
-  $(function(){
-    $(this).animate({width:'9vmin'},50);
-    $('.tablinks span').hide();
-  })
-
+document.getElementById('main').addEventListener('click', ()=> {
+  closeSidebar();
 });
+function closeSidebar (){
+  $('.sidenav').animate({width:'9vmin'},50);
+  $('.tablinks span').hide();
+}
