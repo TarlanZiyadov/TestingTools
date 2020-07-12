@@ -70,3 +70,13 @@ document.addEventListener('DOMContentLoaded', (e)=> {
       $('.haptic-swing').removeClass('haptic-on');
    }, 4000);
 }, true);
+
+// close sidebar on body click for touch screens
+document.querySelector('.body').addEventListener('click', ()=>{
+
+  $(function(){
+    $(this).animate({width:'9vmin'},50);
+    $('.tablinks span').hide();
+  })
+
+});
