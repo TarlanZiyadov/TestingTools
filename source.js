@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 }, true);
 
 // close sidebar on body click for touch screens
-document.querySelector('.body').addEventListener('click', ()=>{
+document.getElementById('body').addEventListener('click', ()=> {
 
   $(function(){
     $(this).animate({width:'9vmin'},50);
