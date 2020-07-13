@@ -142,3 +142,12 @@ background: #555;
   display: block;
   position: absolute;
 }
+
+.shownIcon{
+  background: url('assets/shownIcon.png');
+  background-size: 3vmin;
+  height: 3vmin;
+  width: 3vmin;
+  position: absolute;
+  margin-left: 1vmin;
+}
