@@ -61,7 +61,7 @@ background-color:#2c2c2c;
 color: white;
 height: 12vmin;
 font-size: 2vmin;
-margin-top: 163vmin;
+margin-top: 150vmin;
 position: absolute;
 margin-left: 12vmin;
 height: 40%;
@@ -102,10 +102,11 @@ background: #555;
 .tabcontent {
   float: left;
   padding: 0px 12px;
-  border: 0px solid #ccc;
+  border: 3px solid #ccc;
   border-left: none;
-  height: 150vmin;
+  height: 80vh;
   width: 90%;
+  margin-top: 5vmin;
 }
 
 /* Clear floats after the tab */
