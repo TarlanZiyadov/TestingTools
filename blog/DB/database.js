@@ -13,52 +13,21 @@ window.addEventListener('load', ()=>{
    
     let databaseBlogShownCount = firebase.database().ref().child('blog/shownCount');
 
-
     firebase.auth().onAuthStateChanged(firebaseUser => 
     {
 
     if(firebaseUser)
 
-        {
-            let refresh = window.localStorage.getItem('addView');
-            if (refresh===null){
-
-            window.localStorage.setItem('addView', "1");
-
+        {         
             databaseBlogShownCount.child('blog1/viewed').once('value', (snapshot)=> {
 
-                let addOne=1;
-                let viewedCount=parseInt(snapshot.val());
-                addOne += viewedCount;
-                
-                databaseBlogShownCount.update({
-                    'blog1/viewed': addOne
-                    });
-                }).then(result =>{
+            let viewedCount=parseInt(snapshot.val());
+            let countShownBlog1=document.getElementById('countShownBlog1');
 
-                    databaseBlogShownCount.child('blog1/viewed').once('value', (snapshot)=> {
-
-                    let viewedCount=parseInt(snapshot.val());
-                    let countShownBlog1=document.getElementById('countShownBlog1');
+            countShownBlog1.textContent = "";
+            countShownBlog1.textContent += viewedCount;
+            })
             
-                    countShownBlog1.textContent = "";
-                    countShownBlog1.textContent += viewedCount;
-                    })
-
-                });
-
-            }else{
-
-                databaseBlogShownCount.child('blog1/viewed').once('value', (snapshot)=> {
-
-                let viewedCount=parseInt(snapshot.val());
-                let countShownBlog1=document.getElementById('countShownBlog1');
-        
-                countShownBlog1.textContent = "";
-                countShownBlog1.textContent += viewedCount;
-                })
-            }
-
         }
     })
 })

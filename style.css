@@ -444,9 +444,18 @@ position: absolute;
   display: block;
   position: absolute;
   border-radius: 2vmin;
-  }
+}
   
 
+.blogIcon{
+  background: url('assets/blog.png');
+  background-size: 3vmin;
+  height: 3vmin;
+  width: 3vmin;
+  display: block;
+  position: absolute;
+  border-radius: 2vmin;
+}
 
 
 .linkedinIcon{
