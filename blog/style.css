@@ -29,7 +29,7 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #202020;
     overflow-x: hidden;
     padding-top: 2vmin;
   }
@@ -37,9 +37,10 @@ body {
   .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 2vmin;
+    font-size: 3vmin;
     color: #818181;
     display: block;
+    margin-bottom: 2vmin;
     text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
   }
   
@@ -118,27 +119,27 @@ background: #555;
 
 .aboutIcon{
   background: url('assets/aboutIcon.png');
-  background-size: 2vmin;
-  height: 2vmin;
-  width: 2vmin;
+  background-size: 3vmin;
+  height: 3vmin;
+  width: 3vmin;
   display: block;
   position: absolute;
 }
 
 .blogIcon{
   background: url('assets/blogIcon.png');
-  background-size: 2vmin;
-  height: 2vmin;
-  width: 2vmin;
+  background-size: 3vmin;
+  height: 3vmin;
+  width: 3vmin;
   display: block;
   position: absolute;
 }
 
 .backIcon{
   background: url('assets/back.png');
-  background-size: 2vmin;
-  height: 2vmin;
-  width: 2vmin;
+  background-size: 3vmin;
+  height: 3vmin;
+  width: 3vmin;
   display: block;
   position: absolute;
 }
