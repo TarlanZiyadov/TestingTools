@@ -67,7 +67,8 @@ body {
   overflow-x: hidden;
   padding-top: 20px;
   cursor: pointer;
-  
+  border-top: 1vmin solid #095484;
+  border-bottom: 1vmin solid #095484;
 }
 
 .sidenav a {
@@ -84,6 +85,11 @@ body {
   color: #f1f1f1;
 }
 
+.sidenavStyle{
+  border-bottom: 2px solid #095484;
+  padding-bottom: 2vmin;
+  border-width: 0 0 1px 0;
+}
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}

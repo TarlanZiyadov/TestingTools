@@ -21,34 +21,41 @@ body {
     padding: 0px 10px;
     font-family: 'Times New Roman', Times, serif;
   }
-  
-.sidenav {
-    height: 100%;
-    width: 20vmin;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #202020;
-    overflow-x: hidden;
-    padding-top: 2vmin;
-  }
-  
-  .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 3vmin;
-    color: #818181;
-    display: block;
-    margin-bottom: 2vmin;
-    text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
-  }
-  
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
 
+.sidenav {
+  height: 100%;
+  width: 20vmin;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #202020;
+  overflow-x: hidden;
+  padding-top: 2vmin;
+  border-top: 1vmin solid #095484;
+  border-bottom: 1vmin solid #095484;
+}
   
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 3vmin;
+  color: #818181;
+  display: block;
+  margin-bottom: 2vmin;
+  text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenavStyle{
+  border-bottom: 2px solid #095484;
+  padding-bottom: 2vmin;
+  border-width: 0 0 1px 0;
+}
+
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 4vmin;}
