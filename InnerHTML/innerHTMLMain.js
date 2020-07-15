@@ -1,7 +1,7 @@
 // text
 let mainPageTitle = "Welcome-to-Software for testing-Web-page!";
 let frontPageText="This website has been developed to provide the opportunity to try new testing tools. The idea with this site is to share new developed "+
-"test tools that are currently lacking and also include tips on the existing tools that may be useful for testers. "+
+"test tools that are currently lacking and also include tips on the existing tools that may be useful for testers as well as some blogs about testing. "+
 "Please note that the site is not commercial and is maintained for long periods as a side project.";
 let frontPageTipsText="Do you have any tips on good testing tools or maybe you have developed one and want to share it? Then feel free to contact me.";
 let hoverTxt ="Please hover on the left side of the page or tape on the menu on the left side to see available menus."
