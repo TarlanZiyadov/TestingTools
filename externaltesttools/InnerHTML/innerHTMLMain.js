@@ -1,7 +1,6 @@
 // MAIN PAGE TEXT   
 let mainPageTitle = "Test-tools-to-gain-more-skills!";
-let frontPageText="This page contains testing tools that can be useful for all testers in need. The list is based only on known tools but if there are more useful tools "+
-"missing from the list which of course does, let me know by sending your feedback! The software descriptions have been taken from official sites and are not my own thoughts.";
+let frontPageText="This page contains testing tools that can be useful for all testers The software descriptions have been taken from official sites and are not my own thoughts.";
 let hoverTxt ="Please hover on the left side of the page or tape on the menu on the left side to see available menus.";
 // render
 render(mainPageTitle, '#mainPageTitle');
