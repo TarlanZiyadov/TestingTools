@@ -10,14 +10,10 @@ window.addEventListener('load', ()=>{
       };
 
     firebase.initializeApp(firebaseConfig);
-   
     let databaseBlogShownCount = firebase.database().ref().child('blog/shownCount');
 
-    firebase.auth().onAuthStateChanged(firebaseUser => 
-    {
-
+    firebase.auth().onAuthStateChanged(firebaseUser =>  {
     if(firebaseUser)
-
         {         
             databaseBlogShownCount.child('blog1/viewed').once('value', (snapshot)=> {
 
@@ -27,7 +23,6 @@ window.addEventListener('load', ()=>{
             countShownBlog1.textContent = "";
             countShownBlog1.textContent += viewedCount;
             })
-            
         }
     })
 })

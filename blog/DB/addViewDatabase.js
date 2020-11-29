@@ -2,11 +2,8 @@ document.getElementById('readBlog1').onclick = ()=> {
 
     let databaseBlogShownCount = firebase.database().ref().child('blog/shownCount');
 
-    firebase.auth().onAuthStateChanged(firebaseUser => 
-    {
-
+    firebase.auth().onAuthStateChanged(firebaseUser => {
     if(firebaseUser)
-
         {
             let addView = window.localStorage.getItem('addViewBlog1');
             if (addView===null){
@@ -32,7 +29,6 @@ document.getElementById('readBlog1').onclick = ()=> {
                     countShownBlog1.textContent = "";
                     countShownBlog1.textContent += viewedCount;
                     })
-
                 });
             }
         }

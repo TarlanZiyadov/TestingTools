@@ -136,6 +136,7 @@ img {
   background: #555; 
 }
 
+
 .helper {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 60vmax;
@@ -145,7 +146,18 @@ img {
   font-family: arial;
 }
 
+
 .seleniumByGUI {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 60vmax;
+  max-height: 120vmax;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+
+.pingNet {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 60vmax;
   max-height: 120vmax;
@@ -172,17 +184,7 @@ img {
     margin: auto;
     text-align: center;
     font-family: arial;
-  }
-
-  
-.helpToUser {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 60vmax;
-    max-height: 120vmax;
-    margin: auto;
-    text-align: center;
-    font-family: arial;
-  }
+}
 
 
 .helper button {
@@ -203,7 +205,6 @@ img {
 .helper button:hover {
   opacity: 0.9;
 }
-
 
 
 .seleniumByGUI button {
@@ -227,6 +228,26 @@ img {
 
 
 
+.pingNet button {
+  border: none;
+  outline: 0;
+  padding: 1vmin;
+  color: white;
+  background-color: #3f3f3f;
+  text-align: center;
+  cursor: pointer;
+  width: 30%;
+  font-size: 2vmin;
+  border-radius: 3vmax;
+  margin-bottom: 1vmin;
+  border: 3px solid rgb(112, 112, 112);
+}
+
+.pingNet button:hover {
+  opacity: 0.9;
+}
+
+
 .fastCapture button {
   border: none;
   outline: 0;
@@ -247,18 +268,18 @@ img {
 }
 
 .aboutDeveloper button {
-    border: none;
-    outline: 0;
-    padding: 1vmin;
-    color: white;
-    background-color: #3f3f3f;
-    text-align: center;
-    cursor: pointer;
-    width: 35%;
-    font-size: 2vmin;
-    border-radius: 3vmax;
-    margin-bottom: 1vmin;
-    border: 3px solid rgb(112, 112, 112);
+  border: none;
+  outline: 0;
+  padding: 1vmin;
+  color: white;
+  background-color: #3f3f3f;
+  text-align: center;
+  cursor: pointer;
+  width: 35%;
+  font-size: 2vmin;
+  border-radius: 3vmax;
+  margin-bottom: 1vmin;
+  border: 3px solid rgb(112, 112, 112);
   }
   
   .aboutDeveloper button:hover {
@@ -266,16 +287,17 @@ img {
   }
   
 
-
 .cardDescription {
   display: block;
   font-size:2vmin;
 }
 
+
 .headerTools{
   color:black;
   font-size:3vmin;
 }
+
 
 .headerPage{
   color:white;
@@ -296,11 +318,13 @@ animationTitle{
   display: inline-block;
 }
 
+
 animationTitle.fade{
   opacity: 1;
   transform: translateY(0vmin);
 }
 /* ----------------- */
+
 
 /* Here starts animation for download*/
 #waitDownloading {
@@ -317,6 +341,7 @@ animationTitle.fade{
   font-size: 2vmin;
   text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
 }
+
 
 #waitDownloading.show {
   visibility: visible;
@@ -368,7 +393,6 @@ animationTitle.fade{
 }
 
 
-
 .refreshIcon{
   background: url('assets/refresh.png');
   background-size: 3vmin;
@@ -388,6 +412,7 @@ width: 3vmin;
 display: block;
 position: absolute;
 }
+
 
 .infoIcon{
 background: url('assets/information.png');
@@ -409,7 +434,6 @@ position: absolute;
 }
 
 
-
 .downloadIcon{
 background: url('assets/download.png');
 background-size: 3vmin;
@@ -418,7 +442,6 @@ width: 3vmin;
 display: block;
 position: absolute;
 }
-
 
 
 .contactIcon{
@@ -430,20 +453,9 @@ display: block;
 position: absolute;
 }
 
+
 .githubIcon{
   background: url('assets/github.png');
-  background-size: 3vmin;
-  height: 3vmin;
-  width: 3vmin;
-  display: block;
-  position: absolute;
-  border-radius: 2vmin;
-  }
-  
-  
-
-.externalIcon{
-  background: url('assets/externalButton.png');
   background-size: 3vmin;
   height: 3vmin;
   width: 3vmin;
@@ -465,25 +477,24 @@ position: absolute;
 
 
 .linkedinIcon{
-background: url('assets/linkedin.png');
-background-size: 3vmin;
-height: 3vmin;
-width: 3vmin;
-display: block;
-position: absolute;
+  background: url('assets/linkedin.png');
+  background-size: 3vmin;
+  height: 3vmin;
+  width: 3vmin;
+  display: block;
+  position: absolute;
 }
 
 
-
 .downloadingIcon{
-background: url('assets/downloading.png');
-background-size: 3vmin;
-height: 3vmin;
-width: 3vmin;
-display: inline-block;
-position: relative;
-top: 1vmin;
-margin-right: 2vmin;
+  background: url('assets/downloading.png');
+  background-size: 3vmin;
+  height: 3vmin;
+  width: 3vmin;
+  display: inline-block;
+  position: relative;
+  top: 1vmin;
+  margin-right: 2vmin;
 }
 
 
@@ -504,7 +515,8 @@ margin-right: 2vmin;
   width: 2vmin;
   position: absolute;
   margin-left: 1vmin;
-  }
+}
+
 
 table {
   font-family: 'Times New Roman', Times, serif;
@@ -598,6 +610,42 @@ tr:nth-child(even) {
   color: #c59b08;
 }
 
+
+.ratePingNet {
+  float: center;
+  height: 5vmin;
+  padding: 0 10px;
+}
+.ratePingNet:not(:checked) > input {
+  position:absolute;
+  display: none;
+}
+.ratePingNet:not(:checked) > label {
+  float:right;
+  width:5em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:2vmin;
+  color:rgb(160, 158, 158);
+}
+.ratePingNet:not(:checked) > label:before {
+  content: '★ ';
+}
+.ratePingNet > input:checked ~ label {
+  color: #dfb82f;    
+}
+.ratePingNet:not(:checked) > label:hover,
+.ratePingNet:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+.ratePingNet > input:checked + label:hover,
+.ratePingNet > input:checked + label:hover ~ label,
+.ratePingNet > input:checked ~ label:hover,
+.ratePingNet > input:checked ~ label:hover ~ label,
+.ratePingNet > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
 
 
 .rateFastCapture {

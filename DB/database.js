@@ -17,25 +17,26 @@ window.addEventListener('load', ()=> {
 
       let databaseStarsHelper = firebase.database().ref().child('helper/starcount');
       let databaseStarsSelenium = firebase.database().ref().child('selenium/starcount');
+      let databaseStarsPingNet = firebase.database().ref().child('pingNet/starcount');
       let databaseStarsFastCapture = firebase.database().ref().child('fastCapture/starcount');
 
       let databaseUsersHelper = firebase.database().ref().child('helper/users');
       let databaseUsersSelenium = firebase.database().ref().child('selenium/users');
+      let databaseUsersPingNet = firebase.database().ref().child('pingNet/users');
       let databaseUsersFastCapture = firebase.database().ref().child('fastCapture/users');
 
       let databaseGetUserUidHelper = firebase.database().ref().child('rate/helper');
       let databaseGetUserUidSelenium = firebase.database().ref().child('rate/selenium');
+      let databaseGetUserUidPingNet = firebase.database().ref().child('rate/pingNet');
       let databaseGetUserUidFastCapture = firebase.database().ref().child('rate/fastCapture');
 
       let databaseGetDownloadCountHelper = firebase.database().ref().child('helper/downloadCount');
       let databaseGetDownloadCountSeleniumByGUI = firebase.database().ref().child('selenium/downloadCount');
+      let databaseGetDownloadCountPingNet = firebase.database().ref().child('pingNet/downloadCount');
       let databaseGetDownloadCountFastCapture = firebase.database().ref().child('fastCapture/downloadCount');
 
       firebase.auth().onAuthStateChanged(firebaseUser => {
-
-      if(firebaseUser)
-
-        {         
+      if(firebaseUser) {         
             const user = firebase.auth().currentUser;   
 
             databaseGetUserUidHelper.once('value', (snapshotHelperUid)=> {
@@ -66,6 +67,19 @@ window.addEventListener('load', ()=> {
               });         
             })
 
+            databaseGetUserUidPingNet.once('value', (snapshotPingNetUid)=> {
+              snapshotPingNetUid.forEach((child)=> {
+                
+                if(child.val()==user.uid){
+
+                  $("#star1PingNet").attr('disabled','disabled');
+                  $("#star2PingNet").attr('disabled','disabled');
+                  $("#star3PingNet").attr('disabled','disabled');
+                  $("#star4PingNet").attr('disabled','disabled');
+                  $("#star5PingNet").attr('disabled','disabled');
+                }
+              });         
+            })
 
             databaseGetUserUidFastCapture.once('value', (snapshotFastCaptureUid)=> {
               snapshotFastCaptureUid.forEach((child)=> {
@@ -85,7 +99,6 @@ window.addEventListener('load', ()=> {
             databaseGetDownloadCountHelper.child('downloaded').once('value', (snapshotCount)=> {
 
               let downloaded = parseInt(snapshotCount.val());
-      
               let dwnlCount = document.getElementById("downloadCounterHelper++");
               dwnlCount.textContent = "";                       
               dwnlCount.textContent += downloaded; 
@@ -94,8 +107,15 @@ window.addEventListener('load', ()=> {
             databaseGetDownloadCountSeleniumByGUI.child('downloaded').once('value', (snapshotCount)=> {
   
               let downloaded = parseInt(snapshotCount.val());
-      
               let dwnlCount = document.getElementById("downloadCounterSeleniumByGUI");
+              dwnlCount.textContent = "";                       
+              dwnlCount.textContent += downloaded; 
+            });
+
+            databaseGetDownloadCountPingNet.child('downloaded').once('value', (snapshotCount)=> {
+
+              let downloaded = parseInt(snapshotCount.val());
+              let dwnlCount = document.getElementById("downloadCounterPingNet");
               dwnlCount.textContent = "";                       
               dwnlCount.textContent += downloaded; 
             });
@@ -103,7 +123,6 @@ window.addEventListener('load', ()=> {
             databaseGetDownloadCountFastCapture.child('downloaded').once('value', (snapshotCount)=> {
 
               let downloaded = parseInt(snapshotCount.val());
-      
               let dwnlCount = document.getElementById("downloadCounterFastCapture");
               dwnlCount.textContent = "";                       
               dwnlCount.textContent += downloaded; 
@@ -176,7 +195,6 @@ window.addEventListener('load', ()=> {
                     document.getElementById("star5Helper").checked = true;
                   
                   }
-                  
               });      
             });    
           });    
@@ -251,15 +269,86 @@ window.addEventListener('load', ()=> {
                     document.getElementById("star5Selenium").checked = true;
                   
                   }
-              
-            });      
+              });      
+            });    
           });    
-        });    
-      }); 
-    });   
-  });
+        }); 
+      });   
+    });
     
+// Here we get summary of all stars for PingNet and get back summary of stars with some mathematic condition 
+databaseUsersPingNet.child('countAllUsers').once('value', (snapshotUsersPingNet)=> {
+  databaseStarsPingNet.child('star5').once('value', (snapshotStar5PingNet)=> {    
+    databaseStarsPingNet.child('star4').once('value', (snapshotStar4PingNet)=> {       
+      databaseStarsPingNet.child('star3').once('value', (snapshotStar3PingNet)=> {     
+        databaseStarsPingNet.child('star2').once('value', (snapshotStar2PingNet)=> {  
+          databaseStarsPingNet.child('star1').once('value', (snapshotStar1PingNet)=> {
+  
+            let valueOfAllUsersPingNet = parseInt(snapshotUsersPingNet.val());
+      
+            let valueOfStar1PingNet = parseInt(snapshotStar1PingNet.val());
+            let valueOfStar2PingNet = parseInt(snapshotStar2PingNet.val());
+            let valueOfStar3PingNet = parseInt(snapshotStar3PingNet.val());
+            let valueOfStar4PingNet = parseInt(snapshotStar4PingNet.val());
+            let valueOfStar5PingNet = parseInt(snapshotStar5PingNet.val());
 
+      
+            let summaryPingNet=valueOfStar1PingNet+valueOfStar2PingNet+valueOfStar3PingNet+valueOfStar4PingNet+valueOfStar5PingNet;
+            let ratePingNet=Math.round(summaryPingNet/valueOfAllUsersPingNet);
+
+            let usersCountPingNet = document.getElementById("usersCountPingNet");
+            usersCountPingNet.textContent = "";
+            usersCountPingNet.textContent += valueOfAllUsersPingNet;
+
+            if(ratePingNet >0 && ratePingNet <2){
+
+                    document.getElementById("star1PingNet").checked = true;
+                    document.getElementById("star2PingNet").checked = false;
+                    document.getElementById("star3PingNet").checked = false;
+                    document.getElementById("star4PingNet").checked = false;
+                    document.getElementById("star5PingNet").checked = false;
+                
+                  }else if(ratePingNet >1 && ratePingNet <3){
+                    
+                    document.getElementById("star1PingNet").checked = true;
+                    document.getElementById("star2PingNet").checked = true;
+                    document.getElementById("star3PingNet").checked = false;
+                    document.getElementById("star4PingNet").checked = false;
+                    document.getElementById("star5PingNet").checked = false;
+          
+                  
+                  }else if(ratePingNet >2 && ratePingNet <4){
+
+                    document.getElementById("star1PingNet").checked = true;
+                    document.getElementById("star2PingNet").checked = true;
+                    document.getElementById("star3PingNet").checked = true;
+                    document.getElementById("star4PingNet").checked = false;
+                    document.getElementById("star5PingNet").checked = false;
+                  
+                  }else if(ratePingNet >3 && ratePingNet <5){
+
+                    document.getElementById("star1PingNet").checked = true;
+                    document.getElementById("star2PingNet").checked = true;
+                    document.getElementById("star3PingNet").checked = true;
+                    document.getElementById("star4PingNet").checked = true;
+                    document.getElementById("star5PingNet").checked = false;
+                  
+          
+                  }else if(ratePingNet >4 && ratePingNet ==5){
+
+                    document.getElementById("star1PingNet").checked = true;
+                    document.getElementById("star2PingNet").checked = true;
+                    document.getElementById("star3PingNet").checked = true;
+                    document.getElementById("star4PingNet").checked = true;
+                    document.getElementById("star5PingNet").checked = true;
+                  
+                  }
+              });      
+            });    
+          });    
+        }); 
+      });   
+    });
 
 // Here we get summary of all stars for FastCapture and get back summary of stars with some mathematic condition 
 databaseUsersFastCapture.child('countAllUsers').once('value', (snapshotUsersFastCapture)=> {
@@ -285,59 +374,57 @@ databaseUsersFastCapture.child('countAllUsers').once('value', (snapshotUsersFast
             usersCountFastCapture.textContent = "";
             usersCountFastCapture.textContent += valueOfAllUsersFastCapture;
 
-          if(rateFastCapture >0 && rateFastCapture <2){
+            if(rateFastCapture >0 && rateFastCapture <2){
 
-                  document.getElementById("star1FastCapture").checked = true;
-                  document.getElementById("star2FastCapture").checked = false;
-                  document.getElementById("star3FastCapture").checked = false;
-                  document.getElementById("star4FastCapture").checked = false;
-                  document.getElementById("star5FastCapture").checked = false;
-              
-                }else if(rateFastCapture >1 && rateFastCapture <3){
+                    document.getElementById("star1FastCapture").checked = true;
+                    document.getElementById("star2FastCapture").checked = false;
+                    document.getElementById("star3FastCapture").checked = false;
+                    document.getElementById("star4FastCapture").checked = false;
+                    document.getElementById("star5FastCapture").checked = false;
+                
+                  }else if(rateFastCapture >1 && rateFastCapture <3){
+                    
+                    document.getElementById("star1FastCapture").checked = true;
+                    document.getElementById("star2FastCapture").checked = true;
+                    document.getElementById("star3FastCapture").checked = false;
+                    document.getElementById("star4FastCapture").checked = false;
+                    document.getElementById("star5FastCapture").checked = false;
+          
                   
-                  document.getElementById("star1FastCapture").checked = true;
-                  document.getElementById("star2FastCapture").checked = true;
-                  document.getElementById("star3FastCapture").checked = false;
-                  document.getElementById("star4FastCapture").checked = false;
-                  document.getElementById("star5FastCapture").checked = false;
-        
-                
-                }else if(rateFastCapture >2 && rateFastCapture <4){
+                  }else if(rateFastCapture >2 && rateFastCapture <4){
 
-                  document.getElementById("star1FastCapture").checked = true;
-                  document.getElementById("star2FastCapture").checked = true;
-                  document.getElementById("star3FastCapture").checked = true;
-                  document.getElementById("star4FastCapture").checked = false;
-                  document.getElementById("star5FastCapture").checked = false;
-                
-                }else if(rateFastCapture >3 && rateFastCapture <5){
+                    document.getElementById("star1FastCapture").checked = true;
+                    document.getElementById("star2FastCapture").checked = true;
+                    document.getElementById("star3FastCapture").checked = true;
+                    document.getElementById("star4FastCapture").checked = false;
+                    document.getElementById("star5FastCapture").checked = false;
+                  
+                  }else if(rateFastCapture >3 && rateFastCapture <5){
 
-                  document.getElementById("star1FastCapture").checked = true;
-                  document.getElementById("star2FastCapture").checked = true;
-                  document.getElementById("star3FastCapture").checked = true;
-                  document.getElementById("star4FastCapture").checked = true;
-                  document.getElementById("star5FastCapture").checked = false;
-                
-        
-                }else if(rateFastCapture >4 && rateFastCapture ==5){
+                    document.getElementById("star1FastCapture").checked = true;
+                    document.getElementById("star2FastCapture").checked = true;
+                    document.getElementById("star3FastCapture").checked = true;
+                    document.getElementById("star4FastCapture").checked = true;
+                    document.getElementById("star5FastCapture").checked = false;
+                  
+          
+                  }else if(rateFastCapture >4 && rateFastCapture ==5){
 
-                  document.getElementById("star1FastCapture").checked = true;
-                  document.getElementById("star2FastCapture").checked = true;
-                  document.getElementById("star3FastCapture").checked = true;
-                  document.getElementById("star4FastCapture").checked = true;
-                  document.getElementById("star5FastCapture").checked = true;
-                
-                }
-            
-          });      
-        });    
-      });    
-    }); 
-  });   
-});
+                    document.getElementById("star1FastCapture").checked = true;
+                    document.getElementById("star2FastCapture").checked = true;
+                    document.getElementById("star3FastCapture").checked = true;
+                    document.getElementById("star4FastCapture").checked = true;
+                    document.getElementById("star5FastCapture").checked = true;
+                  
+                  }
+              });      
+            });    
+          });    
+        }); 
+      });   
+   });
 
-
- }
-})
+    }
+  })
 });
 

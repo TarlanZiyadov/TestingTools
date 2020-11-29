@@ -29,13 +29,12 @@ Licensed by https://creativecommons.org/licenses/by/3.0/ ©
   <!-- Navigation bar -->
 <div id="navbar" class="sidenav">
   <strong><a class="tablinks" href="https://softwarefortesting.com" style="font-size:2vmin;"><i class="refreshIcon"></i><span id="refresh" class="sidenavStyle" style="padding-left: 5vmin;"> Refresh</span></a></strong>
-  <strong><a class="tablinks" href="https://softwarefortesting.com/blog/" style="font-size:2vmin;"><i class="blogIcon"></i><span id="blogsButton" class="sidenavStyle" style="padding-left: 5vmin"> Blogs about testing</span></a></strong> 
-  <strong><a class="tablinks" href="https://softwarefortesting.com/externaltesttools/" style="font-size:2vmin;"><i class="externalIcon"></i><span id="externalButton" class="sidenavStyle" style="padding-left: 5vmin"> External test tools</span></a></strong> 
+  <strong><a class="tablinks" href="https://softwarefortesting.com/blog/" style="font-size:2vmin;"><i class="blogIcon"></i><span id="blogsButton" class="sidenavStyle" style="padding-left: 5vmin"> About testing</span></a></strong> 
   <strong><a class="tablinks" onmouseover="openCard(event,'helperPlusPluss')" style="font-size:2vmin;"><i class="fileIcon"></i><span id="downloadHelper++" class="sidenavStyle" style="padding-left: 5vmin"> Helper++</span></a></strong> 
-  <strong><a class="tablinks" onmouseover="openCard(event,'selenium')" style="font-size:2vmin;"><i class="fileIcon"></i><span id="downloadSeleniumByGUI" class="sidenavStyle" style="padding-left: 5vmin"> SeleniumByGUI</span></a></strong>  
+  <strong><a class="tablinks" onmouseover="openCard(event,'selenium')" style="font-size:2vmin;"><i class="fileIcon"></i><span id="downloadSeleniumByGUI" class="sidenavStyle" style="padding-left: 5vmin"> SeleniumByGUI</span></a></strong> 
+  <strong><a class="tablinks" onmouseover="openCard(event,'pingNet')" style="font-size:2vmin;"><i class="fileIcon"></i><span id="downloadPingNet" class="sidenavStyle" style="padding-left: 5vmin"> PingNet</span></a></strong>   
   <strong><a class="tablinks" onmouseover="openCard(event,'fast')" style="font-size:2vmin;"><i class="fileIcon"></i><span id="downloadFastCapture" class="sidenavStyle" style="padding-left: 5vmin"> FastCapture</span></a></strong>
   <strong><a class="tablinks" onmouseover="openCard(event,'aboutCreater')" style="font-size:2vmin;"><i class="infoIcon"></i><span id="about" class="sidenavStyle" style="padding-left: 5vmin"> About</span></a></strong>
-  <strong><a class="tablinks" onmouseover="openCard(event,'helpCard')" style="font-size:2vmin;"><i class="helpIcon"></i><span id="help" class="sidenavStyle" style="padding-left: 5vmin"> Help</span></a></strong>
 </div>
 
 
@@ -255,6 +254,72 @@ Licensed by https://creativecommons.org/licenses/by/3.0/ ©
 </div>
 
 
+<!-- PingNet page -->
+<div id="pingNet" class="tabcontent">
+  <div class="pingNet">
+  <h5 id="softwarePingNet" class ="headerTools"><strong>PingNet</strong></h5>
+    <img src="assets/PingNet.jpg" style="width: 40vmin;height: 50vmin;" alt="PingNet"/>
+    <p id="descriptionPingNet" class="cardDescription"></p>
+    <p>
+      <table>
+        <tr>
+          <th>Platform</th>
+          <th>Archt</th>
+          <th>Setup file size</th>
+          <th>File size</th>
+          <th>Version</th>
+          <th>Downloads</th>
+        </tr>
+        <tr>
+          <td>Windows 8, 10</td>
+          <td>x64</td>
+          <td>186 kb</td>
+          <td>864 kb</td>
+          <td>0.0.1.1</td>
+          <td id="downloadCounterPingNet"></td>
+        </tr>
+      </table>
+    </p>
+  
+    <p>
+      <table>
+        <tr>
+          <th>Version</th>
+          <th>Date</th>
+          <th>News</th>
+        </tr>
+        <tr>
+          <td>0.0.1.1</td>
+          <td>Nov 07, 2020</td>
+          <td>Launch.</td>     
+        </tr>
+      </table>
+    </p>
+  
+    <form id="downloadPingNetLink" action="https://github.com/TarlanZiyadov/PingNet/raw/main/PingNetSetup.exe">
+      <p><button onclick="downloading()"><i class="downloadIcon"></i><span id="downloadPingNet" class="haptic-swing" style="font-size: 2vmin;">Download</span></button></p>
+    </form>
+    <div id="rateClassPingNet" class="ratePingNet">
+      <input type="radio" id="star5PingNet" name="ratePingNet" value="5" />
+      <label for="star5PingNet" title="Great!"><strong>5 stars</strong></label>
+      <input type="radio" id="star4PingNet" name="ratePingNet" value="4" />
+      <label for="star4PingNet" title="Good!"><strong>4 stars</strong></label>
+      <input type="radio" id="star3PingNet" name="ratePingNet" value="3" />
+      <label for="star3PingNet" title="Ok!"><strong>3 stars</strong></label>
+      <input type="radio" id="star2PingNet" name="ratePingNet" value="2" />
+      <label for="star2PingNet" title="Not good!"><strong>2 stars</strong></label>
+      <input type="radio" id="star1PingNet" name="ratePingNet" value="1" />
+      <label for="star1PingNet" title="Bad!"><strong>1 star</strong></label>
+    </div>
+    <p>
+      <p><em><span id="usersCountTxtPingNet" style="font-size: 2vmin; position:relative">Users rated</span></em><i class="rateIcon"></i></p>
+      <p id="usersCountPingNet" style="font-size: 2vmin; position:relative"></p>
+    </p>
+  </div>
+  </div>
+
+
+
 <!-- FastCapture page -->
 <div id="fast" class="tabcontent">
 <div class="fastCapture">
@@ -345,16 +410,6 @@ Licensed by https://creativecommons.org/licenses/by/3.0/ ©
  </div>
   
 
-
-<!-- Help page -->
-<div id="helpCard" class="tabcontent">
-  <div class="helpToUser">
-    <img src="assets/HelpMe.jpg" style="width: 30vmin;height: 30vmin;" alt="Help"/>
-    <p id="descriptionHelp" class="cardDescription"></p>
-  </div>
- </div>
-
-
 <!-- Footer -->
 <div id="footerMainPage" class="footer">
     <p style="padding-top: 0vmin;text-align: left;padding-left: 15vmin;"> 
@@ -393,6 +448,7 @@ Licensed by https://creativecommons.org/licenses/by/3.0/ ©
 <script src="DB/database.js"></script>
 <script src="DB/helperDatabase.js"></script>
 <script src="DB/seleniumByGUIDatabase.js"></script>
+<script src="DB/pingNetDatabase.js"></script>
 <script src="DB/fastCaptureDatabase.js"></script>
 <script src="InnerHTML/innerHTMLMain.js"></script>
 <script src="InnerHTML/animations.js"></script>

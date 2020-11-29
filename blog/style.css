@@ -22,6 +22,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
   }
 
+
 .sidenav {
   height: 100%;
   width: 20vmin;
@@ -59,8 +60,9 @@ body {
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 4vmin;}
-  }
+}
   
+
 .footer{
 left: 0;
 right: 0;
@@ -80,6 +82,7 @@ width: 7vmin;
 height: 7vmin;
 margin-left: 50%;
 }
+
 
 img {
     max-width: 100%;
@@ -106,6 +109,7 @@ background: #888;
 background: #555; 
 }
 
+
 .tabcontent {
   float: left;
   padding: 0px 12px;
@@ -124,6 +128,7 @@ background: #555;
   display: table;
 }
 
+
 .aboutIcon{
   background: url('assets/aboutIcon.png');
   background-size: 3vmin;
@@ -133,7 +138,8 @@ background: #555;
   position: absolute;
 }
 
-.blogIcon{
+
+.testingIcon{
   background: url('assets/blogIcon.png');
   background-size: 3vmin;
   height: 3vmin;
@@ -141,6 +147,7 @@ background: #555;
   display: block;
   position: absolute;
 }
+
 
 .backIcon{
   background: url('assets/back.png');
@@ -150,6 +157,7 @@ background: #555;
   display: block;
   position: absolute;
 }
+
 
 .shownIcon{
   background: url('assets/shownIcon.png');

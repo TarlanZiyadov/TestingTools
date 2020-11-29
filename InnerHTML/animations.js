@@ -8,7 +8,7 @@ hoverTextSplit.length > 0 ? hoverTextElement.innerHTML += hoverTextSplit.shift()
 
 // animation of title
 const mainPageTitleElement = document.querySelector(".headerPage");
-const mainPageTitleSplit=mainPageTitle.split("");
+const mainPageTitleSplit = mainPageTitle.split("");
 mainPageTitleElement.textContent="";
 for (let i = 0; i < mainPageTitleSplit.length; i++){
     mainPageTitleElement.innerHTML += "<animationTitle>" + mainPageTitleSplit[i] + "</animationTitle>";
