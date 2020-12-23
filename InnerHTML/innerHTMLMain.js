@@ -1,6 +1,6 @@
 // text
 let mainPageTitle = "Welcome-to-Software for testing-Web-page!";
-let frontPageText="This website has been developed to provide the opportunity to try new testing tools. As well as some blogs about testing. "+
+let frontPageText="This website has been developed to provide the opportunity to try new testing tools as well as some blogs about testing. "+
 "Please note that the site is not commercial and is maintained for long periods as a side project.";
 let frontPageTipsText="Feel free to send feedback about tools to me. Link down below.";
 let hoverTxt ="Please hover on the left side of the page or tape on the menu on the left side to see available menus."
