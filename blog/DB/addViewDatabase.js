@@ -1,33 +1,31 @@
-document.getElementById('readBlog1').onclick = ()=> {
+function addToDatabase(evt, tabContentName) {
 
-    let databaseBlogShownCount = firebase.database().ref().child('blog/shownCount');
+    let databaseBlogShownCount = firebase.database().ref().child('blog/' + tabContentName);
 
     firebase.auth().onAuthStateChanged(firebaseUser => {
-    if(firebaseUser)
-        {
-            let addView = window.localStorage.getItem('addViewBlog1');
-            if (addView===null){
+        if (firebaseUser) {
+            let addView = window.localStorage.getItem('addView' + tabContentName);
+            if (addView === null) {
 
-            window.localStorage.setItem('addViewBlog1', "1");
+                window.localStorage.setItem('addView' + tabContentName, "1");
 
-            databaseBlogShownCount.child('blog1/viewed').once('value', (snapshot)=> {
+                databaseBlogShownCount.child('viewed').once('value', (snapshot) => {
 
-                let addOne=1;
-                let viewedCount=parseInt(snapshot.val());
-                addOne += viewedCount;
-                
-                databaseBlogShownCount.update({
-                    'blog1/viewed': addOne
+                    let addOne = 1;
+                    let viewedCount = parseInt(snapshot.val());
+                    addOne += viewedCount;
+
+                    databaseBlogShownCount.update({
+                        'viewed': addOne
                     });
-                }).then(result =>{
+                }).then(result => {
 
-                    databaseBlogShownCount.child('blog1/viewed').once('value', (snapshot)=> {
+                    databaseBlogShownCount.child('viewed').once('value', (snapshot) => {
 
-                    let viewedCount=parseInt(snapshot.val());
-                    let countShownBlog1=document.getElementById('countShownBlog1');
-            
-                    countShownBlog1.textContent = "";
-                    countShownBlog1.textContent += viewedCount;
+                        let viewedCount = parseInt(snapshot.val());
+                        let countShownBlog = document.getElementById('countShown' + tabContentName);
+                        countShownBlog.textContent = "";
+                        countShownBlog.textContent += viewedCount;
                     })
                 });
             }

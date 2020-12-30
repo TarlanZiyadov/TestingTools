@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Software for testing</title>
-<link rel="icon" type="image/png" href="assets/web.png"/>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8" />
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-<meta http-equiv="Cache-control" content="public, max-age=60000">
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-<script>window.jQuery || document.write('<script src="jquery.js"><\/script>')</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169533728-1"></script>
 
-<!-- Here is css linked to file -->
-<link rel="stylesheet" href="style.css">
+<head>
+  <title>Software for testing</title>
+  <link rel="icon" type="image/png" href="assets/web.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta http-equiv="Cache-control" content="public, max-age=60000">
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+  <script>window.jQuery || document.write('<script src="jquery.js"><\/script>')</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169533728-1"></script>
+
+  <!-- Here is css linked to file -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <!-- This webpage was developed by Tarlan Ziyadov and all rights reserved by www.softwarefortesting.com ©! -->
 <!--Webpage icons can be found in the 
@@ -24,420 +25,483 @@ https://www.deviantart.com/delacro
 http://www.pixeden.com/
 Licensed by https://creativecommons.org/licenses/by/3.0/ ©
 -->
+
 <body>
 
   <!-- Navigation bar -->
-<div id="navbar" class="sidenav">
-  <strong><a class="tablinks" href="https://softwarefortesting.com" style="font-size:2vmin;"><i class="refreshIcon"></i><span id="refresh" class="sidenavStyle" style="padding-left: 5vmin;"> Refresh</span></a></strong>
-  <strong><a class="tablinks" href="https://softwarefortesting.com/blog/" style="font-size:2vmin;"><i class="blogIcon"></i><span id="blogsButton" class="sidenavStyle" style="padding-left: 5vmin"> About testing</span></a></strong> 
-  <strong><a class="tablinks" onmouseover="openCard(event,'helperPlusPluss')" style="font-size:2vmin;"><i class="fileIcon"></i><span id="downloadHelper++" class="sidenavStyle" style="padding-left: 5vmin"> Helper++</span></a></strong> 
-  <strong><a class="tablinks" onmouseover="openCard(event,'selenium')" style="font-size:2vmin;"><i class="fileIcon"></i><span id="downloadSeleniumByGUI" class="sidenavStyle" style="padding-left: 5vmin"> SeleniumByGUI</span></a></strong> 
-  <strong><a class="tablinks" onmouseover="openCard(event,'pingNet')" style="font-size:2vmin;"><i class="fileIcon"></i><span id="downloadPingNet" class="sidenavStyle" style="padding-left: 5vmin"> PingNet</span></a></strong>   
-  <strong><a class="tablinks" onmouseover="openCard(event,'fast')" style="font-size:2vmin;"><i class="fileIcon"></i><span id="downloadFastCapture" class="sidenavStyle" style="padding-left: 5vmin"> FastCapture</span></a></strong>
-  <strong><a class="tablinks" onmouseover="openCard(event,'aboutCreater')" style="font-size:2vmin;"><i class="infoIcon"></i><span id="about" class="sidenavStyle" style="padding-left: 5vmin"> About</span></a></strong>
-</div>
-
-
-<!-- main body content -->
-<div id="main" class="main"> 
-<!-- Home page -->
-<div>
-  <h2 id="mainPageTitle" class="headerPage"><strong></strong></h2>
-  <div>
-  <em><strong><p id="frontPagetxt" style="padding-left: 10vmin; text-align: center;"></p></strong></em> 
-  <p id="frontPagetxtForTips" style="padding-left: 10vmin; text-align: center;"></p>
-  </div>
-  <br>
-  <p style="padding-left: 10vmin; text-align: center;"><i class="hoverOnIcon"></i>
-   <em><span id="frontPageHoverText" style="padding-left: 5vmin;"></span></em>
-  </p>
-  </br>
-</div>
-
-
-
-<!-- Helper++ page -->
-<div id="helperPlusPluss" class="tabcontent">
-<div class="helper">
-<h3 id="softwareHelper++" class ="headerTools"><strong>Helper++</strong></h3>
-  <img src="assets/Helper++.jpeg" style="width: 80vmin;height: 50vmin;" alt="Helper++"/>
- <p id="descriptionHelper" class="cardDescription"></p>
-    <p>
-      <table>
-        <tr>
-          <th>Platform</th>
-          <th>Archt</th>
-          <th>Setup file size</th>
-          <th>File size</th>
-          <th>Version</th>
-          <th>Downloads</th>
-        </tr>
-        <tr>
-          <td>Windows 8, 10</td>
-          <td>x64</td>
-          <td>317 kb</td>
-          <td>1092 kb</td>
-          <td>1.5.2.7</td>
-          <td id="downloadCounterHelper++"></td>
-        </tr>
-    </table>
-  </p>
-
-  <p>
-    <table>
-      <tr>
-        <th>Version</th>
-        <th>Date</th>
-        <th>News</th>
-      </tr>
-      <tr>
-        <td>0.0.1.1</td>
-        <td>Oct 08, 2019</td>
-        <td>Launch.</td>
-      </tr>
-      <tr>
-        <td>0.1.1.6</td>
-        <td>Feb 22, 2020</td>
-        <td>Now its possibly to search for saved files in Helper++ by searchfield.</td>
-      </tr>
-      <tr>
-        <td>0.2.1.6</td>
-        <td>Mar 02, 2020</td>
-        <td>UI was changed to provide better user experience. Helper ++ optimized for better quality and fast response. By default, all created files are saved in their own folder called Files.</td>
-      </tr>
-      <tr>
-        <td>0.2.1.7</td>
-        <td>Mar 15, 2020</td>
-        <td>Minor update! Selected characters counter was added.</td>
-      </tr>
-      <tr>
-        <td>0.3.1.7</td>
-        <td>Jul 25, 2020</td>
-        <td>
-          Password locking and unlocking are added for Helper++. 
-          Text search possibility in the file added. 
-          Tab indentation added. 
-          Bullet indents added. 
-          Stopwatch added with possibility to customize seconds, minutes and hours. 
-          Some GUI icons changed. 
-          Bug fixed for RTF file.
-        </td>
-      </tr>
-      <tr>
-        <td>0.3.2.7</td>
-        <td>Aug 09, 2020</td>
-        <td>Now its possibly to rename the file from Helper++.</td>
-      </tr>
-      <tr>
-        <td>0.4.2.7</td>
-        <td>Sep 19, 2020</td>
-        <td>Mouse over sound added to buttons. Now its possible to choose vertical or horizontal scrollbar. Some UI animations added to buttons. List box for saved files is now expanding to be more readable. Optimized for better performance.
-          "Everything gets better with time as Helper++".
-        </td>
-      </tr>
-      <tr>
-        <td>1.4.2.7</td>
-        <td>Sep 23, 2020</td>
-        <td>New UI design. Helper++ is twice faster than before.
-           Now its possible to turn on or off horizontal scrollbar. In this update UI design and performance was in focus. Bug fixed caused by mouse hover sound.
-        </td>
-      </tr>
-      <tr>
-        <td>1.5.2.7</td>
-        <td>Oct 18, 2020</td>
-        <td>New UI design. Less is more.
-        </td>
-      </tr>
-  </table>
-</p>
-
-    <form id="downloadHelper++Link" action="https://github.com/TarlanZiyadov/Helper/raw/master/Helper++Setup.exe" download>  
-     <p><button onclick="downloading()"><i class="downloadIcon"></i><span id="downloadHelper++" class="haptic-swing" style="font-size: 2vmin;">Download</span></button></p>
-    </form>
-    <div id="rateClassHelper" class="rateHelper">
-      <input type="radio" id="star5Helper" name="rateHelper" value="5" />
-      <label for="star5Helper" title="Great!"><strong>5 stars</strong></label>
-      <input type="radio" id="star4Helper" name="rateHelper" value="4" />
-      <label for="star4Helper" title="Good!"><strong>4 stars</strong></label>
-      <input type="radio" id="star3Helper" name="rateHelper" value="3" />
-      <label for="star3Helper" title="Ok!"><strong>3 stars</strong></label>
-      <input type="radio" id="star2Helper" name="rateHelper" value="2" />
-      <label for="star2Helper" title="Not good!"><strong>2 stars</strong></label>
-      <input type="radio" id="star1Helper" name="rateHelper" value="1" />
-      <label for="star1Helper" title="Bad!"><strong>1 star</strong></label>
-    </div>
-    <p>
-      <p><em><span id="usersCountTxtHelper" style="font-size: 2vmin; position: relative;">Users rated</span></em><i class="rateIcon"></i></p>
-      <p id="usersCountHelper" style="font-size: 2vmin; position: relative;"></p>
-    </p>
-</div>
-</div>
-
-
-<!-- SeleniumByGUI page -->
-<div id="selenium" class="tabcontent">
-<div class="seleniumByGUI">
-<h4 id="softwareSeleniumByGUI" class ="headerTools"><strong>SeleniumByGUI</strong></h4>
-  <img src="assets/SeleniumByGUI.jpg" style="width: 45vmin;height: 70vmin;" alt="SeleniumByGUI"/>
-  <p id="descriptionSeleniumByGUI" class="cardDescription"></p>
-  <p>
-    <table>
-      <tr>
-        <th>Platform</th>
-        <th>Archt</th>
-        <th>Setup file size</th>
-        <th>File size</th>
-        <th>Version</th>
-        <th>Downloads</th>
-      </tr>
-      <tr>
-        <td>Windows 8, 10</td>
-        <td>x64</td>
-        <td>8824 kb</td>
-        <td>16,9 mb</td>
-        <td>0.0.2.3</td>
-        <td id="downloadCounterSeleniumByGUI"></td>
-      </tr>
-    </table>
-  </p>
-
-  <p>
-    <table>
-      <tr>
-        <th>Version</th>
-        <th>Date</th>
-        <th>News</th>
-      </tr>
-      <tr>
-        <td>0.0.0.2</td>
-        <td>Dec 02, 2019</td>
-        <td>Launch.</td> 
-      </tr>
-      <tr>
-        <td>0.0.0.3</td>
-        <td>Jan 10, 2020</td>
-        <td>Some GUI elements was changed.</td> 
-      </tr>
-      <tr>
-        <td>0.0.1.3</td>
-        <td>Jan 20, 2020</td>
-        <td>Cookie Manager was added. This now means if the user must be logged in then cookies will be good to use before automation. Ui elements was changed.</td> 
-      </tr>
-      <tr>
-        <td>0.0.2.3</td>
-        <td>Jul 29, 2020</td>
-        <td>Some icons changed. Optimized and bug fixed.</td> 
-      </tr>
-    </table>
-  </p>
-
-  <form id="downloadSeleniumByGUILink" action="https://github.com/TarlanZiyadov/SeleniumByGUI/raw/master/SeleniumByGUISetup.exe" download>
-    <p><button onclick="downloading()"><i class="downloadIcon"></i><span id="downloadSeleniumByGUI" class="haptic-swing" style="font-size: 2vmin;">Download</span></button></p>
-  </form>
-  <div id="rateClassSelenium" class="rateSelenium">
-    <input type="radio" id="star5Selenium" name="rateSelenium" value="5" />
-    <label for="star5Selenium" title="Great!"><strong>5 stars</strong></label>
-    <input type="radio" id="star4Selenium" name="rateSelenium" value="4" />
-    <label for="star4Selenium" title="Good!"><strong>4 stars</strong></label>
-    <input type="radio" id="star3Selenium" name="rateSelenium" value="3" />
-    <label for="star3Selenium" title="Ok!"><strong>3 stars</strong></label>
-    <input type="radio" id="star2Selenium" name="rateSelenium" value="2" />
-    <label for="star2Selenium" title="Not good!"><strong>2 stars</strong></label>
-    <input type="radio" id="star1Selenium" name="rateSelenium" value="1" />
-    <label for="star1Selenium" title="Bad!"><strong>1 star</strong></label>
-  </div>
-  <p>
-    <p><em><span id="usersCountTxtSelenium" style="font-size: 2vmin; position:relative">Users rated</span></em><i class="rateIcon"></i></p>
-    <p id="usersCountSelenium" style="font-size: 2vmin; position:relative"></p>
-  </p>
-</div>
-</div>
-
-
-<!-- PingNet page -->
-<div id="pingNet" class="tabcontent">
-  <div class="pingNet">
-  <h5 id="softwarePingNet" class ="headerTools"><strong>PingNet</strong></h5>
-    <img src="assets/PingNet.jpg" style="width: 40vmin;height: 50vmin;" alt="PingNet"/>
-    <p id="descriptionPingNet" class="cardDescription"></p>
-    <p>
-      <table>
-        <tr>
-          <th>Platform</th>
-          <th>Archt</th>
-          <th>Setup file size</th>
-          <th>File size</th>
-          <th>Version</th>
-          <th>Downloads</th>
-        </tr>
-        <tr>
-          <td>Windows 8, 10</td>
-          <td>x64</td>
-          <td>186 kb</td>
-          <td>864 kb</td>
-          <td>0.0.1.1</td>
-          <td id="downloadCounterPingNet"></td>
-        </tr>
-      </table>
-    </p>
-  
-    <p>
-      <table>
-        <tr>
-          <th>Version</th>
-          <th>Date</th>
-          <th>News</th>
-        </tr>
-        <tr>
-          <td>0.0.1.1</td>
-          <td>Nov 07, 2020</td>
-          <td>Launch.</td>     
-        </tr>
-      </table>
-    </p>
-  
-    <form id="downloadPingNetLink" action="https://github.com/TarlanZiyadov/PingNet/raw/main/PingNetSetup.exe">
-      <p><button onclick="downloading()"><i class="downloadIcon"></i><span id="downloadPingNet" class="haptic-swing" style="font-size: 2vmin;">Download</span></button></p>
-    </form>
-    <div id="rateClassPingNet" class="ratePingNet">
-      <input type="radio" id="star5PingNet" name="ratePingNet" value="5" />
-      <label for="star5PingNet" title="Great!"><strong>5 stars</strong></label>
-      <input type="radio" id="star4PingNet" name="ratePingNet" value="4" />
-      <label for="star4PingNet" title="Good!"><strong>4 stars</strong></label>
-      <input type="radio" id="star3PingNet" name="ratePingNet" value="3" />
-      <label for="star3PingNet" title="Ok!"><strong>3 stars</strong></label>
-      <input type="radio" id="star2PingNet" name="ratePingNet" value="2" />
-      <label for="star2PingNet" title="Not good!"><strong>2 stars</strong></label>
-      <input type="radio" id="star1PingNet" name="ratePingNet" value="1" />
-      <label for="star1PingNet" title="Bad!"><strong>1 star</strong></label>
-    </div>
-    <p>
-      <p><em><span id="usersCountTxtPingNet" style="font-size: 2vmin; position:relative">Users rated</span></em><i class="rateIcon"></i></p>
-      <p id="usersCountPingNet" style="font-size: 2vmin; position:relative"></p>
-    </p>
-  </div>
+  <div id="navbar" class="sidenav">
+    <strong><a class="tablinks" href="https://softwarefortesting.com" style="font-size:2vmin;"><i
+          class="refreshIcon"></i><span id="refresh" class="sidenavStyle" style="padding-left: 5vmin;">
+          Refresh</span></a></strong>
+    <strong><a class="tablinks" href="https://softwarefortesting.com/blog/" style="font-size:2vmin;"><i
+          class="blogIcon"></i><span id="blogsButton" class="sidenavStyle" style="padding-left: 5vmin"> About
+          testing</span></a></strong>
+    <strong><a class="tablinks" onmouseover="openCard(event,'helperPlusPluss'), getDatabase(event, 'Helper')"
+        style="font-size:2vmin;"><i class="fileIcon"></i><span id="downloadHelper++" class="sidenavStyle"
+          style="padding-left: 5vmin">
+          Helper++</span></a></strong>
+    <strong><a class="tablinks" onmouseover="openCard(event,'selenium'), getDatabase(event, 'Selenium')"
+        style="font-size:2vmin;"><i class="fileIcon"></i><span id="downloadSeleniumByGUI" class="sidenavStyle"
+          style="padding-left: 5vmin">
+          SeleniumByGUI</span></a></strong>
+    <strong><a class="tablinks" onmouseover="openCard(event,'pingNet'), getDatabase(event, 'PingNet')"
+        style="font-size:2vmin;"><i class="fileIcon"></i><span id="downloadPingNet" class="sidenavStyle"
+          style="padding-left: 5vmin">
+          PingNet</span></a></strong>
+    <strong><a class="tablinks" onmouseover="openCard(event,'fast'), getDatabase(event, 'FastCapture')"
+        style="font-size:2vmin;"><i class="fileIcon"></i><span id="downloadFastCapture" class="sidenavStyle"
+          style="padding-left: 5vmin">
+          FastCapture</span></a></strong>
+    <strong><a class="tablinks" onmouseover="openCard(event,'aboutCreater')" style="font-size:2vmin;"><i
+          class="infoIcon"></i><span id="about" class="sidenavStyle" style="padding-left: 5vmin">
+          About</span></a></strong>
   </div>
 
 
-
-<!-- FastCapture page -->
-<div id="fast" class="tabcontent">
-<div class="fastCapture">
-<h5 id="softwareFastCapture" class ="headerTools"><strong>FastCapture</strong></h5>
-  <img src="assets/FastCapture.jpg" style="width: 20vmin;height: 10vmin;" alt="FastCapture"/>
-  <p id="descriptionFastCapture" class="cardDescription"></p>
-  <p>
-    <table>
-      <tr>
-        <th>Platform</th>
-        <th>Archt</th>
-        <th>Setup file size</th>
-        <th>File size</th>
-        <th>Version</th>
-        <th>Downloads</th>
-      </tr>
-      <tr>
-        <td>Windows 8, 10</td>
-        <td>x64</td>
-        <td>137 kb</td>
-        <td>186 kb</td>
-        <td>0.0.1.1</td>
-        <td id="downloadCounterFastCapture"></td>
-      </tr>
-    </table>
-  </p>
-
-  <p>
-    <table>
-      <tr>
-        <th>Version</th>
-        <th>Date</th>
-        <th>News</th>
-      </tr>
-      <tr>
-        <td>0.0.0.1</td>
-        <td>Dec 29, 2019</td>
-        <td>Launch.</td>     
-      </tr>
-      <tr>
-        <td>0.0.1.1</td>
-        <td>Jul 30, 2020</td>
-        <td>Optimized and some GUI change. Now, when a screenshot is taken, the image opens automatically.</td>     
-      </tr>
-    </table>
-  </p>
-
-  <form id="downloadFastCaptureLink" action="https://github.com/TarlanZiyadov/FastCapture/raw/master/FastCaptureSetup.exe">
-    <p><button onclick="downloading()"><i class="downloadIcon"></i><span id="downloadFastCapture" class="haptic-swing" style="font-size: 2vmin;">Download</span></button></p>
-  </form>
-  <div id="rateClassFastCapture" class="rateFastCapture">
-    <input type="radio" id="star5FastCapture" name="rateFastCapture" value="5" />
-    <label for="star5FastCapture" title="Great!"><strong>5 stars</strong></label>
-    <input type="radio" id="star4FastCapture" name="rateFastCapture" value="4" />
-    <label for="star4FastCapture" title="Good!"><strong>4 stars</strong></label>
-    <input type="radio" id="star3FastCapture" name="rateFastCapture" value="3" />
-    <label for="star3FastCapture" title="Ok!"><strong>3 stars</strong></label>
-    <input type="radio" id="star2FastCapture" name="rateFastCapture" value="2" />
-    <label for="star2FastCapture" title="Not good!"><strong>2 stars</strong></label>
-    <input type="radio" id="star1FastCapture" name="rateFastCapture" value="1" />
-    <label for="star1FastCapture" title="Bad!"><strong>1 star</strong></label>
-  </div>
-  <p>
-    <p><em><span id="usersCountTxtFastCapture" style="font-size: 2vmin; position:relative">Users rated</span></em><i class="rateIcon"></i></p>
-    <p id="usersCountFastCapture" style="font-size: 2vmin; position:relative"></p>
-  </p>
-</div>
-</div>
-
-
-
-<!-- About page -->
-<div id="aboutCreater" class="tabcontent">
-  <div class="aboutDeveloper">
-  <h6 id="TarlanZiyadov" class ="headerTools"><strong>Tarlan Ziyadov</strong></h6>
-    <img src="assets/TarlanZiyadov.png" style="width: 15vmin;height: 20vmin;border-radius: 20%;" alt="AboutDeveloper"/>
-    <p id="descriptionAbout" class="cardDescription"></p>
-    <form action="https://linkedin.com/in/tarlan-ziyadov-9096729a" target="_blank">      
-      <p><button><i class="linkedinIcon"></i><span id="linkedin" class="haptic-swing" style="font-size: 2vmin;">LinkedIn</span></button></p>   
-    </form>
-    <form action="https://github.com/TarlanZiyadov" target="_blank">      
-      <p><button><i class="githubIcon"></i><span id="linkedin" class="haptic-swing" style="font-size: 2vmin;">Github repository</span></button></p>   
-    </form>
-    <form action="mailto:tarlan.ziyadov@hotmail.se" method="post" enctype="text/plain">      
-        <p><button><i class="contactIcon"></i><span id="contact" class="haptic-swing" style="font-size: 2vmin;">Contact</span></button></p>   
-    </form>
-  </div>
- </div>
-  
-
-<!-- Footer -->
-<div id="footerMainPage" class="footer">
-    <p style="padding-top: 0vmin;text-align: left;padding-left: 15vmin;"> 
-      <a id="feedbackMail"  href="mailto:helperplusplus@gmail.com" style="cursor: pointer;"><span style="color: cornflowerblue;">Send your feedback</span></a>
-   </p>
-    <p style="padding-top: 0vmin;text-align: left;padding-left: 15vmin;">
-      <a><span id="copyrighttxt">2020 © Tarlan Ziyadov</span></a> 
+  <!-- main body content -->
+  <div id="main" class="main">
+    <!-- Home page -->
+    <div>
+      <h2 id="mainPageTitle" class="headerPage"><strong></strong></h2>
+      <div>
+        <em><strong>
+            <p id="frontPagetxt" style="padding-left: 10vmin; text-align: center;"></p>
+          </strong></em>
+        <p id="frontPagetxtForTips" style="padding-left: 10vmin; text-align: center;"></p>
+      </div>
       <br>
-      <a><span id="country">Sweden</span></a>
-      <img src="assets/pinpoint.png" style="width: 2vmin;height: 2vmin;" alt="pinpoint"/>
-    </br>
-    </p>
+      <p style="padding-left: 10vmin; text-align: center;"><i class="hoverOnIcon"></i>
+        <em><span id="frontPageHoverText" style="padding-left: 5vmin;"></span></em>
+      </p>
+      </br>
+    </div>
+
+
+
+    <!-- Helper++ page -->
+    <div id="helperPlusPluss" class="tabcontent">
+      <div class="helper">
+        <h3 id="softwareHelper++" class="headerTools"><strong>Helper++</strong></h3>
+        <img src="assets/Helper++.jpeg" style="width: 80vmin;height: 50vmin;" alt="Helper++" />
+        <p id="descriptionHelper" class="cardDescription"></p>
+        <p>
+        <table>
+          <tr>
+            <th>Platform</th>
+            <th>Archt</th>
+            <th>Setup file size</th>
+            <th>File size</th>
+            <th>Version</th>
+            <th>Downloads</th>
+          </tr>
+          <tr>
+            <td>Windows 8, 10</td>
+            <td>x64</td>
+            <td>317 kb</td>
+            <td>1092 kb</td>
+            <td>1.5.2.7</td>
+            <td id="downloadCounterHelper"></td>
+          </tr>
+        </table>
+        </p>
+
+        <p>
+        <table>
+          <tr>
+            <th>Version</th>
+            <th>Date</th>
+            <th>News</th>
+          </tr>
+          <tr>
+            <td>0.0.1.1</td>
+            <td>Oct 08, 2019</td>
+            <td>Launch.</td>
+          </tr>
+          <tr>
+            <td>0.1.1.6</td>
+            <td>Feb 22, 2020</td>
+            <td>Now its possibly to search for saved files in Helper++ by searchfield.</td>
+          </tr>
+          <tr>
+            <td>0.2.1.6</td>
+            <td>Mar 02, 2020</td>
+            <td>UI was changed to provide better user experience. Helper ++ optimized for better quality and fast
+              response. By default, all created files are saved in their own folder called Files.</td>
+          </tr>
+          <tr>
+            <td>0.2.1.7</td>
+            <td>Mar 15, 2020</td>
+            <td>Minor update! Selected characters counter was added.</td>
+          </tr>
+          <tr>
+            <td>0.3.1.7</td>
+            <td>Jul 25, 2020</td>
+            <td>
+              Password locking and unlocking are added for Helper++.
+              Text search possibility in the file added.
+              Tab indentation added.
+              Bullet indents added.
+              Stopwatch added with possibility to customize seconds, minutes and hours.
+              Some GUI icons changed.
+              Bug fixed for RTF file.
+            </td>
+          </tr>
+          <tr>
+            <td>0.3.2.7</td>
+            <td>Aug 09, 2020</td>
+            <td>Now its possibly to rename the file from Helper++.</td>
+          </tr>
+          <tr>
+            <td>0.4.2.7</td>
+            <td>Sep 19, 2020</td>
+            <td>Mouse over sound added to buttons. Now its possible to choose vertical or horizontal scrollbar. Some UI
+              animations added to buttons. List box for saved files is now expanding to be more readable. Optimized for
+              better performance.
+              "Everything gets better with time as Helper++".
+            </td>
+          </tr>
+          <tr>
+            <td>1.4.2.7</td>
+            <td>Sep 23, 2020</td>
+            <td>New UI design. Helper++ is twice faster than before.
+              Now its possible to turn on or off horizontal scrollbar. In this update UI design and performance was in
+              focus. Bug fixed caused by mouse hover sound.
+            </td>
+          </tr>
+          <tr>
+            <td>1.5.2.7</td>
+            <td>Oct 18, 2020</td>
+            <td>New UI design. Less is more.
+            </td>
+          </tr>
+        </table>
+        </p>
+
+        <form id="downloadHelper++Link" action="https://github.com/TarlanZiyadov/Helper/raw/master/Helper++Setup.exe"
+          download>
+          <p><button onclick="downloading()"><i class="downloadIcon"></i><span id="downloadHelper++"
+                class="haptic-swing" style="font-size: 2vmin;">Download</span></button></p>
+        </form>
+        <div id="rateClassHelper" class="rateHelper">
+          <input type="radio" id="star5Helper" name="rateHelper" value="5"
+            onclick="addToDatabase(event, 'Helper', '5')" />
+          <label for="star5Helper" title="Great!"><strong>5 stars</strong></label>
+          <input type="radio" id="star4Helper" name="rateHelper" value="4"
+            onclick="addToDatabase(event, 'Helper', '4')" />
+          <label for="star4Helper" title="Good!"><strong>4 stars</strong></label>
+          <input type="radio" id="star3Helper" name="rateHelper" value="3"
+            onclick="addToDatabase(event, 'Helper', '3')" />
+          <label for="star3Helper" title="Ok!"><strong>3 stars</strong></label>
+          <input type="radio" id="star2Helper" name="rateHelper" value="2"
+            onclick="addToDatabase(event, 'Helper', '2')" />
+          <label for="star2Helper" title="Not good!"><strong>2 stars</strong></label>
+          <input type="radio" id="star1Helper" name="rateHelper" value="1"
+            onclick="addToDatabase(event, 'Helper', '1')" />
+          <label for="star1Helper" title="Bad!"><strong>1 star</strong></label>
+        </div>
+        <p>
+        <p><em><span id="usersCountTxtHelper" style="font-size: 2vmin; position: relative;">Users rated</span></em><i
+            class="rateIcon"></i></p>
+        <p id="usersCountHelper" style="font-size: 2vmin; position: relative;"></p>
+        </p>
+      </div>
+    </div>
+
+
+    <!-- SeleniumByGUI page -->
+    <div id="selenium" class="tabcontent">
+      <div class="seleniumByGUI">
+        <h4 id="softwareSeleniumByGUI" class="headerTools"><strong>SeleniumByGUI</strong></h4>
+        <img src="assets/SeleniumByGUI.jpg" style="width: 45vmin;height: 70vmin;" alt="SeleniumByGUI" />
+        <p id="descriptionSeleniumByGUI" class="cardDescription"></p>
+        <p>
+        <table>
+          <tr>
+            <th>Platform</th>
+            <th>Archt</th>
+            <th>Setup file size</th>
+            <th>File size</th>
+            <th>Version</th>
+            <th>Downloads</th>
+          </tr>
+          <tr>
+            <td>Windows 8, 10</td>
+            <td>x64</td>
+            <td>8824 kb</td>
+            <td>16,9 mb</td>
+            <td>0.0.2.3</td>
+            <td id="downloadCounterSelenium"></td>
+          </tr>
+        </table>
+        </p>
+
+        <p>
+        <table>
+          <tr>
+            <th>Version</th>
+            <th>Date</th>
+            <th>News</th>
+          </tr>
+          <tr>
+            <td>0.0.0.2</td>
+            <td>Dec 02, 2019</td>
+            <td>Launch.</td>
+          </tr>
+          <tr>
+            <td>0.0.0.3</td>
+            <td>Jan 10, 2020</td>
+            <td>Some GUI elements was changed.</td>
+          </tr>
+          <tr>
+            <td>0.0.1.3</td>
+            <td>Jan 20, 2020</td>
+            <td>Cookie Manager was added. This now means if the user must be logged in then cookies will be good to use
+              before automation. Ui elements was changed.</td>
+          </tr>
+          <tr>
+            <td>0.0.2.3</td>
+            <td>Jul 29, 2020</td>
+            <td>Some icons changed. Optimized and bug fixed.</td>
+          </tr>
+        </table>
+        </p>
+
+        <form id="downloadSeleniumByGUILink"
+          action="https://github.com/TarlanZiyadov/SeleniumByGUI/raw/master/SeleniumByGUISetup.exe" download>
+          <p><button onclick="downloading()"><i class="downloadIcon"></i><span id="downloadSeleniumByGUI"
+                class="haptic-swing" style="font-size: 2vmin;">Download</span></button></p>
+        </form>
+        <div id="rateClassSelenium" class="rateSelenium">
+          <input type="radio" id="star5Selenium" name="rateSelenium" value="5"
+            onclick="addToDatabase(event, 'Selenium', '5')" />
+          <label for="star5Selenium" title="Great!"><strong>5 stars</strong></label>
+          <input type="radio" id="star4Selenium" name="rateSelenium" value="4"
+            onclick="addToDatabase(event, 'Selenium', '4')" />
+          <label for="star4Selenium" title="Good!"><strong>4 stars</strong></label>
+          <input type="radio" id="star3Selenium" name="rateSelenium" value="3"
+            onclick="addToDatabase(event, 'Selenium', '3')" />
+          <label for="star3Selenium" title="Ok!"><strong>3 stars</strong></label>
+          <input type="radio" id="star2Selenium" name="rateSelenium" value="2"
+            onclick="addToDatabase(event, 'Selenium', '2')" />
+          <label for="star2Selenium" title="Not good!"><strong>2 stars</strong></label>
+          <input type="radio" id="star1Selenium" name="rateSelenium" value="1"
+            onclick="addToDatabase(event, 'Selenium', '1')" />
+          <label for="star1Selenium" title="Bad!"><strong>1 star</strong></label>
+        </div>
+        <p>
+        <p><em><span id="usersCountTxtSelenium" style="font-size: 2vmin; position:relative">Users rated</span></em><i
+            class="rateIcon"></i></p>
+        <p id="usersCountSelenium" style="font-size: 2vmin; position:relative"></p>
+        </p>
+      </div>
+    </div>
+
+
+    <!-- PingNet page -->
+    <div id="pingNet" class="tabcontent">
+      <div class="pingNet">
+        <h5 id="softwarePingNet" class="headerTools"><strong>PingNet</strong></h5>
+        <img src="assets/PingNet.jpg" style="width: 40vmin;height: 50vmin;" alt="PingNet" />
+        <p id="descriptionPingNet" class="cardDescription"></p>
+        <p>
+        <table>
+          <tr>
+            <th>Platform</th>
+            <th>Archt</th>
+            <th>Setup file size</th>
+            <th>File size</th>
+            <th>Version</th>
+            <th>Downloads</th>
+          </tr>
+          <tr>
+            <td>Windows 8, 10</td>
+            <td>x64</td>
+            <td>186 kb</td>
+            <td>864 kb</td>
+            <td>0.0.1.1</td>
+            <td id="downloadCounterPingNet"></td>
+          </tr>
+        </table>
+        </p>
+
+        <p>
+        <table>
+          <tr>
+            <th>Version</th>
+            <th>Date</th>
+            <th>News</th>
+          </tr>
+          <tr>
+            <td>0.0.1.1</td>
+            <td>Nov 07, 2020</td>
+            <td>Launch.</td>
+          </tr>
+        </table>
+        </p>
+
+        <form id="downloadPingNetLink" action="https://github.com/TarlanZiyadov/PingNet/raw/main/PingNetSetup.exe">
+          <p><button onclick="downloading()"><i class="downloadIcon"></i><span id="downloadPingNet" class="haptic-swing"
+                style="font-size: 2vmin;">Download</span></button></p>
+        </form>
+        <div id="rateClassPingNet" class="ratePingNet">
+          <input type="radio" id="star5PingNet" name="ratePingNet" value="5"
+            onclick="addToDatabase(event, 'PingNet', '5')" />
+          <label for="star5PingNet" title="Great!"><strong>5 stars</strong></label>
+          <input type="radio" id="star4PingNet" name="ratePingNet" value="4"
+            onclick="addToDatabase(event, 'PingNet', '4')" />
+          <label for="star4PingNet" title="Good!"><strong>4 stars</strong></label>
+          <input type="radio" id="star3PingNet" name="ratePingNet" value="3"
+            onclick="addToDatabase(event, 'PingNet', '3')" />
+          <label for="star3PingNet" title="Ok!"><strong>3 stars</strong></label>
+          <input type="radio" id="star2PingNet" name="ratePingNet" value="2"
+            onclick="addToDatabase(event, 'PingNet', '2')" />
+          <label for="star2PingNet" title="Not good!"><strong>2 stars</strong></label>
+          <input type="radio" id="star1PingNet" name="ratePingNet" value="1"
+            onclick="addToDatabase(event, 'PingNet', '1')" />
+          <label for="star1PingNet" title="Bad!"><strong>1 star</strong></label>
+        </div>
+        <p>
+        <p><em><span id="usersCountTxtPingNet" style="font-size: 2vmin; position:relative">Users rated</span></em><i
+            class="rateIcon"></i></p>
+        <p id="usersCountPingNet" style="font-size: 2vmin; position:relative"></p>
+        </p>
+      </div>
+    </div>
+
+
+
+    <!-- FastCapture page -->
+    <div id="fast" class="tabcontent">
+      <div class="fastCapture">
+        <h5 id="softwareFastCapture" class="headerTools"><strong>FastCapture</strong></h5>
+        <img src="assets/FastCapture.jpg" style="width: 20vmin;height: 10vmin;" alt="FastCapture" />
+        <p id="descriptionFastCapture" class="cardDescription"></p>
+        <p>
+        <table>
+          <tr>
+            <th>Platform</th>
+            <th>Archt</th>
+            <th>Setup file size</th>
+            <th>File size</th>
+            <th>Version</th>
+            <th>Downloads</th>
+          </tr>
+          <tr>
+            <td>Windows 8, 10</td>
+            <td>x64</td>
+            <td>137 kb</td>
+            <td>186 kb</td>
+            <td>0.0.1.1</td>
+            <td id="downloadCounterFastCapture"></td>
+          </tr>
+        </table>
+        </p>
+
+        <p>
+        <table>
+          <tr>
+            <th>Version</th>
+            <th>Date</th>
+            <th>News</th>
+          </tr>
+          <tr>
+            <td>0.0.0.1</td>
+            <td>Dec 29, 2019</td>
+            <td>Launch.</td>
+          </tr>
+          <tr>
+            <td>0.0.1.1</td>
+            <td>Jul 30, 2020</td>
+            <td>Optimized and some GUI change. Now, when a screenshot is taken, the image opens automatically.</td>
+          </tr>
+        </table>
+        </p>
+
+        <form id="downloadFastCaptureLink"
+          action="https://github.com/TarlanZiyadov/FastCapture/raw/master/FastCaptureSetup.exe">
+          <p><button onclick="downloading()"><i class="downloadIcon"></i><span id="downloadFastCapture"
+                class="haptic-swing" style="font-size: 2vmin;">Download</span></button></p>
+        </form>
+        <div id="rateClassFastCapture" class="rateFastCapture">
+          <input type="radio" id="star5FastCapture" name="rateFastCapture" value="5"
+            onclick="addToDatabase(event, 'FastCapture', '5')" />
+          <label for="star5FastCapture" title="Great!"><strong>5 stars</strong></label>
+          <input type="radio" id="star4FastCapture" name="rateFastCapture" value="4"
+            onclick="addToDatabase(event, 'FastCapture', '4')" />
+          <label for="star4FastCapture" title="Good!"><strong>4 stars</strong></label>
+          <input type="radio" id="star3FastCapture" name="rateFastCapture" value="3"
+            onclick="addToDatabase(event, 'FastCapture', '3')" />
+          <label for="star3FastCapture" title="Ok!"><strong>3 stars</strong></label>
+          <input type="radio" id="star2FastCapture" name="rateFastCapture" value="2"
+            onclick="addToDatabase(event, 'FastCapture', '2')" />
+          <label for="star2FastCapture" title="Not good!"><strong>2 stars</strong></label>
+          <input type="radio" id="star1FastCapture" name="rateFastCapture" value="1"
+            onclick="addToDatabase(event, 'FastCapture', '1')" />
+          <label for="star1FastCapture" title="Bad!"><strong>1 star</strong></label>
+        </div>
+        <p>
+        <p><em><span id="usersCountTxtFastCapture" style="font-size: 2vmin; position:relative">Users rated</span></em><i
+            class="rateIcon"></i></p>
+        <p id="usersCountFastCapture" style="font-size: 2vmin; position:relative"></p>
+        </p>
+      </div>
+    </div>
+
+
+
+    <!-- About page -->
+    <div id="aboutCreater" class="tabcontent">
+      <div class="aboutDeveloper">
+        <h6 id="TarlanZiyadov" class="headerTools"><strong>Tarlan Ziyadov</strong></h6>
+        <img src="assets/TarlanZiyadov.png" style="width: 15vmin;height: 20vmin;border-radius: 20%;"
+          alt="AboutDeveloper" />
+        <p id="descriptionAbout" class="cardDescription"></p>
+        <form action="https://linkedin.com/in/tarlan-ziyadov-9096729a" target="_blank">
+          <p><button><i class="linkedinIcon"></i><span id="linkedin" class="haptic-swing"
+                style="font-size: 2vmin;">LinkedIn</span></button></p>
+        </form>
+        <form action="https://github.com/TarlanZiyadov" target="_blank">
+          <p><button><i class="githubIcon"></i><span id="linkedin" class="haptic-swing" style="font-size: 2vmin;">Github
+                repository</span></button></p>
+        </form>
+        <form action="mailto:tarlan.ziyadov@hotmail.se" method="post" enctype="text/plain">
+          <p><button><i class="contactIcon"></i><span id="contact" class="haptic-swing"
+                style="font-size: 2vmin;">Contact</span></button></p>
+        </form>
+      </div>
+    </div>
+
+
+    <!-- Footer -->
+    <div id="footerMainPage" class="footer">
+      <p style="padding-top: 0vmin;text-align: left;padding-left: 15vmin;">
+        <a id="feedbackMail" href="mailto:helperplusplus@gmail.com" style="cursor: pointer;"><span
+            style="color: cornflowerblue;">Send your feedback</span></a>
+      </p>
+      <p style="padding-top: 0vmin;text-align: left;padding-left: 15vmin;">
+        <a><span id="copyrighttxt">2020 © Tarlan Ziyadov</span></a>
+        <br>
+        <a><span id="country">Sweden</span></a>
+        <img src="assets/pinpoint.png" style="width: 2vmin;height: 2vmin;" alt="pinpoint" />
+        </br>
+      </p>
+    </div>
+
+
+    <!-- Main page icon -->
+    <div>
+      <p id="footerImg" class="footerImage">
+        <img src="assets/footerIcon.png" alt="footerIcon" />
+      </p>
+    </div>
+
+
+    <!-- Here is div for separate usage only -->
+    <div id="waitDownloading"><i class="downloadingIcon"></i><span style="padding-right: 2vmin;">Downloading please
+        wait...</span></div>
+    <div class="clearfix"></div>
+
   </div>
-
-
-<!-- Main page icon -->
-<div>
-  <p id="footerImg" class="footerImage">
-    <img src="assets/footerIcon.png" alt="footerIcon"/>
-  </p>
- </div>
-
-
-<!-- Here is div for separate usage only -->
-<div id="waitDownloading"><i class="downloadingIcon"></i><span style="padding-right: 2vmin;">Downloading please wait...</span></div>
-<div class="clearfix"></div>
-
-</div>
 </body>
 
 <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-app.js"></script>
@@ -445,11 +509,11 @@ Licensed by https://creativecommons.org/licenses/by/3.0/ ©
 <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-database.js"></script>
 <script src="source.js"></script>
 <script src="InnerHTML/render.js"></script>
+<script src="DB/config.js"></script>
 <script src="DB/database.js"></script>
-<script src="DB/helperDatabase.js"></script>
-<script src="DB/seleniumByGUIDatabase.js"></script>
-<script src="DB/pingNetDatabase.js"></script>
-<script src="DB/fastCaptureDatabase.js"></script>
+<script src="DB/disableRate.js"></script>
+<script src="DB/addToDatabase.js"></script>
+<script src="DB/rate.js"></script>
 <script src="InnerHTML/innerHTMLMain.js"></script>
 <script src="InnerHTML/animations.js"></script>
 

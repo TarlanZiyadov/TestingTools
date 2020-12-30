@@ -1,5 +1,5 @@
 function openTab(evt, tabContentId) {
-  
+
   let i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -11,24 +11,24 @@ function openTab(evt, tabContentId) {
   }
   document.getElementById(tabContentId).style.display = "block";
   evt.currentTarget.className += " active";
-  }
+}
 
-  
+
 // For google analytics
 window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
+function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 gtag('config', 'UA-169533728-1');
 
 
-document.addEventListener('DOMContentLoaded', (e)=> {
+document.addEventListener('DOMContentLoaded', (e) => {
 
   let i, tabcontent;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
-    if(i==0){
+    if (i == 0) {
       tabcontent[i].style.display = "block";
     }
   }
-},true);
+}, true);
