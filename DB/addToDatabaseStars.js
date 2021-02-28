@@ -1,4 +1,4 @@
-function addToDatabase(evt, tabContentName, numb) {
+function addToDatabaseStars(evt, tabContentName, numb) {
     const user = firebase.auth().currentUser;
 
     document.getElementById("star1" + tabContentName).checked = false;

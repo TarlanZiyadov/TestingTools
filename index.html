@@ -186,24 +186,25 @@ Licensed by https://creativecommons.org/licenses/by/3.0/ ©
 
         <form id="downloadHelper++Link" action="https://github.com/TarlanZiyadov/Helper/raw/master/Helper++Setup.exe"
           download>
-          <p><button onclick="downloading()"><i class="downloadIcon"></i><span id="downloadHelper++"
-                class="haptic-swing" style="font-size: 2vmin;">Download</span></button></p>
+          <p><button onclick="downloading(), addToDatabaseDownloads(event, 'Helper', '1')"><i
+                class="downloadIcon"></i><span id="downloadHelper++" class="haptic-swing"
+                style="font-size: 2vmin;">Download</span></button></p>
         </form>
         <div id="rateClassHelper" class="rateHelper">
           <input type="radio" id="star5Helper" name="rateHelper" value="5"
-            onclick="addToDatabase(event, 'Helper', '5')" />
+            onclick="addToDatabaseStars(event, 'Helper', '5')" />
           <label for="star5Helper" title="Great!"><strong>5 stars</strong></label>
           <input type="radio" id="star4Helper" name="rateHelper" value="4"
-            onclick="addToDatabase(event, 'Helper', '4')" />
+            onclick="addToDatabaseStars(event, 'Helper', '4')" />
           <label for="star4Helper" title="Good!"><strong>4 stars</strong></label>
           <input type="radio" id="star3Helper" name="rateHelper" value="3"
-            onclick="addToDatabase(event, 'Helper', '3')" />
+            onclick="addToDatabaseStars(event, 'Helper', '3')" />
           <label for="star3Helper" title="Ok!"><strong>3 stars</strong></label>
           <input type="radio" id="star2Helper" name="rateHelper" value="2"
-            onclick="addToDatabase(event, 'Helper', '2')" />
+            onclick="addToDatabaseStars(event, 'Helper', '2')" />
           <label for="star2Helper" title="Not good!"><strong>2 stars</strong></label>
           <input type="radio" id="star1Helper" name="rateHelper" value="1"
-            onclick="addToDatabase(event, 'Helper', '1')" />
+            onclick="addToDatabaseStars(event, 'Helper', '1')" />
           <label for="star1Helper" title="Bad!"><strong>1 star</strong></label>
         </div>
         <p>
@@ -275,24 +276,25 @@ Licensed by https://creativecommons.org/licenses/by/3.0/ ©
 
         <form id="downloadSeleniumByGUILink"
           action="https://github.com/TarlanZiyadov/SeleniumByGUI/raw/master/SeleniumByGUISetup.exe" download>
-          <p><button onclick="downloading()"><i class="downloadIcon"></i><span id="downloadSeleniumByGUI"
-                class="haptic-swing" style="font-size: 2vmin;">Download</span></button></p>
+          <p><button onclick="downloading(), addToDatabaseDownloads(event, 'Selenium', '1')"><i
+                class="downloadIcon"></i><span id="downloadSeleniumByGUI" class="haptic-swing"
+                style="font-size: 2vmin;">Download</span></button></p>
         </form>
         <div id="rateClassSelenium" class="rateSelenium">
           <input type="radio" id="star5Selenium" name="rateSelenium" value="5"
-            onclick="addToDatabase(event, 'Selenium', '5')" />
+            onclick="addToDatabaseStars(event, 'Selenium', '5')" />
           <label for="star5Selenium" title="Great!"><strong>5 stars</strong></label>
           <input type="radio" id="star4Selenium" name="rateSelenium" value="4"
-            onclick="addToDatabase(event, 'Selenium', '4')" />
+            onclick="addToDatabaseStars(event, 'Selenium', '4')" />
           <label for="star4Selenium" title="Good!"><strong>4 stars</strong></label>
           <input type="radio" id="star3Selenium" name="rateSelenium" value="3"
-            onclick="addToDatabase(event, 'Selenium', '3')" />
+            onclick="addToDatabaseStars(event, 'Selenium', '3')" />
           <label for="star3Selenium" title="Ok!"><strong>3 stars</strong></label>
           <input type="radio" id="star2Selenium" name="rateSelenium" value="2"
-            onclick="addToDatabase(event, 'Selenium', '2')" />
+            onclick="addToDatabaseStars(event, 'Selenium', '2')" />
           <label for="star2Selenium" title="Not good!"><strong>2 stars</strong></label>
           <input type="radio" id="star1Selenium" name="rateSelenium" value="1"
-            onclick="addToDatabase(event, 'Selenium', '1')" />
+            onclick="addToDatabaseStars(event, 'Selenium', '1')" />
           <label for="star1Selenium" title="Bad!"><strong>1 star</strong></label>
         </div>
         <p>
@@ -347,24 +349,25 @@ Licensed by https://creativecommons.org/licenses/by/3.0/ ©
         </p>
 
         <form id="downloadPingNetLink" action="https://github.com/TarlanZiyadov/PingNet/raw/main/PingNetSetup.exe">
-          <p><button onclick="downloading()"><i class="downloadIcon"></i><span id="downloadPingNet" class="haptic-swing"
+          <p><button onclick="downloading(), addToDatabaseDownloads(event, 'PingNet', '1')"><i
+                class="downloadIcon"></i><span id="downloadPingNet" class="haptic-swing"
                 style="font-size: 2vmin;">Download</span></button></p>
         </form>
         <div id="rateClassPingNet" class="ratePingNet">
           <input type="radio" id="star5PingNet" name="ratePingNet" value="5"
-            onclick="addToDatabase(event, 'PingNet', '5')" />
+            onclick="addToDatabaseStars(event, 'PingNet', '5')" />
           <label for="star5PingNet" title="Great!"><strong>5 stars</strong></label>
           <input type="radio" id="star4PingNet" name="ratePingNet" value="4"
-            onclick="addToDatabase(event, 'PingNet', '4')" />
+            onclick="addToDatabaseStars(event, 'PingNet', '4')" />
           <label for="star4PingNet" title="Good!"><strong>4 stars</strong></label>
           <input type="radio" id="star3PingNet" name="ratePingNet" value="3"
-            onclick="addToDatabase(event, 'PingNet', '3')" />
+            onclick="addToDatabaseStars(event, 'PingNet', '3')" />
           <label for="star3PingNet" title="Ok!"><strong>3 stars</strong></label>
           <input type="radio" id="star2PingNet" name="ratePingNet" value="2"
-            onclick="addToDatabase(event, 'PingNet', '2')" />
+            onclick="addToDatabaseStars(event, 'PingNet', '2')" />
           <label for="star2PingNet" title="Not good!"><strong>2 stars</strong></label>
           <input type="radio" id="star1PingNet" name="ratePingNet" value="1"
-            onclick="addToDatabase(event, 'PingNet', '1')" />
+            onclick="addToDatabaseStars(event, 'PingNet', '1')" />
           <label for="star1PingNet" title="Bad!"><strong>1 star</strong></label>
         </div>
         <p>
@@ -426,24 +429,25 @@ Licensed by https://creativecommons.org/licenses/by/3.0/ ©
 
         <form id="downloadFastCaptureLink"
           action="https://github.com/TarlanZiyadov/FastCapture/raw/master/FastCaptureSetup.exe">
-          <p><button onclick="downloading()"><i class="downloadIcon"></i><span id="downloadFastCapture"
-                class="haptic-swing" style="font-size: 2vmin;">Download</span></button></p>
+          <p><button onclick="downloading(), addToDatabaseDownloads(event, 'FastCapture', '1')"><i
+                class="downloadIcon"></i><span id="downloadFastCapture" class="haptic-swing"
+                style="font-size: 2vmin;">Download</span></button></p>
         </form>
         <div id="rateClassFastCapture" class="rateFastCapture">
           <input type="radio" id="star5FastCapture" name="rateFastCapture" value="5"
-            onclick="addToDatabase(event, 'FastCapture', '5')" />
+            onclick="addToDatabaseStars(event, 'FastCapture', '5')" />
           <label for="star5FastCapture" title="Great!"><strong>5 stars</strong></label>
           <input type="radio" id="star4FastCapture" name="rateFastCapture" value="4"
-            onclick="addToDatabase(event, 'FastCapture', '4')" />
+            onclick="addToDatabaseStars(event, 'FastCapture', '4')" />
           <label for="star4FastCapture" title="Good!"><strong>4 stars</strong></label>
           <input type="radio" id="star3FastCapture" name="rateFastCapture" value="3"
-            onclick="addToDatabase(event, 'FastCapture', '3')" />
+            onclick="addToDatabaseStars(event, 'FastCapture', '3')" />
           <label for="star3FastCapture" title="Ok!"><strong>3 stars</strong></label>
           <input type="radio" id="star2FastCapture" name="rateFastCapture" value="2"
-            onclick="addToDatabase(event, 'FastCapture', '2')" />
+            onclick="addToDatabaseStars(event, 'FastCapture', '2')" />
           <label for="star2FastCapture" title="Not good!"><strong>2 stars</strong></label>
           <input type="radio" id="star1FastCapture" name="rateFastCapture" value="1"
-            onclick="addToDatabase(event, 'FastCapture', '1')" />
+            onclick="addToDatabaseStars(event, 'FastCapture', '1')" />
           <label for="star1FastCapture" title="Bad!"><strong>1 star</strong></label>
         </div>
         <p>
@@ -519,7 +523,8 @@ Licensed by https://creativecommons.org/licenses/by/3.0/ ©
 <script src="DB/config.js"></script>
 <script src="DB/database.js"></script>
 <script src="DB/disableRate.js"></script>
-<script src="DB/addToDatabase.js"></script>
+<script src="DB/addToDatabaseStars.js"></script>
+<script src="DB/addToDatabaseDownloads.js"></script>
 <script src="DB/rate.js"></script>
 <script src="InnerHTML/innerHTMLMain.js"></script>
 <script src="InnerHTML/animations.js"></script>
